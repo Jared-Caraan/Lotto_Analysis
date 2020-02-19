@@ -21,19 +21,9 @@ def extract_num(a):
     res = a[(len(br)+ind):(len(br)+ind)+17]
     
     return res
+    
+def transform(soup):
 
-def main():
-    #Get response from website
-    try:
-        url = "https://www.lotto-8.com/philippines/listltoPH42.asp?indexpage=1"
-        response = requests.get(url)
-        print(response)
-    except:
-        print("Error")
-    
-    #Parsing the html structure
-    soup = BeautifulSoup(response.text, "html.parser")
-    
     #Getting the right elements (dates and winning numbers)
     row = soup.findAll('td')
     row_slice = row[2:len(row)-1]
@@ -49,9 +39,31 @@ def main():
     #consolidate lists
     final_list = list(zip(row_extract_date,row_extract_num))
     
-    #Create new dataframe
-    df = pd.DataFrame(final_list, columns = ['Date', 'Numbers'])
+    return final_list
     
+def main():
+    
+    #Create new dataframe
+    df = pd.DataFrame()
+
+    #Get response from website 
+    for i in range(1,6):
+        page = str(i)
+        clause = "&orderby=new"
+        url = "https://www.lotto-8.com/philippines/listltoPH42.asp?indexpage={}{}".format(page,clause)
+        response = requests.get(url)
+        print("Page: " + page + ": " + str(response))
+    
+        #Parsing the html structure
+        soup = BeautifulSoup(response.text, "html.parser")
+        
+        page_row = transform(soup)
+        print("Page: " + page + ": " + "Extracting dates and numbers")
+        
+        df = df.append(page_row, ignore_index = True)
+        print("Page: " + page + ": " + "Appending to DataFrame")
+    
+    df = df.rename(columns={0: "Date", 1: "Winning Numbers"})
     print(df)
 
 if __name__ == "__main__":
