@@ -1,0 +1,9 @@
+2020-02-24 01:37:37,274:__main__:<Response [200]>
+2020-02-24 01:37:37,303:__main__:Extracting dates and numbers
+2020-02-24 01:37:37,306:__main__:Appending to DataFrame
+2020-02-24 01:37:37,307:__main__:         Date    Winning Numbers
+0  22/02/2020  04,05,16,37,38,39
+2020-02-24 01:37:37,316:__main__:Changing Date column to date
+2020-02-24 01:37:37,414:__main__:Reading historical data
+2020-02-24 01:37:37,416:__main__:Latest date would be: 419   2020-11-02
+Name: Date, dtype: datetime64[ns]

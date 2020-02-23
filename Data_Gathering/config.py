@@ -8,6 +8,8 @@ t1    = str(datetime.now().hour) + "-" + str(datetime.now().minute) + "-" + str(
 filename_log   = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_scrape.txt'.format(d1,t1)
 filename_excel = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\PastDataResults.xlsx'
 
+delta_log = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_delta.txt'.format(d1,t1)
+
 url_list = []
 
 for i in range(1,15):

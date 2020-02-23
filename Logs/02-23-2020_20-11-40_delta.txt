@@ -1,0 +1,4 @@
+2020-02-23 20:11:48,831:__main__:<Response [200]>
+2020-02-23 20:11:48,855:__main__:Extracting dates and numbers
+2020-02-23 20:11:48,857:__main__:Appending to DataFrame
+2020-02-23 20:11:48,858:__main__:Renaming columns

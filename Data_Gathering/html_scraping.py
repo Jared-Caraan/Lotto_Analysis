@@ -84,13 +84,9 @@ def main():
     try:
         df["Date"] = pd.to_datetime(df["Date"])
     except Exception as e:
-        logger.error("Exception: " + e)
+        logger.error("Exception: " + str(e))
     else:
         logger.debug("Changing Date column to date")
-    
-    #Sort
-    df = df.sort_values(by=['Date'], ascending = True)
-    logger.debug("Sorting date in ascending order")
     
     logger.debug(df.head(5))
     logger.debug(df.tail(5))
@@ -99,7 +95,7 @@ def main():
     try:
         df.to_excel(filename_excel)
     except Exception as e:
-        logger.error("Exception: " + e)
+        logger.error("Exception: " + str(e))
     else:
         logger.debug("Excel file generated successfully")
 

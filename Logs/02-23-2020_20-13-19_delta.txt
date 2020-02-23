@@ -1,0 +1,7 @@
+2020-02-23 20:13:20,696:__main__:<Response [200]>
+2020-02-23 20:13:20,721:__main__:Extracting dates and numbers
+2020-02-23 20:13:20,722:__main__:Appending to DataFrame
+2020-02-23 20:13:20,723:__main__:Renaming columns
+2020-02-23 20:13:20,725:__main__:Exception: Given date string not likely a datetime.
+2020-02-23 20:13:20,725:__main__:0    2
+Name: Date, dtype: object
