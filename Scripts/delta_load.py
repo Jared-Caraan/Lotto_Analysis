@@ -60,8 +60,8 @@ def main():
 
     try:
         response = requests.get(val)
-    except:
-        logger.error(str(response))
+    except Exception as e:
+        logger.critical("Exception: " + str(e))
     else:
         logger.debug(str(response))
         
@@ -76,8 +76,7 @@ def main():
     
     #Changing column data type
     try:
-        df["Date"] = pd.to_datetime(df["Date"])
-        
+        df["Date"] = pd.to_datetime(df["Date"])   
     except Exception as e:
         logger.error("Exception: " + str(e))
     else:
