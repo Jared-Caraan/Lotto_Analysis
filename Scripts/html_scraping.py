@@ -80,14 +80,6 @@ def main():
     df = df.rename(columns={0: "Date", 1: "Winning Numbers"})
     logger.debug("Renaming columns")
     
-    #Changing column data type
-    try:
-        df["Date"] = pd.to_datetime(df["Date"])
-    except Exception as e:
-        logger.error("Exception: " + str(e))
-    else:
-        logger.debug("Changing Date column to date")
-    
     logger.debug(df.head(5))
     logger.debug(df.tail(5))
     

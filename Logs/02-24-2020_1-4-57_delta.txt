@@ -1,8 +1,0 @@
-2020-02-24 01:04:58,120:__main__:<Response [200]>
-2020-02-24 01:04:58,146:__main__:Extracting dates and numbers
-2020-02-24 01:04:58,185:__main__:Appending to DataFrame
-2020-02-24 01:04:58,185:__main__:         Date    Winning Numbers
-0  22/02/2020  04,05,16,37,38,39
-2020-02-24 01:04:58,191:__main__:Changing Date column to date
-2020-02-24 01:04:58,191:__main__:0   2020-02-22
-Name: Date, dtype: datetime64[ns]

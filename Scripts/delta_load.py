@@ -73,14 +73,6 @@ def main():
     
     df = df.append({'Date': page_row[0], 'Winning Numbers': page_row[1]}, ignore_index = True)
     logger.debug("Appending to DataFrame")
-    
-    #Changing column data type
-    try:
-        df["Date"] = pd.to_datetime(df["Date"])   
-    except Exception as e:
-        logger.error("Exception: " + str(e))
-    else:
-        logger.debug("Changing Date column to date")
         
     #Fetching the latest past result from the xlsx
     try:
