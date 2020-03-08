@@ -80,6 +80,10 @@ def main():
     df = df.rename(columns={0: "Date", 1: "Winning Numbers"})
     logger.debug("Renaming columns")
     
+    #Splitting values into different columns
+    df[['first', 'second', 'third', 'fourth', 'fifth', 'sixth']] = df['Winning Numbers'].str.split(',', expand=True)
+    logger.debug("Splitting numbers into columns")
+    
     logger.debug(df.head(5))
     logger.debug(df.tail(5))
     

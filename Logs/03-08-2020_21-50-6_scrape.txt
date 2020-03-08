@@ -1,0 +1,57 @@
+2020-03-08 21:50:08,434:__main__:Page: 1: <Response [200]>
+2020-03-08 21:50:08,460:__main__:Page: 1: Extracting dates and numbers
+2020-03-08 21:50:08,462:__main__:Page: 1: Appending to DataFrame
+2020-03-08 21:50:08,960:__main__:Page: 2: <Response [200]>
+2020-03-08 21:50:08,985:__main__:Page: 2: Extracting dates and numbers
+2020-03-08 21:50:08,986:__main__:Page: 2: Appending to DataFrame
+2020-03-08 21:50:09,497:__main__:Page: 3: <Response [200]>
+2020-03-08 21:50:09,523:__main__:Page: 3: Extracting dates and numbers
+2020-03-08 21:50:09,525:__main__:Page: 3: Appending to DataFrame
+2020-03-08 21:50:10,114:__main__:Page: 4: <Response [200]>
+2020-03-08 21:50:10,162:__main__:Page: 4: Extracting dates and numbers
+2020-03-08 21:50:10,164:__main__:Page: 4: Appending to DataFrame
+2020-03-08 21:50:10,746:__main__:Page: 5: <Response [200]>
+2020-03-08 21:50:10,772:__main__:Page: 5: Extracting dates and numbers
+2020-03-08 21:50:10,773:__main__:Page: 5: Appending to DataFrame
+2020-03-08 21:50:11,374:__main__:Page: 6: <Response [200]>
+2020-03-08 21:50:11,398:__main__:Page: 6: Extracting dates and numbers
+2020-03-08 21:50:11,400:__main__:Page: 6: Appending to DataFrame
+2020-03-08 21:50:11,898:__main__:Page: 7: <Response [200]>
+2020-03-08 21:50:11,922:__main__:Page: 7: Extracting dates and numbers
+2020-03-08 21:50:11,923:__main__:Page: 7: Appending to DataFrame
+2020-03-08 21:50:12,483:__main__:Page: 8: <Response [200]>
+2020-03-08 21:50:12,510:__main__:Page: 8: Extracting dates and numbers
+2020-03-08 21:50:12,511:__main__:Page: 8: Appending to DataFrame
+2020-03-08 21:50:13,092:__main__:Page: 9: <Response [200]>
+2020-03-08 21:50:13,118:__main__:Page: 9: Extracting dates and numbers
+2020-03-08 21:50:13,120:__main__:Page: 9: Appending to DataFrame
+2020-03-08 21:50:13,720:__main__:Page: 10: <Response [200]>
+2020-03-08 21:50:13,745:__main__:Page: 10: Extracting dates and numbers
+2020-03-08 21:50:13,747:__main__:Page: 10: Appending to DataFrame
+2020-03-08 21:50:14,261:__main__:Page: 11: <Response [200]>
+2020-03-08 21:50:14,285:__main__:Page: 11: Extracting dates and numbers
+2020-03-08 21:50:14,287:__main__:Page: 11: Appending to DataFrame
+2020-03-08 21:50:14,941:__main__:Page: 12: <Response [200]>
+2020-03-08 21:50:14,970:__main__:Page: 12: Extracting dates and numbers
+2020-03-08 21:50:14,972:__main__:Page: 12: Appending to DataFrame
+2020-03-08 21:50:16,164:__main__:Page: 13: <Response [200]>
+2020-03-08 21:50:16,192:__main__:Page: 13: Extracting dates and numbers
+2020-03-08 21:50:16,194:__main__:Page: 13: Appending to DataFrame
+2020-03-08 21:50:16,700:__main__:Page: 14: <Response [200]>
+2020-03-08 21:50:16,725:__main__:Page: 14: Extracting dates and numbers
+2020-03-08 21:50:16,726:__main__:Page: 14: Appending to DataFrame
+2020-03-08 21:50:16,727:__main__:Renaming columns
+2020-03-08 21:50:16,732:__main__:Splitting numbers into columns
+2020-03-08 21:50:16,771:__main__:         Date    Winning Numbers first second third fourth fifth sixth
+0  07/03/2020  03,05,09,11,14,17    03     05    09     11    14    17
+1  05/03/2020  14,15,17,20,24,39    14     15    17     20    24    39
+2  03/03/2020  05,07,09,25,39,40    05     07    09     25    39    40
+3  29/02/2020  08,10,23,24,39,42    08     10    23     24    39    42
+4  27/02/2020  05,07,16,29,32,34    05     07    16     29    32    34
+2020-03-08 21:50:16,791:__main__:           Date    Winning Numbers first second third fourth fifth sixth
+415  27/06/2017  06,10,20,30,34,35    06     10    20     30    34    35
+416  24/06/2017  02,07,13,21,40,41    02     07    13     21    40    41
+417  22/06/2017  06,12,13,16,21,27    06     12    13     16    21    27
+418  20/06/2017  11,12,13,14,24,25    11     12    13     14    24    25
+419  17/06/2017  16,18,29,32,33,39    16     18    29     32    33    39
+2020-03-08 21:50:21,192:__main__:Excel file generated successfully

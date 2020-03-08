@@ -1,0 +1,43 @@
+2020-03-08 21:47:03,538:__main__:Page: 1: <Response [200]>
+2020-03-08 21:47:03,564:__main__:Page: 1: Extracting dates and numbers
+2020-03-08 21:47:03,616:__main__:Page: 1: Appending to DataFrame
+2020-03-08 21:47:04,110:__main__:Page: 2: <Response [200]>
+2020-03-08 21:47:04,136:__main__:Page: 2: Extracting dates and numbers
+2020-03-08 21:47:04,208:__main__:Page: 2: Appending to DataFrame
+2020-03-08 21:47:04,805:__main__:Page: 3: <Response [200]>
+2020-03-08 21:47:04,830:__main__:Page: 3: Extracting dates and numbers
+2020-03-08 21:47:04,832:__main__:Page: 3: Appending to DataFrame
+2020-03-08 21:47:05,513:__main__:Page: 4: <Response [200]>
+2020-03-08 21:47:05,538:__main__:Page: 4: Extracting dates and numbers
+2020-03-08 21:47:05,540:__main__:Page: 4: Appending to DataFrame
+2020-03-08 21:47:06,058:__main__:Page: 5: <Response [200]>
+2020-03-08 21:47:06,083:__main__:Page: 5: Extracting dates and numbers
+2020-03-08 21:47:06,085:__main__:Page: 5: Appending to DataFrame
+2020-03-08 21:47:06,681:__main__:Page: 6: <Response [200]>
+2020-03-08 21:47:06,705:__main__:Page: 6: Extracting dates and numbers
+2020-03-08 21:47:06,707:__main__:Page: 6: Appending to DataFrame
+2020-03-08 21:47:07,284:__main__:Page: 7: <Response [200]>
+2020-03-08 21:47:07,309:__main__:Page: 7: Extracting dates and numbers
+2020-03-08 21:47:07,310:__main__:Page: 7: Appending to DataFrame
+2020-03-08 21:47:07,827:__main__:Page: 8: <Response [200]>
+2020-03-08 21:47:07,880:__main__:Page: 8: Extracting dates and numbers
+2020-03-08 21:47:07,882:__main__:Page: 8: Appending to DataFrame
+2020-03-08 21:47:08,434:__main__:Page: 9: <Response [200]>
+2020-03-08 21:47:08,486:__main__:Page: 9: Extracting dates and numbers
+2020-03-08 21:47:08,488:__main__:Page: 9: Appending to DataFrame
+2020-03-08 21:47:09,097:__main__:Page: 10: <Response [200]>
+2020-03-08 21:47:09,123:__main__:Page: 10: Extracting dates and numbers
+2020-03-08 21:47:09,125:__main__:Page: 10: Appending to DataFrame
+2020-03-08 21:47:09,724:__main__:Page: 11: <Response [200]>
+2020-03-08 21:47:09,748:__main__:Page: 11: Extracting dates and numbers
+2020-03-08 21:47:09,750:__main__:Page: 11: Appending to DataFrame
+2020-03-08 21:47:10,337:__main__:Page: 12: <Response [200]>
+2020-03-08 21:47:10,361:__main__:Page: 12: Extracting dates and numbers
+2020-03-08 21:47:10,363:__main__:Page: 12: Appending to DataFrame
+2020-03-08 21:47:10,862:__main__:Page: 13: <Response [200]>
+2020-03-08 21:47:10,890:__main__:Page: 13: Extracting dates and numbers
+2020-03-08 21:47:10,891:__main__:Page: 13: Appending to DataFrame
+2020-03-08 21:47:11,408:__main__:Page: 14: <Response [200]>
+2020-03-08 21:47:11,432:__main__:Page: 14: Extracting dates and numbers
+2020-03-08 21:47:11,434:__main__:Page: 14: Appending to DataFrame
+2020-03-08 21:47:11,458:__main__:Renaming columns

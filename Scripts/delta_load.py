@@ -72,6 +72,7 @@ def main():
     logger.debug("Extracting dates and numbers")
     
     df = df.append({'Date': page_row[0], 'Winning Numbers': page_row[1]}, ignore_index = True)
+    df[['first', 'second', 'third', 'fourth', 'fifth', 'sixth']] = df['Winning Numbers'].str.split(',', expand=True)
     logger.debug("Appending to DataFrame")
         
     #Fetching the latest past result from the xlsx
