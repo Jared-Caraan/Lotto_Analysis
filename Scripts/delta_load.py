@@ -90,8 +90,9 @@ def main():
         logger.debug("No new records")
     else:
         try:
-            df_past = pd.concat(df.head(1),df_past).reset_index(drop = True)
-            df_past.to_excel(filename_excel)
+            df = df.append(df_past, sort = False, ignore_index = True)
+            df.drop(columns = ['Unnamed: 0'], inplace = True)
+            df.to_excel(filename_excel)
         except Exception as e:
             logger.error("Exception: " + str(e))
         else:
