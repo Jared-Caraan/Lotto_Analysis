@@ -8,6 +8,7 @@ An analysis of the winning numbers of 6/42 Lotto as well as trying to predict th
 
 ## Visualization
 -Line Graph which shows the trends of each six ordinal numbers for the past 6 months
+
 https://plotly.com/~jargolastik/8
 
 ## Contact
