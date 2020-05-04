@@ -1,10 +1,14 @@
 from datetime import date
 from datetime import datetime
+from pandas.api.types import CategoricalDtype
 
 #--Date Configuration--#
 today = date.today()
 d1    = today.strftime("%m-%d-%Y")
 t1    = str(datetime.now().hour) + "-" + str(datetime.now().minute) + "-" + str(datetime.now().second)
+
+weekday = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+day_type = CategoricalDtype(categories=weekday, ordered=True)
 
 #--Files--#
 filename_log     = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_scrape.txt'.format(d1,t1)
@@ -16,6 +20,7 @@ dir_archive      = r'C:\Personal_Project\Lotto_Analysis\Logs'
 
 #--Log--#
 delta_log = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_delta.txt'.format(d1,t1)
+visual_log = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_visual.txt'.format(d1,t1)
 
 #--URL Scraping--#
 url_list = []

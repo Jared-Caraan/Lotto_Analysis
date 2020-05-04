@@ -1,0 +1,5 @@
+2020-05-05 03:22:27,585:__main__:Reading historical data
+2020-05-05 03:22:27,586:__main__:Data Transformation
+2020-05-05 03:22:27,590:__main__:Filtering past 6 months
+2020-05-05 03:22:37,601:__main__:Creating line graphs
+2020-05-05 03:22:37,606:__main__:Exception: name 'day_type' is not defined
