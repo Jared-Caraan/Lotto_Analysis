@@ -1,7 +1,0 @@
-2020-04-30 16:54:30,096:__main__:<Response [200]>
-2020-04-30 16:54:30,146:__main__:Extracting dates and numbers
-2020-04-30 16:54:30,182:__main__:Appending to DataFrame
-2020-04-30 16:54:30,799:__main__:Reading historical data
-2020-04-30 16:54:30,799:__main__:Latest date would be: 0    14/03/2020
-Name: Date, dtype: object
-2020-04-30 16:54:30,800:__main__:No new records

@@ -1,5 +1,0 @@
-2020-05-05 03:30:09,431:__main__:Reading historical data
-2020-05-05 03:30:09,432:__main__:Data Transformation
-2020-05-05 03:30:09,437:__main__:Filtering past 6 months
-2020-05-05 03:30:27,422:__main__:Creating line graphs
-2020-05-05 03:30:34,896:__main__:Creating heatmap

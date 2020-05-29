@@ -1,5 +1,0 @@
-2020-05-05 03:28:35,815:__main__:Reading historical data
-2020-05-05 03:28:35,817:__main__:Data Transformation
-2020-05-05 03:28:35,821:__main__:Filtering past 6 months
-2020-05-05 03:28:48,955:__main__:Creating line graphs
-2020-05-05 03:28:49,235:__main__:Exception: name 'np' is not defined
