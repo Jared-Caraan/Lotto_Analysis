@@ -1,0 +1,15 @@
+2020-06-04 04:33:35,446:__main__:Reading historical data
+2020-06-04 04:34:20,661:__main__:Training column first
+2020-06-04 04:34:20,782:__main__:Predicting first number
+2020-06-04 04:35:05,619:__main__:Training column second
+2020-06-04 04:35:05,749:__main__:Predicting second number
+2020-06-04 04:35:50,491:__main__:Training column third
+2020-06-04 04:35:50,600:__main__:Predicting third number
+2020-06-04 04:36:35,339:__main__:Training column fourth
+2020-06-04 04:36:35,496:__main__:Predicting fourth number
+2020-06-04 04:37:20,413:__main__:Training column fifth
+2020-06-04 04:37:20,533:__main__:Predicting fifth number
+2020-06-04 04:38:05,773:__main__:Training column sixth
+2020-06-04 04:38:05,916:__main__:Predicting sixth number
+2020-06-04 04:38:05,917:__main__:New winning numbers
+2020-06-04 04:38:05,917:__main__:[6, 11, 9, 12, 11, 12]

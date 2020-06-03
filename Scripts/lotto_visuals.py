@@ -176,7 +176,6 @@ def main():
     df['Date'] = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
     df['Day_Name'] = df['Date'].dt.day_name()
     
-    ## NEW DATAFRAME
     logger.debug("Filtering past 6 months")
     
     filt = df['Date'] >= df['Date'].max() - pd.DateOffset(months=6)
