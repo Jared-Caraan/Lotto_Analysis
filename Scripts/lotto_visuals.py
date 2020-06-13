@@ -2,10 +2,15 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import chart_studio.plotly as py
+import chart_studio
 import logging
 
 from plotly.subplots import make_subplots
 from config import filename_excel, visual_log, day_type
+
+## CHART STUDIO CONFIG
+chart_studio.tools.set_credentials_file(username='jargolastik', api_key='AbGkiEPweNW58t2r5wlB')
+
 
 ## LOGGER CONFIG
 logger = logging.getLogger(__name__)
@@ -18,7 +23,44 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
 
+def histogram(df_new):
+	## NUMBER LISTS
+	first = list(df_new['first'])
+	second = list(df_new['second'])
+	third = list(df_new['third'])
+	fourth = list(df_new['fourth'])
+	fifth = list(df_new['fifth'])
+	sixth = list(df_new['sixth'])
+	
+	## VISUALS
+	fig = make_subplots(rows=3, cols=2, subplot_titles = ("First", "Second", "Third", "Fourth", "Fifth", "Sixth"), vertical_spacing=0.07)
+	fig.add_trace(go.Histogram(x=first))
+	fig.add_trace(go.Histogram(x=second), row = 1, col = 2)
+	fig.add_trace(go.Histogram(x=third), row = 2, col = 1)
+	fig.add_trace(go.Histogram(x=fourth), row = 2, col = 2)
+	fig.add_trace(go.Histogram(x=fifth), row = 3, col = 1)
+	fig.add_trace(go.Histogram(x=sixth), row = 3, col = 2)
+
+	fig.update_xaxes(title_text = "Number", row = 1, col = 1)
+	fig.update_xaxes(title_text = "Number", row = 1, col = 2)
+	fig.update_xaxes(title_text = "Number", row = 2, col = 1)
+	fig.update_xaxes(title_text = "Number", row = 2, col = 2)
+	fig.update_xaxes(title_text = "Number", row = 3, col = 1)
+	fig.update_xaxes(title_text = "Number", row = 3, col = 2)
+
+	fig.update_yaxes(title_text = "Count", row = 1, col = 1)
+	fig.update_yaxes(title_text = "Count", row = 1, col = 2)
+	fig.update_yaxes(title_text = "Count", row = 2, col = 1)
+	fig.update_yaxes(title_text = "Count", row = 2, col = 2)
+	fig.update_yaxes(title_text = "Count", row = 3, col = 1)
+	fig.update_yaxes(title_text = "Count", row = 3, col = 2)
+
+	fig.update_layout( title_text = 'Lotto Histogram', yaxis_title = 'count', xaxis_title = 'Numbers', height = 1200, width = 1200)
+
+	py.plot(fig, filename = '6-42 Histogram', auto_open=True)
+	
 def line_graph(df_new):
+	## VISUALS
     fig = make_subplots(rows=3, cols=2, subplot_titles = ("First", "Second", "Third", "Fourth", "Fifth", "Sixth"), vertical_spacing=0.07)
     
     fig.add_trace(go.Scatter(x = df_new['Date'], y = df_new['first'], name = "First Number", mode = "lines+markers", opacity = 0.8, legendgroup = "1st group"))
@@ -153,10 +195,7 @@ def heatmap(df_new):
                 colorscale = 'Hot',
                 reversescale = True))
 
-    fig.update_layout(
-        title_text = 'Digit occurrence by day for 6 months',
-        yaxis_title = 'Day of Result',
-        xaxis_title = 'Single Lotto Digit')
+    fig.update_layout( title_text = 'Digit occurrence by day for 6 months', yaxis_title = 'Day of Result', xaxis_title = 'Single Lotto Digit')
 
     py.plot(fig, filename = '6-42 Heatmap', auto_open=True)
 
@@ -188,7 +227,7 @@ def main():
     df_new['fourth_mean'] = df_new['fourth'].mean()
     df_new['fifth_mean'] = df_new['fifth'].mean()
     df_new['sixth_mean'] = df_new['sixth'].mean()
-    
+	
     try:
         line_graph(df_new)
     except Exception as e:
@@ -202,6 +241,13 @@ def main():
         logger.critical("Exception: " + str(e))
     else:
         logger.debug("Creating heatmap")
+	
+    try:
+        histogram(df_new)
+    except Exception as e:
+        logger.critical("Exception: " + str(e))
+    else:
+        logger.debug("Creating histograms")
 
 if __name__ == "__main__":
     main()
