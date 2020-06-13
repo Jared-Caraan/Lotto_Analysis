@@ -9,11 +9,15 @@ An analysis of the winning numbers of 6/42 Lotto as well as trying to predict th
 ## Visualization
 -Line Graphs to show the trends of each six numbers for the past 6 months
 
-https://plotly.com/~jargolastik/20/#/
+https://chart-studio.plotly.com/~jargolastik/20
 
 -Heatmap to visualize how frequent each number is
 
-https://plotly.com/~jargolastik/24/#/
+https://chart-studio.plotly.com/~jargolastik/24/#/
+
+-Histograms
+
+https://chart-studio.plotly.com/~jargolastik/28/#/
 
 ## Contact
 Linked In: https://www.linkedin.com/in/jared-dominic-caraan-152272143/
