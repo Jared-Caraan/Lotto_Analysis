@@ -1,0 +1,1 @@
+2020-06-21 20:15:40,911:__main__:Exception: HTTPSConnectionPool(host='www.lotto-8.com', port=443): Max retries exceeded with url: /philippines/listltoPH42.asp?indexpage=1&orderby=new (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000257329C6548>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
