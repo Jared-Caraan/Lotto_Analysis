@@ -1,6 +1,0 @@
-2020-06-13 15:57:30,297:__main__:Reading historical data
-2020-06-13 15:57:30,299:__main__:Data Transformation
-2020-06-13 15:57:30,303:__main__:Filtering past 6 months
-2020-06-13 16:00:38,026:__main__:Exception: Authentication credentials were not provided.
-2020-06-13 16:03:49,832:__main__:Exception: Authentication credentials were not provided.
-2020-06-13 16:07:02,813:__main__:Exception: Authentication credentials were not provided.
