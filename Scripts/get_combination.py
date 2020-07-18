@@ -1,10 +1,13 @@
 import pandas as pd
 import numpy as np
+import operator
 
 from config import filename_excel
 
 def get_combi(df):
-    num_col = ['first']
+    last_prob = 0.0
+    num_col = ['first','second','third', 'fourth', 'fifth', 'sixth']
+    num_high = []
     probs = {}
     
     if df.iloc[0].Day_Name == 'Saturday':
@@ -18,13 +21,24 @@ def get_combi(df):
     df_filtered = df[filt]
     
     for i in num_col:
+        
         num_list = list(df_filtered[i].unique())
-        for j in num_list:
-            count = ((df_filtered[i].values == j).sum()) / len(df_filtered)
-            print(count)
-            probs[j] = count
             
-    return probs
+        for j in num_list:
+            
+            if i == 'first':
+                count = (((df_filtered[i].values == j).sum()) / len(df_filtered))          
+                probs[j] = count
+            else:
+                count = ((((df_filtered[i].values == j).sum()) / len(df_filtered)) * (last_prob))           
+                probs[j] = count
+            
+        num_high.append(max(probs.items(), key=operator.itemgetter(1))[0])
+        last_prob = max(probs.items(), key=operator.itemgetter(1))[1]
+        print(last_prob)
+        prob = {}
+            
+    return num_high
 
 def main():
     
