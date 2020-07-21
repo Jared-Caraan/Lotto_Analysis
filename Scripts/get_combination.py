@@ -20,23 +20,20 @@ def get_combi(df):
     filt = df['Day_Name'] == next_day
     df_filtered = df[filt]
     
+    print("For " + next_day + " results")
     for i in num_col:
         
         num_list = list(df_filtered[i].unique())
-            
+        print(i)
         for j in num_list:
             
-            if i == 'first':
-                count = (((df_filtered[i].values == j).sum()) / len(df_filtered))          
-                probs[j] = count
-            else:
-                count = ((((df_filtered[i].values == j).sum()) / len(df_filtered)) * (last_prob))           
-                probs[j] = count
+            count = round((((df_filtered[i].values == j).sum()) / len(df_filtered)),2)
+            probs[j] = count
             
         num_high.append(max(probs.items(), key=operator.itemgetter(1))[0])
         last_prob = max(probs.items(), key=operator.itemgetter(1))[1]
         print(last_prob)
-        prob = {}
+        probs = {}
             
     return num_high
 
