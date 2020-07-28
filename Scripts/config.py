@@ -11,9 +11,10 @@ weekday = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 
 day_type = CategoricalDtype(categories=weekday, ordered=True)
 
 ## FILES
-filename_log     = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_scrape.txt'.format(d1,t1)
-filename_excel   = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\PastDataResults.xlsx'
-filename_archive = r'C:\Personal_Project\Lotto_Analysis\Archive\{}_log.zip'.format(d1)
+filename_log      = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_scrape.txt'.format(d1,t1)
+filename_excel    = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\PastDataResults.xlsx'
+filename_rng_test = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\RNG_test.xlsx'
+filename_archive  = r'C:\Personal_Project\Lotto_Analysis\Archive\{}_log.zip'.format(d1)
 
 ## DIRECTORY
 dir_archive      = r'C:\Personal_Project\Lotto_Analysis\Logs'
