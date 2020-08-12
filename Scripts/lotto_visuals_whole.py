@@ -95,7 +95,7 @@ def line_graph(df_new):
     fig.update_yaxes(title_text = "Digit", row = 3, col = 1)
     fig.update_yaxes(title_text = "Digit", row = 3, col = 2)
     
-    fig.update_layout(title="6/42 winning numbers for the past 6 months", hovermode='x unified', font=dict(family="Helvetica"), height = 1200, width = 1200)
+    fig.update_layout(title="Lotto Trend", hovermode='x unified', font=dict(family="Helvetica"), height = 1200, width = 1200)
     
     py.plot(fig, filename = '6-42 Trends (Whole)', auto_open=True)
     
@@ -195,7 +195,7 @@ def heatmap(df_new):
                 colorscale = 'Hot',
                 reversescale = True))
 
-    fig.update_layout( title_text = 'Digit occurrence by day for 6 months', yaxis_title = 'Day of Result', xaxis_title = 'Single Lotto Digit')
+    fig.update_layout( title_text = 'Lotto Heatmap', yaxis_title = 'Day of Result', xaxis_title = 'Single Lotto Digit')
 
     py.plot(fig, filename = '6-42 Heatmap (Whole)', auto_open=True)
 
