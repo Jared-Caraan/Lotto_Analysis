@@ -1,23 +1,35 @@
 # Lotto_Analysis
 
 ## Description
-An analysis of the winning numbers of 6/42 Lotto as well as trying to predict the next combinations using Machine Learning.
+An analysis of the winning numbers of 6/42 Lotto as well as trying to predict the next combinations.
 
 ## Prerequisites
 -Python
 
 ## Visualization
--Line Graphs to show the trends of each six numbers for the past 6 months
+-Line Graph (6 months)
 
-https://chart-studio.plotly.com/~jargolastik/20
+https://chart-studio.plotly.com/~jargolastik/20/#/
 
--Heatmap to visualize how frequent each number is
+-Line Graph (circa 2017)
+
+https://chart-studio.plotly.com/~jargolastik/30/#/
+
+-Heatmap (6 months)
 
 https://chart-studio.plotly.com/~jargolastik/24/#/
 
--Histograms
+-Heatmap (circa 2017)
+
+https://chart-studio.plotly.com/~jargolastik/32/#/
+
+-Histogram (6 months)
 
 https://chart-studio.plotly.com/~jargolastik/28/#/
+
+-Histogram (circa 2017)
+
+https://chart-studio.plotly.com/~jargolastik/34/#/
 
 ## Contact
 Linked In: https://www.linkedin.com/in/jared-dominic-caraan-152272143/
