@@ -1,0 +1,10 @@
+2020-08-10 14:28:26,975:__main__:<Response [200]>
+2020-08-10 14:28:26,999:__main__:Extracting dates and numbers
+2020-08-10 14:28:27,089:__main__:Appending to DataFrame
+2020-08-10 14:28:27,692:__main__:Reading historical data
+2020-08-10 14:28:27,692:__main__:Latest date would be: 0    14/03/2020
+Name: Date, dtype: object
+2020-08-10 14:28:33,354:__main__:Adding newest date: 0    08/08/2020
+Name: Date, dtype: object
+2020-08-10 14:28:33,355:__main__:Newest winning number: 0    06,07,22,27,32,40
+Name: Winning Numbers, dtype: object

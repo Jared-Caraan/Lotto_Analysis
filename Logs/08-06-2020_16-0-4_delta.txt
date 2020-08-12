@@ -1,0 +1,1 @@
+2020-08-06 16:00:06,403:__main__:Exception: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
