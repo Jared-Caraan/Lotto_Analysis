@@ -1,0 +1,6 @@
+2020-08-14 17:59:15,699:__main__:Reading historical data
+2020-08-14 17:59:15,700:__main__:Data Transformation
+2020-08-14 17:59:15,705:__main__:Filtering past 6 months
+2020-08-14 17:59:25,909:__main__:Creating line graphs
+2020-08-14 17:59:33,801:__main__:Creating heatmap
+2020-08-14 17:59:44,190:__main__:Creating histograms
