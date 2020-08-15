@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 from config import filename_excel, filename_z_score
 
