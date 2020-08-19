@@ -1,0 +1,7 @@
+2020-08-18 16:00:15,943:__main__:<Response [200]>
+2020-08-18 16:00:15,967:__main__:Extracting dates and numbers
+2020-08-18 16:00:15,974:__main__:Appending to DataFrame
+2020-08-18 16:00:16,397:__main__:Reading historical data
+2020-08-18 16:00:16,398:__main__:Latest date would be: 0    15/08/2020
+Name: Date, dtype: object
+2020-08-18 16:00:16,399:__main__:No new records
