@@ -29,7 +29,7 @@ predict_log = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_visual.txt'.format(
 ## URL SCRAPING
 url_list = []
 
-for i in range(1,15):
+for i in range(1,64):
     page   = str(i)
     clause = "&orderby=new"
     url    = "https://www.lotto-8.com/philippines/listltoPH42.asp?indexpage={}{}".format(page,clause)
