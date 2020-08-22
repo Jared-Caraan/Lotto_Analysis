@@ -24,7 +24,10 @@ dir_archive      = r'C:\Personal_Project\Lotto_Analysis\Logs'
 ## LOG
 delta_log   = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_delta.txt'.format(d1,t1)
 visual_log  = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_visual.txt'.format(d1,t1)
-predict_log = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_visual.txt'.format(d1,t1)
+train_log = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_train.txt'.format(d1,t1)
+
+## MODEL
+pickle_dir = r'C:\Personal_Project\Lotto_Analysis\Model\randomforestmodel.pkl'
 
 ## URL SCRAPING
 url_list = []
@@ -35,7 +38,11 @@ for i in range(1,64):
     url    = "https://www.lotto-8.com/philippines/listltoPH42.asp?indexpage={}{}".format(page,clause)
     url_list.append(url)
     
-## RNN
+## Hyperparameters
 num_prediction = 1
 look_back      = 2
 epoch          = 400
+test_size      = 0.2
+rand_state     = 10
+n_estimators   = 10
+criterion      = 'entropy'

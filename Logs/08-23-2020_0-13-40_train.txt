@@ -1,0 +1,19 @@
+2020-08-23 00:13:40,493:__main__:Reading raw data
+2020-08-23 00:13:40,494:__main__:Dropped columns
+2020-08-23 00:13:40,498:__main__:Added features
+2020-08-23 00:13:40,501:__main__:Factorizing columns
+2020-08-23 00:13:40,502:__main__:Splitting feature and label
+2020-08-23 00:13:40,503:__main__:Creating train and test data
+2020-08-23 00:13:40,504:__main__:Performing scaling
+2020-08-23 00:13:40,525:__main__:Training
+2020-08-23 00:13:40,527:__main__:Confusion Matrix:
+2020-08-23 00:13:40,540:__main__:Predicted Pattern  Even: 2, Odd: 4  Even: 3, Odd: 3  Even: 4, Odd: 2
+Actual Pattern                                                      
+Even: 0, Odd: 6                  0                2                1
+Even: 1, Odd: 5                  4               19                6
+Even: 2, Odd: 4                 11               50               19
+Even: 3, Odd: 3                 17               84               32
+Even: 4, Odd: 2                 18               60               21
+Even: 5, Odd: 1                  2               20                6
+Even: 6, Odd: 0                  2                1                1
+2020-08-23 00:13:40,573:__main__:Saving model
