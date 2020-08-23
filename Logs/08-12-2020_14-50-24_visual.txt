@@ -1,5 +1,0 @@
-2020-08-12 14:50:25,171:__main__:Reading historical data
-2020-08-12 14:50:25,183:__main__:Data Transformation
-2020-08-12 14:50:43,987:__main__:Creating line graphs
-2020-08-12 14:50:50,637:__main__:Creating heatmap
-2020-08-12 14:50:57,337:__main__:Creating histograms

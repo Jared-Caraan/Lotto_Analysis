@@ -38,10 +38,11 @@ def main():
     df['Date'] = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
     df['Day_Name'] = df['Date'].dt.day_name()
     df['Month_Num'] = df['Date'].dt.month
+    df['Year'] = df['Date'].dt.year
     logger.debug("Added features")
     
     ##Rearranging columns
-    df = df[['Date', 'Day_Name', 'Month_Num', 'Odd_Even_Dist']]
+    df = df[['Date', 'Day_Name', 'Month_Num', 'Year', 'Odd_Even_Dist']]
     
     ##Factorizing categorical value
     factor_label = pd.factorize(df['Odd_Even_Dist'])
@@ -50,11 +51,14 @@ def main():
     
     factor_day = pd.factorize(df['Day_Name'])
     df.Day_Name = factor_day[0]
+    
+    factor_year = pd.factorize(df['Year'])
+    df.Year = factor_year[0]
     logger.debug("Factorizing columns")
     
     ##Split into dependent and independent variables
-    X = df.iloc[:,1:3].values
-    y = df.iloc[:,3].values
+    X = df.iloc[:,1:4].values
+    y = df.iloc[:,4].values
     logger.debug("Splitting feature and label")
     
     ##Train and Test data
@@ -81,8 +85,7 @@ def main():
     y_pred = np.vectorize(reversefactor.get)(y_pred)
     
     ##Confusion Matrix
-    logger.debug("Confusion Matrix:")
-    logger.debug(pd.crosstab(y_test, y_pred, rownames = ['Actual Pattern'], colnames = ['Predicted Pattern']))
+    print(pd.crosstab(y_test, y_pred, rownames = ['Actual Pattern'], colnames = ['Predicted Pattern']))
     
     ##Saving the model
     try:
