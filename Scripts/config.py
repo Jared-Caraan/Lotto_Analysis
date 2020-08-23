@@ -7,7 +7,7 @@ today = date.today()
 d1    = today.strftime("%m-%d-%Y")
 t1    = str(datetime.now().hour) + "-" + str(datetime.now().minute) + "-" + str(datetime.now().second)
 
-weekday = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+weekday  = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 day_type = CategoricalDtype(categories=weekday, ordered=True)
 
 ## FILES
@@ -24,7 +24,8 @@ dir_archive      = r'C:\Personal_Project\Lotto_Analysis\Logs'
 ## LOG
 delta_log   = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_delta.txt'.format(d1,t1)
 visual_log  = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_visual.txt'.format(d1,t1)
-train_log = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_train.txt'.format(d1,t1)
+train_log   = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_train.txt'.format(d1,t1)
+score_log   = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_score.txt'.format(d1,t1)
 
 ## MODEL
 pickle_dir = r'C:\Personal_Project\Lotto_Analysis\Model\randomforestmodel.pkl'
