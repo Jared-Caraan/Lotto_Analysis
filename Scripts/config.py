@@ -30,6 +30,9 @@ score_log   = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_score.txt'.format(d
 ## MODEL
 pickle_dir = r'C:\Personal_Project\Lotto_Analysis\Model\randomforestmodel.pkl'
 
+## SCALER
+scaler_dir = r'C:\Personal_Project\Lotto_Analysis\Model\randomforestscaler.pkl'
+
 ## URL SCRAPING
 url_list = []
 

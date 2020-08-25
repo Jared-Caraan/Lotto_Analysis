@@ -1,0 +1,2 @@
+2020-08-25 22:04:17,633:__main__:Loading scaler
+2020-08-25 22:04:17,829:__main__:Loading model
