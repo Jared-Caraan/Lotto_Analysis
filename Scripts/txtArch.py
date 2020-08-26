@@ -10,7 +10,7 @@ import zipfile
 import time
 
 from zipfile import ZipFile
-from config import filename_archive, dir_archive
+from config import filename_archive, delta_archive, visual_archive, train_archive, score_archive
                   
 def toArchive(filename,directory):
         with ZipFile(filename, 'w') as zipObj:
@@ -26,7 +26,10 @@ def toArchive(filename,directory):
                             
 def main():
     try:
-        toArchive(filename_archive,dir_archive)
+        toArchive(filename_archive,delta_archive)
+        toArchive(filename_archive,visual_archive)
+        toArchive(filename_archive,train_archive)
+        toArchive(filename_archive,score_archive)
     except:
         System.exit(0)
     
