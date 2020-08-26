@@ -11,7 +11,6 @@ weekday  = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
 day_type = CategoricalDtype(categories=weekday, ordered=True)
 
 ## FILES
-filename_log      = 'C:\Personal_Project\Lotto_Analysis\Logs\{}_{}_scrape.txt'.format(d1,t1)
 filename_excel    = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\PastDataResults.xlsx'
 filename_rng_test = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\RNG_test.xlsx'
 filename_z_score  = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\z_score.xlsx'
@@ -19,12 +18,14 @@ filename_odd_even = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\odd_even.
 filename_archive  = r'C:\Personal_Project\Lotto_Analysis\Archive\{}_log.zip'.format(d1)
 
 ## DIRECTORY
+scrape_archive     = r'C:\Personal_Project\Lotto_Analysis\Logs\Scrape'
 delta_archive      = r'C:\Personal_Project\Lotto_Analysis\Logs\Delta'
 visual_archive     = r'C:\Personal_Project\Lotto_Analysis\Logs\Visual'
 train_archive      = r'C:\Personal_Project\Lotto_Analysis\Logs\Train'
 score_archive      = r'C:\Personal_Project\Lotto_Analysis\Logs\Score'
 
 ## LOG
+scrape_log  = 'C:\Personal_Project\Lotto_Analysis\Logs\Scrape\{}_{}_scrape.txt'.format(d1,t1)
 delta_log   = 'C:\Personal_Project\Lotto_Analysis\Logs\Delta\{}_{}_delta.txt'.format(d1,t1)
 visual_log  = 'C:\Personal_Project\Lotto_Analysis\Logs\Visual\{}_{}_visual.txt'.format(d1,t1)
 train_log   = 'C:\Personal_Project\Lotto_Analysis\Logs\Train\{}_{}_train.txt'.format(d1,t1)
