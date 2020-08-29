@@ -51,6 +51,36 @@ def transform(soup):
     
     return final_list
 
+def odd_even(x):
+
+     pattern_str = list(x.split(","))
+     
+     pattern_list = []
+     res = "-"
+     
+     for i in pattern_str:
+        if int(i.lstrip('0')) % 2 == 0:
+            pattern_list.append("even")
+        else:
+            pattern_list.append("odd")
+     
+     return (res.join(pattern_list))
+     
+def odd_even_dist(x):
+    
+    pattern_str = list(x.split("-"))
+    
+    even_count = 0
+    odd_count = 0
+    
+    for i in pattern_str:
+        if i == 'even':
+            even_count += 1
+        else:
+            odd_count += 1
+            
+    return "Even: {}, Odd: {}".format(str(even_count), str(odd_count))
+
 def main():
 
     #Create new dataframe
@@ -92,6 +122,16 @@ def main():
         try:
             df = df.append(df_past, sort = False, ignore_index = True)
             df.drop(columns = ['Unnamed: 0'], inplace = True)
+            
+            ##Adding date detail
+            df['Date'] = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
+            df['Day_Name'] = df['Date'].dt.day_name()
+            
+            ##Odd-Column Pattern
+            df['Odd_Even'] = df['Winning Numbers'].apply(lambda x: odd_even(str(x)))
+            
+            df['Odd_Even_Dist'] = df['Odd_Even'].apply(lambda x: odd_even_dist(str(x)))
+            
             df.to_excel(filename_excel)
         except Exception as e:
             logger.error("Exception: " + str(e))
