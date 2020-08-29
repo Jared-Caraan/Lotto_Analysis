@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
-from config import filename_odd_even, train_log, test_size, rand_state, n_estimators, criterion, pickle_dir, scaler_dir
+from config import filename_excel, train_log, test_size, rand_state, n_estimators, criterion, pickle_dir, scaler_dir
 
 ## LOGGER CONFIG
 logger = logging.getLogger(__name__)
@@ -41,14 +41,14 @@ def main():
     
     ##Loading dataset
     try:
-        df = pd.read_excel(filename_odd_even)
+        df = pd.read_excel(filename_excel)
     except Exception as e:
         logger.critical("Exception: " + str(e))
     else:
         logger.debug("Reading raw data")
     
     ##Dropping columns
-    df.drop(columns=['Unnamed: 0', 'Winning Numbers', 'Odd_Even'], inplace=True)
+    df.drop(columns=['Unnamed: 0', 'Winning Numbers', 'Odd_Even', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'Day_Name'], inplace=True)
     logger.debug("Dropped columns")
     
     ##Adding features
