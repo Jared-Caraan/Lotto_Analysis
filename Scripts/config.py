@@ -32,10 +32,12 @@ train_log   = 'C:\Personal_Project\Lotto_Analysis\Logs\Train\{}_{}_train.txt'.fo
 score_log   = 'C:\Personal_Project\Lotto_Analysis\Logs\Score\{}_{}_score.txt'.format(d1,t1)
 
 ## MODEL
-pickle_dir = r'C:\Personal_Project\Lotto_Analysis\Model\randomforestmodel.pkl'
+pickle_odd_even   = r'C:\Personal_Project\Lotto_Analysis\Model\odd_even_model.pkl'
+pickle_first      = r'C:\Personal_Project\Lotto_Analysis\Model\first_model.pkl'
 
 ## SCALER
-scaler_dir = r'C:\Personal_Project\Lotto_Analysis\Model\randomforestscaler.pkl'
+scaler_odd_even   = r'C:\Personal_Project\Lotto_Analysis\Model\odd_even_scaler.pkl'
+scaler_first      = r'C:\Personal_Project\Lotto_Analysis\Model\first_scaler.pkl'
 
 ## URL SCRAPING
 url_list = []

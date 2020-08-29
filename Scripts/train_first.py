@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
-from config import filename_excel, train_log, test_size, rand_state, n_estimators, criterion, pickle_odd_even, scaler_odd_even
+from config import filename_excel, train_log, test_size, rand_state, n_estimators, criterion, pickle_first, scaler_first
 
 ## LOGGER CONFIG
 logger = logging.getLogger(__name__)
@@ -20,23 +20,6 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
 
-def factorize(row):
-    
-    if row == "Even: 0, Odd: 6":
-        return 0
-    elif row == "Even: 1, Odd: 5":
-        return 1
-    elif row == "Even: 2, Odd: 4":
-        return 2
-    elif row == "Even: 3, Odd: 3":
-        return 3
-    elif row == "Even: 4, Odd: 2":
-        return 4
-    elif row == "Even: 5, Odd: 1":
-        return 5
-    else:
-        return 6
-
 def main():
     
     ##Loading dataset
@@ -48,7 +31,7 @@ def main():
         logger.debug("Reading raw data")
     
     ##Dropping columns
-    df.drop(columns=['Unnamed: 0', 'Winning Numbers', 'Odd_Even', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'Day_Name'], inplace=True)
+    df.drop(columns=['Unnamed: 0', 'Winning Numbers', 'Odd_Even', 'Odd_Even_Dist', 'second', 'third', 'fourth', 'fifth', 'sixth', 'Day_Name'], inplace=True)
     logger.debug("Dropped columns")
     
     ##Adding features
@@ -59,12 +42,13 @@ def main():
     logger.debug("Added features")
     
     ##Rearranging columns
-    df = df[['Date', 'Day_Num', 'Month_Num', 'Year', 'Odd_Even_Dist']]
+    df = df[['Date', 'Day_Num', 'Month_Num', 'Year', 'first']]
+    
+    logger.debug(df.head())
     
     ##Factorizing categorical value
-    label_list = sorted(df['Odd_Even_Dist'].unique())
-    
-    df['Odd_Even_Dist'] = df['Odd_Even_Dist'].apply(lambda x: factorize(str(x)))
+    label_list = sorted(df['first'].unique())
+    logger.debug(label_list)
     
     factor_year = pd.factorize(df['Year'])
     df.Year = factor_year[0]
@@ -94,29 +78,30 @@ def main():
     y_pred = classifier.predict(X_test)
     
     ##Reverse factorize
-    reversefactor = dict(zip(range(8), label_list))
-    print(np.vectorize(reversefactor.get)(y_test))
+    reversefactor = dict(zip(range(len(label_list)), label_list))
+    logger.debug(reversefactor)
+    print(np.vectorize(reversefactor.get)(y_test,-1))
     y_test = np.vectorize(reversefactor.get)(y_test)
     y_pred = np.vectorize(reversefactor.get)(y_pred)
     
     ##Confusion Matrix
     print(pd.crosstab(y_test, y_pred, rownames = ['Actual Pattern'], colnames = ['Predicted Pattern']))
     
-    #Saving the scaler
-    # try:
-        # joblib.dump(scaler, scaler_dir)
-    # except Exception as e:
-        # logger.critical("Exception: " + str(e))
-    # else:
-        # logger.debug("Saving scaler")
+    ##Saving the scaler
+    try:
+        joblib.dump(scaler, scaler_first)
+    except Exception as e:
+        logger.critical("Exception: " + str(e))
+    else:
+        logger.debug("Saving scaler")
     
-    #Saving the model
-    # try:
-        # joblib.dump(classifier, pickle_dir)
-    # except Exception as e:
-        # logger.critical("Exception: " + str(e))
-    # else:
-        # logger.debug("Saving model")
+    ##Saving the model
+    try:
+        joblib.dump(classifier, pickle_first)
+    except Exception as e:
+        logger.critical("Exception: " + str(e))
+    else:
+        logger.debug("Saving model")
 
 if __name__ == "__main__":
     main()

@@ -6,7 +6,7 @@ import joblib
 
 from datetime import datetime
 from sklearn.preprocessing import StandardScaler
-from config import filename_odd_even, score_log, pickle_dir, scaler_dir
+from config import filename_odd_even, score_log, pickle_odd_even, scaler_odd_even
 
 ## LOGGER CONFIG
 logger = logging.getLogger(__name__)
