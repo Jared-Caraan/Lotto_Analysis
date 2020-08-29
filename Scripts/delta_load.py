@@ -104,6 +104,17 @@ def main():
     df = df.append({'Date': page_row[0], 'Winning Numbers': page_row[1]}, ignore_index = True)
     df[['first', 'second', 'third', 'fourth', 'fifth', 'sixth']] = df['Winning Numbers'].str.split(',', expand=True)
     logger.debug("Appending to DataFrame")
+    
+    ##Adding date detail
+    df['Date'] = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
+    df['Day_Name'] = df['Date'].dt.day_name()
+    logger.debug("Adding date feature")
+    
+    ##Odd-Column Pattern
+    df['Odd_Even'] = df['Winning Numbers'].apply(lambda x: odd_even(str(x)))
+    
+    df['Odd_Even_Dist'] = df['Odd_Even'].apply(lambda x: odd_even_dist(str(x)))
+    logger.debug("Adding odd-even feature")
         
     #Fetching the latest past result from the xlsx
     try:
@@ -122,15 +133,6 @@ def main():
         try:
             df = df.append(df_past, sort = False, ignore_index = True)
             df.drop(columns = ['Unnamed: 0'], inplace = True)
-            
-            ##Adding date detail
-            df['Date'] = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
-            df['Day_Name'] = df['Date'].dt.day_name()
-            
-            ##Odd-Column Pattern
-            df['Odd_Even'] = df['Winning Numbers'].apply(lambda x: odd_even(str(x)))
-            
-            df['Odd_Even_Dist'] = df['Odd_Even'].apply(lambda x: odd_even_dist(str(x)))
             
             df.to_excel(filename_excel)
         except Exception as e:

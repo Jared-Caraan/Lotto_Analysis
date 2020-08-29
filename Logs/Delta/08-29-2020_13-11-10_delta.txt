@@ -1,0 +1,7 @@
+2020-08-29 13:11:11,325:__main__:<Response [200]>
+2020-08-29 13:11:11,356:__main__:Extracting dates and numbers
+2020-08-29 13:11:11,356:__main__:Appending to DataFrame
+2020-08-29 13:11:11,810:__main__:Reading historical data
+2020-08-29 13:11:11,810:__main__:Latest date would be: 0   2020-08-27
+Name: Date, dtype: datetime64[ns]
+2020-08-29 13:11:11,825:__main__:Exception: time data '2020-08-27 00:00:00' does not match format '%d/%m/%Y' (match)
