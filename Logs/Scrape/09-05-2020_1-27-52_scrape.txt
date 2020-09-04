@@ -1,0 +1,204 @@
+2020-09-05 01:27:54,634:__main__:Page: 1: <Response [200]>
+2020-09-05 01:27:54,659:__main__:Page: 1: Extracting dates and numbers
+2020-09-05 01:27:54,660:__main__:Page: 1: Appending to DataFrame
+2020-09-05 01:27:55,159:__main__:Page: 2: <Response [200]>
+2020-09-05 01:27:55,187:__main__:Page: 2: Extracting dates and numbers
+2020-09-05 01:27:55,189:__main__:Page: 2: Appending to DataFrame
+2020-09-05 01:27:55,700:__main__:Page: 3: <Response [200]>
+2020-09-05 01:27:55,725:__main__:Page: 3: Extracting dates and numbers
+2020-09-05 01:27:55,727:__main__:Page: 3: Appending to DataFrame
+2020-09-05 01:27:56,228:__main__:Page: 4: <Response [200]>
+2020-09-05 01:27:56,253:__main__:Page: 4: Extracting dates and numbers
+2020-09-05 01:27:56,255:__main__:Page: 4: Appending to DataFrame
+2020-09-05 01:27:56,772:__main__:Page: 5: <Response [200]>
+2020-09-05 01:27:56,797:__main__:Page: 5: Extracting dates and numbers
+2020-09-05 01:27:56,799:__main__:Page: 5: Appending to DataFrame
+2020-09-05 01:27:57,300:__main__:Page: 6: <Response [200]>
+2020-09-05 01:27:57,325:__main__:Page: 6: Extracting dates and numbers
+2020-09-05 01:27:57,326:__main__:Page: 6: Appending to DataFrame
+2020-09-05 01:27:57,826:__main__:Page: 7: <Response [200]>
+2020-09-05 01:27:57,851:__main__:Page: 7: Extracting dates and numbers
+2020-09-05 01:27:57,852:__main__:Page: 7: Appending to DataFrame
+2020-09-05 01:27:58,362:__main__:Page: 8: <Response [200]>
+2020-09-05 01:27:58,388:__main__:Page: 8: Extracting dates and numbers
+2020-09-05 01:27:58,390:__main__:Page: 8: Appending to DataFrame
+2020-09-05 01:27:58,904:__main__:Page: 9: <Response [200]>
+2020-09-05 01:27:58,930:__main__:Page: 9: Extracting dates and numbers
+2020-09-05 01:27:58,931:__main__:Page: 9: Appending to DataFrame
+2020-09-05 01:27:59,433:__main__:Page: 10: <Response [200]>
+2020-09-05 01:27:59,482:__main__:Page: 10: Extracting dates and numbers
+2020-09-05 01:27:59,484:__main__:Page: 10: Appending to DataFrame
+2020-09-05 01:28:00,029:__main__:Page: 11: <Response [200]>
+2020-09-05 01:28:00,054:__main__:Page: 11: Extracting dates and numbers
+2020-09-05 01:28:00,056:__main__:Page: 11: Appending to DataFrame
+2020-09-05 01:28:00,646:__main__:Page: 12: <Response [200]>
+2020-09-05 01:28:00,671:__main__:Page: 12: Extracting dates and numbers
+2020-09-05 01:28:00,672:__main__:Page: 12: Appending to DataFrame
+2020-09-05 01:28:01,174:__main__:Page: 13: <Response [200]>
+2020-09-05 01:28:01,200:__main__:Page: 13: Extracting dates and numbers
+2020-09-05 01:28:01,201:__main__:Page: 13: Appending to DataFrame
+2020-09-05 01:28:01,718:__main__:Page: 14: <Response [200]>
+2020-09-05 01:28:01,743:__main__:Page: 14: Extracting dates and numbers
+2020-09-05 01:28:01,744:__main__:Page: 14: Appending to DataFrame
+2020-09-05 01:28:02,246:__main__:Page: 15: <Response [200]>
+2020-09-05 01:28:02,271:__main__:Page: 15: Extracting dates and numbers
+2020-09-05 01:28:02,273:__main__:Page: 15: Appending to DataFrame
+2020-09-05 01:28:02,793:__main__:Page: 16: <Response [200]>
+2020-09-05 01:28:02,818:__main__:Page: 16: Extracting dates and numbers
+2020-09-05 01:28:02,820:__main__:Page: 16: Appending to DataFrame
+2020-09-05 01:28:03,337:__main__:Page: 17: <Response [200]>
+2020-09-05 01:28:03,363:__main__:Page: 17: Extracting dates and numbers
+2020-09-05 01:28:03,365:__main__:Page: 17: Appending to DataFrame
+2020-09-05 01:28:03,927:__main__:Page: 18: <Response [200]>
+2020-09-05 01:28:03,956:__main__:Page: 18: Extracting dates and numbers
+2020-09-05 01:28:03,957:__main__:Page: 18: Appending to DataFrame
+2020-09-05 01:28:04,468:__main__:Page: 19: <Response [200]>
+2020-09-05 01:28:04,493:__main__:Page: 19: Extracting dates and numbers
+2020-09-05 01:28:04,495:__main__:Page: 19: Appending to DataFrame
+2020-09-05 01:28:04,998:__main__:Page: 20: <Response [200]>
+2020-09-05 01:28:05,024:__main__:Page: 20: Extracting dates and numbers
+2020-09-05 01:28:05,025:__main__:Page: 20: Appending to DataFrame
+2020-09-05 01:28:05,527:__main__:Page: 21: <Response [200]>
+2020-09-05 01:28:05,554:__main__:Page: 21: Extracting dates and numbers
+2020-09-05 01:28:05,556:__main__:Page: 21: Appending to DataFrame
+2020-09-05 01:28:06,094:__main__:Page: 22: <Response [200]>
+2020-09-05 01:28:06,123:__main__:Page: 22: Extracting dates and numbers
+2020-09-05 01:28:06,124:__main__:Page: 22: Appending to DataFrame
+2020-09-05 01:28:06,630:__main__:Page: 23: <Response [200]>
+2020-09-05 01:28:06,656:__main__:Page: 23: Extracting dates and numbers
+2020-09-05 01:28:06,658:__main__:Page: 23: Appending to DataFrame
+2020-09-05 01:28:07,189:__main__:Page: 24: <Response [200]>
+2020-09-05 01:28:07,214:__main__:Page: 24: Extracting dates and numbers
+2020-09-05 01:28:07,216:__main__:Page: 24: Appending to DataFrame
+2020-09-05 01:28:08,093:__main__:Page: 25: <Response [200]>
+2020-09-05 01:28:08,132:__main__:Page: 25: Extracting dates and numbers
+2020-09-05 01:28:08,134:__main__:Page: 25: Appending to DataFrame
+2020-09-05 01:28:08,646:__main__:Page: 26: <Response [200]>
+2020-09-05 01:28:08,671:__main__:Page: 26: Extracting dates and numbers
+2020-09-05 01:28:08,672:__main__:Page: 26: Appending to DataFrame
+2020-09-05 01:28:09,176:__main__:Page: 27: <Response [200]>
+2020-09-05 01:28:09,203:__main__:Page: 27: Extracting dates and numbers
+2020-09-05 01:28:09,204:__main__:Page: 27: Appending to DataFrame
+2020-09-05 01:28:09,718:__main__:Page: 28: <Response [200]>
+2020-09-05 01:28:09,749:__main__:Page: 28: Extracting dates and numbers
+2020-09-05 01:28:09,751:__main__:Page: 28: Appending to DataFrame
+2020-09-05 01:28:10,386:__main__:Page: 29: <Response [200]>
+2020-09-05 01:28:10,411:__main__:Page: 29: Extracting dates and numbers
+2020-09-05 01:28:10,413:__main__:Page: 29: Appending to DataFrame
+2020-09-05 01:28:10,928:__main__:Page: 30: <Response [200]>
+2020-09-05 01:28:10,957:__main__:Page: 30: Extracting dates and numbers
+2020-09-05 01:28:10,959:__main__:Page: 30: Appending to DataFrame
+2020-09-05 01:28:11,483:__main__:Page: 31: <Response [200]>
+2020-09-05 01:28:11,509:__main__:Page: 31: Extracting dates and numbers
+2020-09-05 01:28:11,510:__main__:Page: 31: Appending to DataFrame
+2020-09-05 01:28:12,020:__main__:Page: 32: <Response [200]>
+2020-09-05 01:28:12,115:__main__:Page: 32: Extracting dates and numbers
+2020-09-05 01:28:12,121:__main__:Page: 32: Appending to DataFrame
+2020-09-05 01:28:12,657:__main__:Page: 33: <Response [200]>
+2020-09-05 01:28:12,695:__main__:Page: 33: Extracting dates and numbers
+2020-09-05 01:28:12,697:__main__:Page: 33: Appending to DataFrame
+2020-09-05 01:28:13,214:__main__:Page: 34: <Response [200]>
+2020-09-05 01:28:13,253:__main__:Page: 34: Extracting dates and numbers
+2020-09-05 01:28:13,257:__main__:Page: 34: Appending to DataFrame
+2020-09-05 01:28:13,798:__main__:Page: 35: <Response [200]>
+2020-09-05 01:28:13,834:__main__:Page: 35: Extracting dates and numbers
+2020-09-05 01:28:13,836:__main__:Page: 35: Appending to DataFrame
+2020-09-05 01:28:14,384:__main__:Page: 36: <Response [200]>
+2020-09-05 01:28:14,415:__main__:Page: 36: Extracting dates and numbers
+2020-09-05 01:28:14,417:__main__:Page: 36: Appending to DataFrame
+2020-09-05 01:28:14,939:__main__:Page: 37: <Response [200]>
+2020-09-05 01:28:14,971:__main__:Page: 37: Extracting dates and numbers
+2020-09-05 01:28:14,973:__main__:Page: 37: Appending to DataFrame
+2020-09-05 01:28:15,509:__main__:Page: 38: <Response [200]>
+2020-09-05 01:28:15,539:__main__:Page: 38: Extracting dates and numbers
+2020-09-05 01:28:15,541:__main__:Page: 38: Appending to DataFrame
+2020-09-05 01:28:16,055:__main__:Page: 39: <Response [200]>
+2020-09-05 01:28:16,089:__main__:Page: 39: Extracting dates and numbers
+2020-09-05 01:28:16,090:__main__:Page: 39: Appending to DataFrame
+2020-09-05 01:28:16,700:__main__:Page: 40: <Response [200]>
+2020-09-05 01:28:16,733:__main__:Page: 40: Extracting dates and numbers
+2020-09-05 01:28:16,737:__main__:Page: 40: Appending to DataFrame
+2020-09-05 01:28:17,460:__main__:Page: 41: <Response [200]>
+2020-09-05 01:28:17,491:__main__:Page: 41: Extracting dates and numbers
+2020-09-05 01:28:17,492:__main__:Page: 41: Appending to DataFrame
+2020-09-05 01:28:18,023:__main__:Page: 42: <Response [200]>
+2020-09-05 01:28:18,060:__main__:Page: 42: Extracting dates and numbers
+2020-09-05 01:28:18,063:__main__:Page: 42: Appending to DataFrame
+2020-09-05 01:28:18,697:__main__:Page: 43: <Response [200]>
+2020-09-05 01:28:18,730:__main__:Page: 43: Extracting dates and numbers
+2020-09-05 01:28:18,732:__main__:Page: 43: Appending to DataFrame
+2020-09-05 01:28:19,725:__main__:Page: 44: <Response [200]>
+2020-09-05 01:28:19,756:__main__:Page: 44: Extracting dates and numbers
+2020-09-05 01:28:19,758:__main__:Page: 44: Appending to DataFrame
+2020-09-05 01:28:20,839:__main__:Page: 45: <Response [200]>
+2020-09-05 01:28:20,899:__main__:Page: 45: Extracting dates and numbers
+2020-09-05 01:28:20,901:__main__:Page: 45: Appending to DataFrame
+2020-09-05 01:28:21,872:__main__:Page: 46: <Response [200]>
+2020-09-05 01:28:21,915:__main__:Page: 46: Extracting dates and numbers
+2020-09-05 01:28:21,916:__main__:Page: 46: Appending to DataFrame
+2020-09-05 01:28:22,801:__main__:Page: 47: <Response [200]>
+2020-09-05 01:28:22,855:__main__:Page: 47: Extracting dates and numbers
+2020-09-05 01:28:22,857:__main__:Page: 47: Appending to DataFrame
+2020-09-05 01:28:23,822:__main__:Page: 48: <Response [200]>
+2020-09-05 01:28:23,852:__main__:Page: 48: Extracting dates and numbers
+2020-09-05 01:28:23,853:__main__:Page: 48: Appending to DataFrame
+2020-09-05 01:28:24,369:__main__:Page: 49: <Response [200]>
+2020-09-05 01:28:24,398:__main__:Page: 49: Extracting dates and numbers
+2020-09-05 01:28:24,399:__main__:Page: 49: Appending to DataFrame
+2020-09-05 01:28:24,917:__main__:Page: 50: <Response [200]>
+2020-09-05 01:28:24,964:__main__:Page: 50: Extracting dates and numbers
+2020-09-05 01:28:24,967:__main__:Page: 50: Appending to DataFrame
+2020-09-05 01:28:25,599:__main__:Page: 51: <Response [200]>
+2020-09-05 01:28:25,633:__main__:Page: 51: Extracting dates and numbers
+2020-09-05 01:28:25,635:__main__:Page: 51: Appending to DataFrame
+2020-09-05 01:28:26,178:__main__:Page: 52: <Response [200]>
+2020-09-05 01:28:26,203:__main__:Page: 52: Extracting dates and numbers
+2020-09-05 01:28:26,205:__main__:Page: 52: Appending to DataFrame
+2020-09-05 01:28:26,717:__main__:Page: 53: <Response [200]>
+2020-09-05 01:28:26,742:__main__:Page: 53: Extracting dates and numbers
+2020-09-05 01:28:26,744:__main__:Page: 53: Appending to DataFrame
+2020-09-05 01:28:27,271:__main__:Page: 54: <Response [200]>
+2020-09-05 01:28:27,297:__main__:Page: 54: Extracting dates and numbers
+2020-09-05 01:28:27,298:__main__:Page: 54: Appending to DataFrame
+2020-09-05 01:28:27,812:__main__:Page: 55: <Response [200]>
+2020-09-05 01:28:27,838:__main__:Page: 55: Extracting dates and numbers
+2020-09-05 01:28:27,840:__main__:Page: 55: Appending to DataFrame
+2020-09-05 01:28:28,359:__main__:Page: 56: <Response [200]>
+2020-09-05 01:28:28,400:__main__:Page: 56: Extracting dates and numbers
+2020-09-05 01:28:28,402:__main__:Page: 56: Appending to DataFrame
+2020-09-05 01:28:28,920:__main__:Page: 57: <Response [200]>
+2020-09-05 01:28:28,979:__main__:Page: 57: Extracting dates and numbers
+2020-09-05 01:28:28,982:__main__:Page: 57: Appending to DataFrame
+2020-09-05 01:28:29,526:__main__:Page: 58: <Response [200]>
+2020-09-05 01:28:29,568:__main__:Page: 58: Extracting dates and numbers
+2020-09-05 01:28:29,570:__main__:Page: 58: Appending to DataFrame
+2020-09-05 01:28:30,153:__main__:Page: 59: <Response [200]>
+2020-09-05 01:28:30,178:__main__:Page: 59: Extracting dates and numbers
+2020-09-05 01:28:30,179:__main__:Page: 59: Appending to DataFrame
+2020-09-05 01:28:30,746:__main__:Page: 60: <Response [200]>
+2020-09-05 01:28:30,771:__main__:Page: 60: Extracting dates and numbers
+2020-09-05 01:28:30,773:__main__:Page: 60: Appending to DataFrame
+2020-09-05 01:28:31,361:__main__:Page: 61: <Response [200]>
+2020-09-05 01:28:31,387:__main__:Page: 61: Extracting dates and numbers
+2020-09-05 01:28:31,388:__main__:Page: 61: Appending to DataFrame
+2020-09-05 01:28:31,982:__main__:Page: 62: <Response [200]>
+2020-09-05 01:28:32,019:__main__:Page: 62: Extracting dates and numbers
+2020-09-05 01:28:32,022:__main__:Page: 62: Appending to DataFrame
+2020-09-05 01:28:32,645:__main__:Page: 63: <Response [200]>
+2020-09-05 01:28:32,677:__main__:Page: 63: Extracting dates and numbers
+2020-09-05 01:28:32,679:__main__:Page: 63: Appending to DataFrame
+2020-09-05 01:28:32,680:__main__:Renaming columns
+2020-09-05 01:28:32,691:__main__:Splitting numbers into columns
+2020-09-05 01:28:32,720:__main__:        Date    Winning Numbers first second third fourth fifth sixth  Day_Name                    Odd_Even    Odd_Even_Dist
+0 2020-09-03  03,06,10,11,19,33    03     06    10     11    19    33  Thursday   odd-even-even-odd-odd-odd  Even: 2, Odd: 4
+1 2020-09-01  15,21,24,29,34,36    15     21    24     29    34    36   Tuesday  odd-odd-even-odd-even-even  Even: 3, Odd: 3
+2 2020-08-29  12,16,21,31,39,42    12     16    21     31    39    42  Saturday  even-even-odd-odd-odd-even  Even: 3, Odd: 3
+3 2020-08-27  03,05,14,19,20,23    03     05    14     19    20    23  Thursday   odd-odd-even-odd-even-odd  Even: 2, Odd: 4
+4 2020-08-25  15,17,25,37,38,39    15     17    25     37    38    39   Tuesday    odd-odd-odd-odd-even-odd  Even: 1, Odd: 5
+2020-09-05 01:28:32,741:__main__:           Date    Winning Numbers first second third fourth fifth sixth  Day_Name                    Odd_Even    Odd_Even_Dist
+1879 2007-01-20  03,13,20,25,29,37    03     13    20     25    29    37  Saturday    odd-odd-even-odd-odd-odd  Even: 1, Odd: 5
+1880 2007-01-16  01,02,03,05,23,37    01     02    03     05    23    37   Tuesday    odd-even-odd-odd-odd-odd  Even: 1, Odd: 5
+1881 2007-01-13  11,17,19,29,32,40    11     17    19     29    32    40  Saturday   odd-odd-odd-odd-even-even  Even: 2, Odd: 4
+1882 2007-01-09  11,14,16,29,39,41    11     14    16     29    39    41   Tuesday   odd-even-even-odd-odd-odd  Even: 2, Odd: 4
+1883 2007-01-06  04,15,19,22,30,39    04     15    19     22    30    39  Saturday  even-odd-odd-even-even-odd  Even: 3, Odd: 3
+2020-09-05 01:28:36,314:__main__:Excel file generated successfully
