@@ -15,7 +15,7 @@
 
 #--DECLARATIONS--#
     $script_dir = "C:\Personal_Project\Lotto_Analysis\Scripts\"
-    $script = "txtArch.py"
+    $script = "lotto_archive.py"
 
 #--EXECUTION OF PYTHON SCRIPT--#
     python "${script_dir}${script}"

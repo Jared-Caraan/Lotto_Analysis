@@ -15,7 +15,7 @@
 
 #--DECLARATIONS--#
     $script_dir = "C:\Personal_Project\Lotto_Analysis\Scripts\"
-    $script = "delta_load.py"
+    $script = "lotto_scrape_delta.py"
 
 #--EXECUTION OF PYTHON SCRIPT--#
     python "${script_dir}${script}"
