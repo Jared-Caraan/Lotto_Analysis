@@ -1,3 +1,0 @@
-2020-08-25 18:20:54,064:__main__:Reading raw data
-2020-08-25 18:20:54,065:__main__:Dropped columns
-2020-08-25 18:20:54,084:__main__:Added features
