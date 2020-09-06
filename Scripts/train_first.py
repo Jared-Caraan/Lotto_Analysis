@@ -20,6 +20,13 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
 
+def factorize(df):
+    
+    label_list = sorted(df['first'].unique())
+    
+    for i in range(0,len(label_list)):
+        
+
 def main():
     
     ##Loading dataset
