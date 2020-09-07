@@ -20,13 +20,6 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
 
-def factorize(df):
-    
-    label_list = sorted(df['first'].unique())
-    
-    for i in range(0,len(label_list)):
-        
-
 def main():
     
     ##Loading dataset
@@ -55,11 +48,14 @@ def main():
     
     ##Factorizing categorical value
     label_list = sorted(df['first'].unique())
-    logger.debug(label_list)
+    logger.debug("Label list: " + str(label_list))
+    
+    df['first'] = df['first'].replace(label_list, range(len(label_list)))
     
     factor_year = pd.factorize(df['Year'])
     df.Year = factor_year[0]
     logger.debug("Factorizing columns")
+    logger.debug(df.head(10))
     
     ##Split into dependent and independent variables
     X = df.iloc[:,1:4].values 
@@ -69,7 +65,7 @@ def main():
     ##Train and Test data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = test_size, random_state = rand_state)
     logger.debug("Creating train and test data")
-    
+   
     ##Feature scaling
     scaler = MinMaxScaler()
     X_train = scaler.fit_transform(X_train)
@@ -83,11 +79,11 @@ def main():
     
     ##Predicting the test set
     y_pred = classifier.predict(X_test)
+    logger.debug("Predicting test set")
     
     ##Reverse factorize
     reversefactor = dict(zip(range(len(label_list)), label_list))
     logger.debug(reversefactor)
-    print(np.vectorize(reversefactor.get)(y_test,-1))
     y_test = np.vectorize(reversefactor.get)(y_test)
     y_pred = np.vectorize(reversefactor.get)(y_pred)
     
