@@ -1,0 +1,10 @@
+2020-09-10 03:22:07,767:__main__:Reading raw data
+2020-09-10 03:22:07,769:__main__:Dropped columns
+2020-09-10 03:22:07,776:__main__:Added features
+2020-09-10 03:22:07,788:__main__:Factorizing columns
+2020-09-10 03:22:07,789:__main__:Splitting feature and label
+2020-09-10 03:22:07,791:__main__:Creating train and test data
+2020-09-10 03:22:07,793:__main__:Performing scaling
+2020-09-10 03:22:07,852:__main__:Training
+2020-09-10 03:22:07,924:__main__:Exception: name 'scaler_dir' is not defined
+2020-09-10 03:22:07,924:__main__:Exception: name 'pickle_dir' is not defined

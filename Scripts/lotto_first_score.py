@@ -6,7 +6,7 @@ import joblib
 
 from datetime import datetime
 from sklearn.preprocessing import StandardScaler
-from config import score_log, pickle_odd_even, scaler_odd_even
+from config import score_log, pickle_first, scaler_first
 
 ## LOGGER CONFIG
 logger = logging.getLogger(__name__)
@@ -37,7 +37,7 @@ def main():
     
     ##Load scaler
     try:
-        scaler = joblib.load(scaler_odd_even)
+        scaler = joblib.load(scaler_first)
     except Exception as e:
         logger.critical("Exception: " + str(e))
     else:
@@ -45,7 +45,7 @@ def main():
         
     ##Load model
     try:
-        model = joblib.load(pickle_odd_even)
+        model = joblib.load(pickle_first)
     except Exception as e:
         logger.critical("Exception: " + str(e))
     else:

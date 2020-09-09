@@ -95,28 +95,27 @@ def main():
     
     ##Reverse factorize
     reversefactor = dict(zip(range(8), label_list))
-    print(np.vectorize(reversefactor.get)(y_test))
     y_test = np.vectorize(reversefactor.get)(y_test)
     y_pred = np.vectorize(reversefactor.get)(y_pred)
     
     ##Confusion Matrix
     print(pd.crosstab(y_test, y_pred, rownames = ['Actual Pattern'], colnames = ['Predicted Pattern']))
     
-    #Saving the scaler
-    # try:
-        # joblib.dump(scaler, scaler_dir)
-    # except Exception as e:
-        # logger.critical("Exception: " + str(e))
-    # else:
-        # logger.debug("Saving scaler")
+    ##Saving the scaler
+    try:
+        joblib.dump(scaler, scaler_odd_even)
+    except Exception as e:
+        logger.critical("Exception: " + str(e))
+    else:
+        logger.debug("Saving scaler")
     
-    #Saving the model
-    # try:
-        # joblib.dump(classifier, pickle_dir)
-    # except Exception as e:
-        # logger.critical("Exception: " + str(e))
-    # else:
-        # logger.debug("Saving model")
+    ##Saving the model
+    try:
+        joblib.dump(classifier, pickle_odd_even)
+    except Exception as e:
+        logger.critical("Exception: " + str(e))
+    else:
+        logger.debug("Saving model")
 
 if __name__ == "__main__":
     main()
