@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
-from config import filename_excel, train_log, test_size, rand_state, n_estimators, criterion, pickle_first, scaler_first
+from config import filename_excel, train_log, test_size, rand_state, n_estimators, criterion, model_num, scaler_num, col_list
 
 ## LOGGER CONFIG
 logger = logging.getLogger(__name__)
@@ -20,42 +20,7 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
 
-def main():
-    
-    ##Loading dataset
-    try:
-        df = pd.read_excel(filename_excel)
-    except Exception as e:
-        logger.critical("Exception: " + str(e))
-    else:
-        logger.debug("Reading raw data")
-    
-    ##Dropping columns
-    df.drop(columns=['Unnamed: 0', 'Winning Numbers', 'Odd_Even', 'Odd_Even_Dist', 'second', 'third', 'fourth', 'fifth', 'sixth', 'Day_Name'], inplace=True)
-    logger.debug("Dropped columns")
-    
-    ##Adding features
-    df['Date'] = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
-    df['Day_Num'] = df['Date'].dt.weekday
-    df['Month_Num'] = df['Date'].dt.month
-    df['Year'] = df['Date'].dt.year
-    logger.debug("Added features")
-    
-    ##Rearranging columns
-    df = df[['Date', 'Day_Num', 'Month_Num', 'Year', 'first']]
-    
-    logger.debug(df.head())
-    
-    ##Factorizing categorical value
-    label_list = sorted(df['first'].unique())
-    logger.debug("Label list: " + str(label_list))
-    
-    df['first'] = df['first'].replace(label_list, range(len(label_list)))
-    
-    factor_year = pd.factorize(df['Year'])
-    df.Year = factor_year[0]
-    logger.debug("Factorizing columns")
-    logger.debug(df.head(10))
+def train(df, col, label, scaler_, model):
     
     ##Split into dependent and independent variables
     X = df.iloc[:,1:4].values 
@@ -82,7 +47,7 @@ def main():
     logger.debug("Predicting test set")
     
     ##Reverse factorize
-    reversefactor = dict(zip(range(len(label_list)), label_list))
+    reversefactor = dict(zip(range(len(label)), label))
     logger.debug(reversefactor)
     y_test = np.vectorize(reversefactor.get)(y_test)
     y_pred = np.vectorize(reversefactor.get)(y_pred)
@@ -90,9 +55,12 @@ def main():
     ##Confusion Matrix
     print(pd.crosstab(y_test, y_pred, rownames = ['Actual Pattern'], colnames = ['Predicted Pattern']))
     
+    scaler_ = scaler_ + "_{}.pkl".format(col)
+    model   = model + "_{}.pkl".format(col)
+    
     ##Saving the scaler
     try:
-        joblib.dump(scaler, scaler_first)
+        joblib.dump(scaler, scaler_)
     except Exception as e:
         logger.critical("Exception: " + str(e))
     else:
@@ -100,11 +68,50 @@ def main():
     
     ##Saving the model
     try:
-        joblib.dump(classifier, pickle_first)
+        joblib.dump(classifier, model)
     except Exception as e:
         logger.critical("Exception: " + str(e))
     else:
         logger.debug("Saving model")
+
+def main():
+    
+    logger.debug("Generating scaler and model for the six columns")
+    
+    for i in range(len(col_list)):
+        
+        ##Loading dataset
+        try:
+            df = pd.read_excel(filename_excel)
+        except Exception as e:
+            logger.critical("Exception: " + str(e))
+        else:
+            logger.debug("Reading raw data")
+        
+        ##Adding features
+        df['Date'] = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
+        df['Day_Num'] = df['Date'].dt.weekday
+        df['Month_Num'] = df['Date'].dt.month
+        df['Year'] = df['Date'].dt.year
+        logger.debug("Added features")
+        
+        df = df[['Date', 'Day_Num', 'Month_Num', 'Year', col_list[i]]]
+        
+        ##Factorizing categorical value
+        logger.debug("Column: " + str(col_list[i]))
+        logger.debug(df.head())
+        label_list = sorted(df[col_list[i]].unique())
+        logger.debug("Label list: " + str(label_list))
+        
+        factor_list = list(np.arange(0,len(label_list)))
+        df.loc[:,col_list[i]] = df.loc[:,col_list[i]].replace(label_list, factor_list)
+    
+        factor_year = pd.factorize(df['Year'])
+        df.Year = factor_year[0]
+        logger.debug("Factorizing columns")
+        logger.debug(df.head())
+        
+        train(df, str(col_list[i]), label_list, scaler_num, model_num)
 
 if __name__ == "__main__":
     main()
