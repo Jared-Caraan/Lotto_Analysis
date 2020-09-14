@@ -23,7 +23,7 @@ logger.addHandler(file_handler)
 def train(df, col, label, scaler_, model):
     
     ##Split into dependent and independent variables
-    X = df.iloc[:,1:4].values 
+    X = df.iloc[:,0:4].values 
     y = df.iloc[:,4].values
     logger.debug("Splitting feature and label")
     
@@ -93,9 +93,12 @@ def main():
         df['Day_Num'] = df['Date'].dt.weekday
         df['Month_Num'] = df['Date'].dt.month
         df['Year'] = df['Date'].dt.year
+        df['Week'] = df['Date'].dt.strftime('%V')
+        week_int = pd.to_numeric(df['Week'])
+        df.Week = week_int
         logger.debug("Added features")
         
-        df = df[['Date', 'Day_Num', 'Month_Num', 'Year', col_list[i]]]
+        df = df[['Day_Num', 'Month_Num', 'Year', 'Week', col_list[i]]]
         
         ##Factorizing categorical value
         logger.debug("Column: " + str(col_list[i]))

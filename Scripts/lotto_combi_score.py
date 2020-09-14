@@ -64,8 +64,9 @@ def main():
     open.append(input_date.weekday())
     open.append(input_date.month)
     open.append(0)
+    open.append(int(input_date.strftime('%V')))
     
-    arr = np.array(open).reshape(1,3)
+    arr = np.array(open).reshape(1,4)
     
     for i in range(len(col_list)):
         logger.debug("Predicting " + col_list[i] )
