@@ -52,9 +52,6 @@ def train(df, col, label, scaler_, model):
     y_test = np.vectorize(reversefactor.get)(y_test)
     y_pred = np.vectorize(reversefactor.get)(y_pred)
     
-    ##Confusion Matrix
-    print(pd.crosstab(y_test, y_pred, rownames = ['Actual Pattern'], colnames = ['Predicted Pattern']))
-    
     ##Metrics
     try:
         logger.debug("Accuracy = {0:.2f}".format(accuracy_score(y_test,y_pred) * 100))
