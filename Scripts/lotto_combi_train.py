@@ -6,7 +6,7 @@ import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, accuracy_score
 from config import filename_excel, train_log, test_size, rand_state, n_estimators, criterion, model_num, scaler_num, col_list
 
 ## LOGGER CONFIG
@@ -54,6 +54,12 @@ def train(df, col, label, scaler_, model):
     
     ##Confusion Matrix
     print(pd.crosstab(y_test, y_pred, rownames = ['Actual Pattern'], colnames = ['Predicted Pattern']))
+    
+    ##Metrics
+    try:
+        logger.debug("Accuracy = {0:.2f}".format(accuracy_score(y_test,y_pred) * 100))
+    except Exception as e:
+        logger.critical("Exception: " + str(e))
     
     scaler_ = scaler_ + "_{}.pkl".format(col)
     model   = model + "_{}.pkl".format(col)
