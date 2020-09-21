@@ -125,6 +125,10 @@ def main():
     logger.debug(df.head(5))
     logger.debug(df.tail(5))
     
+    ##Remove duplicates
+    logger.debug("Removing duplicates (if there's any)")
+    df.drop_duplicates(inplace=True, ignore_index=True)
+    
     ##Transferring to Excel
     try:
         df.to_excel(filename_excel)

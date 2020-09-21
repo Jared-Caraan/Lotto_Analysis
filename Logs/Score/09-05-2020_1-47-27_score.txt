@@ -1,4 +1,0 @@
-2020-09-05 01:47:27,594:__main__:Loading scaler
-2020-09-05 01:47:27,782:__main__:Loading model
-2020-09-05 01:47:27,782:__main__:Scaling input
-2020-09-05 01:47:27,785:__main__:Predicted class: [4]

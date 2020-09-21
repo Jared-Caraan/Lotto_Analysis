@@ -5,7 +5,7 @@
     -----------  ------                 -----------
     Change Date  Author                 Description
     -----------  ------                 -----------
-    02-27-2020   j.caraan04@gmail.com   Scheduled checking of new 6/42 lotto result from the website, and appending it to the datasheet
+    09-22-2020   j.caraan04@gmail.com   Scheduled checking of new 6/42 lotto result from the website, and appending it to the datasheet
 
 #>
 
@@ -15,7 +15,7 @@
 
 #--DECLARATIONS--#
     $script_dir = "C:\Personal_Project\Lotto_Analysis\Scripts\"
-    $script = "lotto_scrape_delta.py"
+    $script = "lotto_load_delta.py"
 
 #--EXECUTION OF PYTHON SCRIPT--#
     python "${script_dir}${script}"

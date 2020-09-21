@@ -1,8 +1,0 @@
-2020-08-30 01:32:35,129:__main__:Reading raw data
-2020-08-30 01:32:35,131:__main__:Dropped columns
-2020-08-30 01:32:35,136:__main__:Added features
-2020-08-30 01:32:35,142:__main__:Factorizing columns
-2020-08-30 01:32:35,145:__main__:Splitting feature and label
-2020-08-30 01:32:35,146:__main__:Creating train and test data
-2020-08-30 01:32:35,147:__main__:Performing scaling
-2020-08-30 01:32:35,186:__main__:Training
