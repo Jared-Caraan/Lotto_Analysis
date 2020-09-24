@@ -48,7 +48,6 @@ def train(df, col, label, scaler_, model):
     
     ##Reverse factorize
     reversefactor = dict(zip(range(len(label)), label))
-    logger.debug(reversefactor)
     y_test = np.vectorize(reversefactor.get)(y_test)
     y_pred = np.vectorize(reversefactor.get)(y_pred)
     
