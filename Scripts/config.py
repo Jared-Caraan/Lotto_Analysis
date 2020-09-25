@@ -50,7 +50,7 @@ for i in range(1,64):
     url_list.append(url)
     
 ## Hyperparameters
-test_size      = 0.2
+test_size      = 0.15
 rand_state     = 10
 n_estimators   = 10
 criterion      = 'entropy'
