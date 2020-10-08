@@ -27,19 +27,19 @@ def train(df, col, label, scaler_, model):
     y = df.iloc[:,4].values
     logger.debug("Splitting feature and label")
     
-    ##Train and Test data
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = test_size, random_state = rand_state)
-    logger.debug("Creating train and test data")
+    #Train and Test data
+    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = test_size, random_state = rand_state)
+    # logger.debug("Creating train and test data")
    
     ##Feature scaling
     scaler = MinMaxScaler()
-    X_train = scaler.fit_transform(X_train)
-    X_test = scaler.transform(X_test)
+    X_train = scaler.fit_transform(X)
+    X_test = scaler.transform(X)
     logger.debug("Performing scaling")
     
     ##Training model
     classifier = RandomForestClassifier(n_estimators = n_estimators, criterion = criterion, random_state = rand_state)
-    classifier.fit(X_train, y_train)
+    classifier.fit(X_train, y)
     logger.debug("Training")
     
     ##Predicting the test set
@@ -48,7 +48,7 @@ def train(df, col, label, scaler_, model):
     
     ##Reverse factorize
     reversefactor = dict(zip(range(len(label)), label))
-    y_test = np.vectorize(reversefactor.get)(y_test)
+    y_test = np.vectorize(reversefactor.get)(y)
     y_pred = np.vectorize(reversefactor.get)(y_pred)
     
     ##Metrics
