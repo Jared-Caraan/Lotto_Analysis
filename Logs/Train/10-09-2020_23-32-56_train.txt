@@ -1,0 +1,2 @@
+2020-10-09 23:32:56,900:__main__:Generating scaler and model for the six columns
+2020-10-09 23:32:57,139:__main__:Reading raw data

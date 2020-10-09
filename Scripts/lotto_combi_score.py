@@ -52,7 +52,7 @@ def score(arr, col, scaler_, model_):
 
 def main():
     
-    open = []
+    open      = []
     pred_list = []
     
     try:
@@ -62,11 +62,9 @@ def main():
     
     input_date = datetime.strptime(args[1], '%m/%d/%Y')
     open.append(input_date.weekday())
-    open.append(input_date.month)
     open.append(0)
-    open.append(int(input_date.strftime('%V')))
     
-    arr = np.array(open).reshape(1,4)
+    arr = np.array(open).reshape(1,2)
     
     for i in range(len(col_list)):
         logger.debug("Predicting " + col_list[i] )

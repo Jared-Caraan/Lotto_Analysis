@@ -23,8 +23,8 @@ logger.addHandler(file_handler)
 def train(df, col, label, scaler_, model):
     
     ##Split into dependent and independent variables
-    X = df.iloc[:,0:4].values 
-    y = df.iloc[:,4].values
+    X = df.iloc[:,0:2].values 
+    y = df.iloc[:,2].values
     logger.debug("Splitting feature and label")
     
     ##Train and Test data
@@ -32,9 +32,9 @@ def train(df, col, label, scaler_, model):
     logger.debug("Creating train and test data")
    
     ##Feature scaling
-    scaler = MinMaxScaler()
+    scaler  = MinMaxScaler()
     X_train = scaler.fit_transform(X_train)
-    X_test = scaler.transform(X_test)
+    X_test  = scaler.transform(X_test)
     logger.debug("Performing scaling")
     
     ##Training model
@@ -48,8 +48,9 @@ def train(df, col, label, scaler_, model):
     
     ##Reverse factorize
     reversefactor = dict(zip(range(len(label)), label))
-    y_test = np.vectorize(reversefactor.get)(y_test)
-    y_pred = np.vectorize(reversefactor.get)(y_pred)
+    y_test        = np.vectorize(reversefactor.get)(y_test)
+    y_pred        = np.vectorize(reversefactor.get)(y_pred)
+    logger.debug(reversefactor)
     
     ##Metrics
     try:
@@ -91,16 +92,13 @@ def main():
             logger.debug("Reading raw data")
         
         ##Adding features
-        df['Date'] = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
-        df['Day_Num'] = df['Date'].dt.weekday
-        df['Month_Num'] = df['Date'].dt.month
-        df['Year'] = df['Date'].dt.year
-        df['Week'] = df['Date'].dt.strftime('%V')
-        week_int = pd.to_numeric(df['Week'])
-        df.Week = week_int
+        df['Date']      = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
+        df['Day_Num']   = df['Date'].dt.weekday
+        df['Year']      = df['Date'].dt.year
+        
         logger.debug("Added features")
         
-        df = df[['Day_Num', 'Month_Num', 'Year', 'Week', col_list[i]]]
+        df = df[['Day_Num', 'Year', col_list[i]]]
         
         ##Factorizing categorical value
         logger.debug("Column: " + str(col_list[i]))
@@ -112,7 +110,8 @@ def main():
         df.loc[:,col_list[i]] = df.loc[:,col_list[i]].replace(label_list, factor_list)
     
         factor_year = pd.factorize(df['Year'])
-        df.Year = factor_year[0]
+        df.Year     = factor_year[0]
+        
         logger.debug("Factorizing columns")
         logger.debug(df.head())
         
