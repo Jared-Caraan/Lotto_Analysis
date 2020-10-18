@@ -48,6 +48,8 @@ for i in range(1,64):
     clause = "&orderby=new"
     url    = "https://www.lotto-8.com/philippines/listltoPH42.asp?indexpage={}{}".format(page,clause)
     url_list.append(url)
+
+first_batch = "https://lottotips888.blogspot.com/2008/09/philippine-lotto-results-642-year-1995.html"
     
 ## Hyperparameters
 test_size      = 0.15
