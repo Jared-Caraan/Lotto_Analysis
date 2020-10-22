@@ -51,9 +51,13 @@ for i in range(1,64):
     url_list.append(url)
 
 first_batch = "https://lottotips888.blogspot.com/2008/09/philippine-lotto-results-642-year-1995.html"
+second_batch = "http://www.theluckygene.com/LotteryResults.aspx?gid=LottoPH"
     
 ## Hyperparameters
 test_size      = 0.15
 rand_state     = 10
 n_estimators   = 10
 criterion      = 'entropy'
+
+## DRIVER
+chromedriver = 'C:\Driver\chromedriver_win32\chromedriver.exe'
