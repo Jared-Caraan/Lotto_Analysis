@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
-from config import filename_excel, train_log, test_size, rand_state, n_estimators, criterion, model_num, scaler_num, col_list
+from config import filename_all, train_log, test_size, rand_state, n_estimators, criterion, model_num, scaler_num, col_list
 
 ## LOGGER CONFIG
 logger = logging.getLogger(__name__)
@@ -85,7 +85,7 @@ def main():
         
         ##Loading dataset
         try:
-            df = pd.read_excel(filename_excel)
+            df = pd.read_excel(filename_all)
         except Exception as e:
             logger.critical("Exception: " + str(e))
         else:

@@ -15,6 +15,7 @@ day_type = CategoricalDtype(categories=weekday, ordered=True)
 filename_excel    = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\PastDataResults.xlsx'
 filename_1995     = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\Results_1995.xlsx'
 filename_2005     = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\Results_2005.xlsx'
+filename_all      = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\Results_all.xlsx'
 filename_rng_test = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\RNG_test.xlsx'
 filename_z_score  = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\z_score.xlsx'
 filename_odd_even = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\odd_even.xlsx'
