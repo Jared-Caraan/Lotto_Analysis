@@ -1,0 +1,19 @@
+2020-11-02 03:19:39,337:__main__:Generating scaler and model for the six columns
+2020-11-02 03:19:39,891:__main__:Reading raw data
+2020-11-02 03:19:39,891:__main__:Added features
+2020-11-02 03:19:39,891:__main__:Column: first
+2020-11-02 03:19:39,891:__main__:   Day_Num  Year  first
+0        3  2020      1
+1        1  2020      1
+2        5  2020      7
+3        3  2020      2
+4        1  2020      3
+2020-11-02 03:19:39,926:__main__:Label list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 26, 27, 28]
+2020-11-02 03:19:39,934:__main__:Factorizing columns
+2020-11-02 03:19:39,934:__main__:   Day_Num  Year  first
+0        3     0      0
+1        1     0      0
+2        5     0      6
+3        3     0      1
+4        1     0      2
+2020-11-02 03:19:39,942:__main__:Splitting feature and label
