@@ -6,12 +6,9 @@ def main():
     
     df1 = pd.read_excel(filename_excel)
     df2 = pd.read_excel(filename_2005)
-    #df3 = pd.read_excel(filename_1995)
     
     df1.drop(columns = ['Unnamed: 0'], inplace = True)
     df2.drop(columns = ['Unnamed: 0'], inplace = True)
-    #df3.drop(columns = ['Unnamed: 0'], inplace = True)
-    #df3.sort_values(by = 'Date', ascending = False, inplace = True)
     
     final_df = pd.concat([df1,df2]).drop_duplicates().reset_index(drop=True)
     
