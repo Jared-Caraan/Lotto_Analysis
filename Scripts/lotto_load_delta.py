@@ -4,7 +4,7 @@ import pandas as pd
 import logging
 
 from bs4 import BeautifulSoup
-from config import delta_log, filename_excel, url_list
+from config import delta_log, filename_all, url_list
 
 #Logger Configuration
 logger = logging.getLogger(__name__)
@@ -118,7 +118,7 @@ def main():
         
     #Fetching the latest past result from the xlsx
     try:
-        df_past = pd.read_excel(filename_excel)
+        df_past = pd.read_excel(filename_all)
     except Exception as e:
         logger.error("Exception: " + str(e))
     else:
@@ -134,7 +134,7 @@ def main():
             df = df.append(df_past, sort = False, ignore_index = True)
             df.drop(columns = ['Unnamed: 0'], inplace = True)
             
-            df.to_excel(filename_excel)
+            df.to_excel(filename_all)
         except Exception as e:
             logger.error("Exception: " + str(e))
         else:
