@@ -1,5 +1,0 @@
-2020-10-20 23:35:36,678:__main__:Extracting dates and numbers
-2020-10-20 23:35:36,694:__main__:Adding extra columns
-2020-10-20 23:35:36,710:__main__:Converting results to numbers
-2020-10-20 23:35:36,718:__main__:Renaming columns
-2020-10-20 23:35:37,583:__main__:Exception: [Errno 22] Invalid argument: 'C:\\Personal_Project\\Lotto_Analysis\\Data_Gathering\x01995_Results.xlsx'
