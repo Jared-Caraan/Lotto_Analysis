@@ -19,7 +19,11 @@ filename_all      = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\Results_a
 filename_rng_test = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\RNG_test.xlsx'
 filename_z_score  = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\z_score.xlsx'
 filename_odd_even = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\odd_even.xlsx'
-filename_archive  = r'C:\Personal_Project\Lotto_Analysis\Archive\{}_log.zip'.format(d1)
+filename_archS    = r'C:\Personal_Project\Lotto_Analysis\Archive\{}_scrape.zip'.format(d1)
+filename_archD    = r'C:\Personal_Project\Lotto_Analysis\Archive\{}_delta.zip'.format(d1)
+filename_archV    = r'C:\Personal_Project\Lotto_Analysis\Archive\{}_visual.zip'.format(d1)
+filename_archT    = r'C:\Personal_Project\Lotto_Analysis\Archive\{}_train.zip'.format(d1)
+filename_archP    = r'C:\Personal_Project\Lotto_Analysis\Archive\{}_predict.zip'.format(d1)
 
 ## DIRECTORY
 scrape_archive = r'C:\Personal_Project\Lotto_Analysis\Logs\Scrape'
