@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-from sklearn.feature_selection import SelectKBest, f_classif
+from sklearn.feature_selection import SelectKBest, f_classif, f_regression
 from config import filename_excel
 
 def main():
@@ -32,8 +32,8 @@ def main():
     X = df.iloc[:,0:4].values 
     y = df.iloc[:,4].values
     
-    X_new = SelectKBest(score_func = f_classif, k=2).fit_transform(X,y)
-    
+    X_new = SelectKBest(score_func = f_regression, k=2).fit_transform(X,y)
+    print(df.head())
     print(X_new[:4])
 
 if __name__ == "__main__":

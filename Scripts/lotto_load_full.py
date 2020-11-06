@@ -6,7 +6,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from config import scrape_log, filename_excel, url_list
 
-##Logger Configuration
+#Logger Configuration
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
@@ -17,7 +17,7 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
 
-##Removing HTML Tags to snip only the date
+#Removing HTML Tags to snip only the date
 def extract_date(a):
 
     a   = str(a).replace("<br>", "<br/>")
@@ -27,7 +27,7 @@ def extract_date(a):
     
     return res
 
-##Removing HTML Tags to snip only the winning numbers
+#Removing HTML Tags to snip only the winning numbers
 def extract_num(a):
 
     a   = str(a).replace(u'\xa0', '')
@@ -37,7 +37,7 @@ def extract_num(a):
     
     return res
 
-##Data Transformation to return only the date and the winning numbers
+#Data Transformation to return only the date and the winning numbers
 def transform(soup):
 
     row       = soup.findAll('td')
@@ -84,10 +84,10 @@ def odd_even_dist(x):
     
 def main():
     
-    ##Create new dataframe
+    #Create new dataframe
     df = pd.DataFrame()
 
-    ##Get response from website 
+    #Get response from website 
     for idx, val in enumerate(url_list):
         try:
             response = requests.get(val)
@@ -96,7 +96,7 @@ def main():
         else:
             logger.debug("Page: " + str(idx+1) + ": " + str(response))
     
-        ##Parsing the html structure
+        #Parsing the html structure
         soup = BeautifulSoup(response.text, "html.parser")
         
         page_row = transform(soup)
@@ -105,31 +105,38 @@ def main():
         df = df.append(page_row, ignore_index = True)
         logger.debug("Page: " + str(idx+1) + ": " + "Appending to DataFrame")
     
-    ##Rename columns
+    #Rename columns
     df = df.rename(columns={0: "Date", 1: "Winning Numbers"})
     logger.debug("Renaming columns")
     
-    ##Splitting values into different columns
+    #Splitting values into different columns
     df[['first', 'second', 'third', 'fourth', 'fifth', 'sixth']] = df['Winning Numbers'].str.split(',', expand=True)
     logger.debug("Splitting numbers into columns")
     
-    ##Adding date detail
-    df['Date'] = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
+    #Adding date detail
+    df['Date']     = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
     df['Day_Name'] = df['Date'].dt.day_name()
     
-    ##Odd-Column Pattern
-    df['Odd_Even'] = df['Winning Numbers'].apply(lambda x: odd_even(str(x)))
-    
+    #Odd-Column Pattern
+    df['Odd_Even']      = df['Winning Numbers'].apply(lambda x: odd_even(str(x)))
     df['Odd_Even_Dist'] = df['Odd_Even'].apply(lambda x: odd_even_dist(str(x)))
+    
+    #Convert to numeric
+    df['first']  = df['first'].astype(int)
+    df['second'] = df['second'].astype(int)
+    df['third']  = df['third'].astype(int)
+    df['fourth'] = df['fourth'].astype(int)
+    df['fifth']  = df['fifth'].astype(int)
+    df['sixth']  = df['sixth'].astype(int)
     
     logger.debug(df.head(5))
     logger.debug(df.tail(5))
     
-    ##Remove duplicates
+    #Remove duplicates
     logger.debug("Removing duplicates (if there's any)")
     df.drop_duplicates(inplace=True, ignore_index=True)
     
-    ##Transferring to Excel
+    #Transferring to Excel
     try:
         df.to_excel(filename_excel)
     except Exception as e:

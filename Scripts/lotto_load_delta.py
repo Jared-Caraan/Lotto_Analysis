@@ -105,16 +105,23 @@ def main():
     df[['first', 'second', 'third', 'fourth', 'fifth', 'sixth']] = df['Winning Numbers'].str.split(',', expand=True)
     logger.debug("Appending to DataFrame")
     
-    ##Adding date detail
+    #Adding date detail
     df['Date'] = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
     df['Day_Name'] = df['Date'].dt.day_name()
     logger.debug("Adding date feature")
     
-    ##Odd-Column Pattern
-    df['Odd_Even'] = df['Winning Numbers'].apply(lambda x: odd_even(str(x)))
-    
+    #Odd-Column Pattern
+    df['Odd_Even']      = df['Winning Numbers'].apply(lambda x: odd_even(str(x)))
     df['Odd_Even_Dist'] = df['Odd_Even'].apply(lambda x: odd_even_dist(str(x)))
     logger.debug("Adding odd-even feature")
+    
+    #Convert to numeric
+    df['first']  = df['first'].astype(int)
+    df['second'] = df['second'].astype(int)
+    df['third']  = df['third'].astype(int)
+    df['fourth'] = df['fourth'].astype(int)
+    df['fifth']  = df['fifth'].astype(int)
+    df['sixth']  = df['sixth'].astype(int)
         
     #Fetching the latest past result from the xlsx
     try:

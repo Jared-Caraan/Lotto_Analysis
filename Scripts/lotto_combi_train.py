@@ -22,37 +22,37 @@ logger.addHandler(file_handler)
 
 def train(df, col, label, scaler_, model):
     
-    ##Split into dependent and independent variables
+    #Split into dependent and independent variables
     X = df.iloc[:,0:2].values 
     y = df.iloc[:,2].values
     logger.debug("Splitting feature and label")
     
-    ##Train and Test data
+    #Train and Test data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = test_size, random_state = rand_state)
     logger.debug("Creating train and test data")
    
-    ##Feature scaling
+    #Feature scaling
     scaler  = MinMaxScaler()
     X_train = scaler.fit_transform(X_train)
     X_test  = scaler.transform(X_test)
     logger.debug("Performing scaling")
     
-    ##Training model
+    #Training model
     classifier = RandomForestClassifier(n_estimators = n_estimators, criterion = criterion, random_state = rand_state)
     classifier.fit(X_train, y_train)
     logger.debug("Training")
     
-    ##Predicting the test set
+    #Predicting the test set
     y_pred = classifier.predict(X_test)
     logger.debug("Predicting test set")
     
-    ##Reverse factorize
+    #Reverse factorize
     reversefactor = dict(zip(range(len(label)), label))
     y_test        = np.vectorize(reversefactor.get)(y_test)
     y_pred        = np.vectorize(reversefactor.get)(y_pred)
     logger.debug(reversefactor)
     
-    ##Metrics
+    #Metrics
     try:
         logger.debug("Accuracy = {0:.2f}".format(accuracy_score(y_test,y_pred) * 100))
     except Exception as e:
@@ -61,7 +61,7 @@ def train(df, col, label, scaler_, model):
     scaler_ = scaler_ + "_{}.pkl".format(col)
     model   = model + "_{}.pkl".format(col)
     
-    ##Saving the scaler
+    #Saving the scaler
     try:
         joblib.dump(scaler, scaler_)
     except Exception as e:
@@ -69,7 +69,7 @@ def train(df, col, label, scaler_, model):
     else:
         logger.debug("Saving scaler")
     
-    ##Saving the model
+    #Saving the model
     try:
         joblib.dump(classifier, model)
     except Exception as e:
@@ -83,7 +83,7 @@ def main():
     
     for i in range(len(col_list)):
         
-        ##Loading dataset
+        #Loading dataset
         try:
             df = pd.read_excel(filename_all)
         except Exception as e:
@@ -91,7 +91,7 @@ def main():
         else:
             logger.debug("Reading raw data")
         
-        ##Adding features
+        #Adding features
         df['Date']      = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
         df['Day_Num']   = df['Date'].dt.weekday
         df['Year']      = df['Date'].dt.year
@@ -100,7 +100,7 @@ def main():
         
         df = df[['Day_Num', 'Year', col_list[i]]]
         
-        ##Factorizing categorical value
+        #Factorizing categorical value
         logger.debug("Column: " + str(col_list[i]))
         logger.debug(df.head())
         label_list = sorted(df[col_list[i]].unique())
