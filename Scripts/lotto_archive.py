@@ -10,7 +10,7 @@ import zipfile
 import time
 
 from zipfile import ZipFile
-from config import *
+from config import archive_files, delete_zipped, filename_archive
                   
 def toArchive(filename,directory):
         with ZipFile(filename, 'w') as zipObj:
@@ -20,9 +20,10 @@ def toArchive(filename,directory):
                         path = os.path.join(folder,file)
                         info = os.stat(path)
                         mtime = dt.datetime.fromtimestamp(info.st_mtime)
-                        if mtime <= (dt.datetime.now() - dt.timedelta(days = 7)):
+                        if mtime <= (dt.datetime.now() - dt.timedelta(days = 14)):
+                            print(str(os.path.join(folder,file)))
                             zipObj.write(os.path.join(folder,file), file, compress_type = zipfile.ZIP_DEFLATED)
-                            #os.remove(os.path.join(folder,file))
+                            os.remove(os.path.join(folder,file))
 
 def toDelete(directory):
     for folder, subfolders, files in os.walk(directory):
@@ -31,16 +32,12 @@ def toDelete(directory):
                 path = os.path.join(folder,file)
                 info = os.stat(path)
                 mtime = dt.datetime.fromtimestamp(info.st_mtime)
-                if mtime <= (dt.datetime.now() - dt.timedelta(weeks = 8)):
+                if mtime <= (dt.datetime.now() - dt.timedelta(days = 45)):
                     os.remove(os.path.join(folder,file))
                             
 def main():
     try:
-        toArchive(filename_archS,scrape_archive)
-        toArchive(filename_archD,delta_archive)
-        toArchive(filename_archV,visual_archive)
-        toArchive(filename_archT,train_archive)
-        toArchive(filename_archP,score_archive)
+        toArchive(filename_archive,archive_files)
         toDelete(delete_zipped)
     except:
         System.exit(0)
