@@ -31,6 +31,7 @@ delta_archive  = r'C:\Personal_Project\Lotto_Analysis\Logs\Delta'
 visual_archive = r'C:\Personal_Project\Lotto_Analysis\Logs\Visual'
 train_archive  = r'C:\Personal_Project\Lotto_Analysis\Logs\Train'
 score_archive  = r'C:\Personal_Project\Lotto_Analysis\Logs\Score'
+delete_zipped  = r'C:\Personal_Project\Lotto_Analysis\Archive'
 
 ## LOG
 scrape_log = 'C:\Personal_Project\Lotto_Analysis\Logs\Scrape\{}_{}_scrape.txt'.format(d1,t1)

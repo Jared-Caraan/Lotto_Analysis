@@ -22,7 +22,17 @@ def toArchive(filename,directory):
                         mtime = dt.datetime.fromtimestamp(info.st_mtime)
                         if mtime <= (dt.datetime.now() - dt.timedelta(days = 7)):
                             zipObj.write(os.path.join(folder,file), file, compress_type = zipfile.ZIP_DEFLATED)
-                            os.remove(os.path.join(folder,file))
+                            #os.remove(os.path.join(folder,file))
+
+def toDelete(directory):
+    for folder, subfolders, files in os.walk(directory):
+        for file in files:
+            if file.endswith('.zip'):
+                path = os.path.join(folder,file)
+                info = os.stat(path)
+                mtime = dt.datetime.fromtimestamp(info.st_mtime)
+                if mtime <= (dt.datetime.now() - dt.timedelta(weeks = 8)):
+                    os.remove(os.path.join(folder,file))
                             
 def main():
     try:
@@ -31,6 +41,7 @@ def main():
         toArchive(filename_archV,visual_archive)
         toArchive(filename_archT,train_archive)
         toArchive(filename_archP,score_archive)
+        toDelete(delete_zipped)
     except:
         System.exit(0)
     
