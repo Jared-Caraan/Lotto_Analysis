@@ -3,11 +3,13 @@ import numpy as np
 import pandas as pd
 import joblib
 
+from pprint import pprint
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import confusion_matrix, accuracy_score
-from config import filename_all, train_log, test_size, rand_state, n_estimators, criterion, model_num, scaler_num, col_list
+from config import *
 
 ## LOGGER CONFIG
 logger = logging.getLogger(__name__)
@@ -38,12 +40,13 @@ def train(df, col, label, scaler_, model):
     logger.debug("Performing scaling")
     
     #Training model
-    classifier = RandomForestClassifier(n_estimators = n_estimators, criterion = criterion, random_state = rand_state)
-    classifier.fit(X_train, y_train)
+    classifier = RandomForestClassifier()
+    clf = RandomizedSearchCV(classifier, model_params, n_iter = 100, cv = 5, random_state = 1)
+    clf.fit(X_train, y_train)
     logger.debug("Training")
     
     #Predicting the test set
-    y_pred = classifier.predict(X_test)
+    y_pred = clf.predict(X_test)
     logger.debug("Predicting test set")
     
     #Reverse factorize
@@ -71,7 +74,7 @@ def train(df, col, label, scaler_, model):
     
     #Saving the model
     try:
-        joblib.dump(classifier, model)
+        joblib.dump(clf, model)
     except Exception as e:
         logger.critical("Exception: " + str(e))
     else:
