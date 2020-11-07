@@ -37,7 +37,7 @@ def train(df, col, label, scaler_, model):
     X_test  = scaler.transform(X_test)
     
     #Training model
-    classifier = RandomForestClassifier(n_estimators = n_estimators, criterion = criterion, random_state = rand_state)
+    classifier = RandomForestClassifier()
     clf = RandomizedSearchCV(classifier, model_params, n_iter = 100, cv = 5, random_state = 1)
     clf.fit(X_train, y_train)
     
