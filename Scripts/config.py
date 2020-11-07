@@ -1,6 +1,7 @@
 from datetime import date
 from datetime import datetime
 from pandas.api.types import CategoricalDtype
+from scipy.stats import randint
 
 # DATE CONFIGURATIONS
 today = date.today()
@@ -57,6 +58,11 @@ test_size      = 0.15
 rand_state     = 10
 n_estimators   = 10
 criterion      = 'entropy'
+
+model_params = {
+    'n_estimators': randint(3,100),
+    'criterion': ['entropy', 'gini']
+}
 
 ## DRIVER
 chromedriver = 'C:\Driver\chromedriver_win32\chromedriver.exe'

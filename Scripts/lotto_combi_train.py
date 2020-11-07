@@ -3,11 +3,13 @@ import numpy as np
 import pandas as pd
 import joblib
 
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import MinMaxScaler
+from scipy import stats
+from sklearn.model_selection import train_test_split, RandomizedSearchCV
+from sklearn.preprocessing import MinMaxScaler, RobustScaler, StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
-from config import filename_all, train_log, test_size, rand_state, n_estimators, criterion, model_num, scaler_num, col_list
+from pprint import pprint
+from config import *
 
 ## LOGGER CONFIG
 logger = logging.getLogger(__name__)
@@ -25,26 +27,22 @@ def train(df, col, label, scaler_, model):
     #Split into dependent and independent variables
     X = df.iloc[:,0:2].values 
     y = df.iloc[:,2].values
-    logger.debug("Splitting feature and label")
     
     #Train and Test data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = test_size, random_state = rand_state)
-    logger.debug("Creating train and test data")
    
     #Feature scaling
-    scaler  = MinMaxScaler()
+    scaler  = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test  = scaler.transform(X_test)
-    logger.debug("Performing scaling")
     
     #Training model
     classifier = RandomForestClassifier(n_estimators = n_estimators, criterion = criterion, random_state = rand_state)
-    classifier.fit(X_train, y_train)
-    logger.debug("Training")
+    clf = RandomizedSearchCV(classifier, model_params, n_iter = 100, cv = 5, random_state = 1)
+    clf.fit(X_train, y_train)
     
     #Predicting the test set
-    y_pred = classifier.predict(X_test)
-    logger.debug("Predicting test set")
+    y_pred = clf.predict(X_test)
     
     #Reverse factorize
     reversefactor = dict(zip(range(len(label)), label))
@@ -71,7 +69,7 @@ def train(df, col, label, scaler_, model):
     
     #Saving the model
     try:
-        joblib.dump(classifier, model)
+        joblib.dump(clf, model)
     except Exception as e:
         logger.critical("Exception: " + str(e))
     else:
@@ -88,15 +86,19 @@ def main():
             df = pd.read_excel(filename_all)
         except Exception as e:
             logger.critical("Exception: " + str(e))
-        else:
-            logger.debug("Reading raw data")
         
         #Adding features
         df['Date']      = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
         df['Day_Num']   = df['Date'].dt.weekday
         df['Year']      = df['Date'].dt.year
         
-        logger.debug("Added features")
+        #Remove outliers
+        
+        df['z_score'] = stats.zscore(df[col_list[i]])
+        df['z_score'] = np.abs(df['z_score'])
+        
+        filtered = df['z_score'] > 3
+        df = df[~filtered]
         
         df = df[['Day_Num', 'Year', col_list[i]]]
         
@@ -104,15 +106,13 @@ def main():
         logger.debug("Column: " + str(col_list[i]))
         logger.debug(df.head())
         label_list = sorted(df[col_list[i]].unique())
-        logger.debug("Label list: " + str(label_list))
         
         factor_list = list(np.arange(0,len(label_list)))
         df.loc[:,col_list[i]] = df.loc[:,col_list[i]].replace(label_list, factor_list)
     
         factor_year = pd.factorize(df['Year'])
         df.Year     = factor_year[0]
-        
-        logger.debug("Factorizing columns")
+
         logger.debug(df.head())
         
         train(df, str(col_list[i]), label_list, scaler_num, model_num)
