@@ -89,8 +89,8 @@ def main():
         
         #Adding features
         df['Date']      = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
-        df['Day_Num']   = df['Date'].dt.weekday
-        df['Year']      = df['Date'].dt.year
+        df['Month']     = df['Date'].dt.month
+        df['Week']      = df['Date'].dt.isocalendar().week
         
         #Remove outliers
         
@@ -100,7 +100,7 @@ def main():
         filtered = df['z_score'] > 3
         df = df[~filtered]
         
-        df = df[['Day_Num', 'Year', col_list[i]]]
+        df = df[['Month', 'Week', col_list[i]]]
         
         #Factorizing categorical value
         logger.debug("Column: " + str(col_list[i]))
@@ -110,8 +110,11 @@ def main():
         factor_list = list(np.arange(0,len(label_list)))
         df.loc[:,col_list[i]] = df.loc[:,col_list[i]].replace(label_list, factor_list)
     
-        factor_year = pd.factorize(df['Year'])
-        df.Year     = factor_year[0]
+        factor_month = pd.factorize(df['Month'])
+        df.Month     = factor_month[0]
+        
+        factor_week = pd.factorize(df['Week'])
+        df.Week     = factor_week[0]
 
         logger.debug(df.head())
         
