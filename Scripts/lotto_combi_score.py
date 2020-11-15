@@ -61,8 +61,8 @@ def main():
         logger.critical("Exception: " + str(e))
     
     input_date = datetime.strptime(args[1], '%m/%d/%Y')
-    open.append(input_date.weekday())
-    open.append(0)
+    open.append(input_date.strftime("%m"))
+    open.append(input_date.strftime("%W"))
     
     arr = np.array(open).reshape(1,2)
     

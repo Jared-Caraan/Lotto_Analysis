@@ -94,11 +94,11 @@ def main():
         
         #Remove outliers
         
-        df['z_score'] = stats.zscore(df[col_list[i]])
-        df['z_score'] = np.abs(df['z_score'])
+        # df['z_score'] = stats.zscore(df[col_list[i]])
+        # df['z_score'] = np.abs(df['z_score'])
         
-        filtered = df['z_score'] > 3
-        df = df[~filtered]
+        # filtered = df['z_score'] > 3
+        # df = df[~filtered]
         
         df = df[['Month', 'Week', col_list[i]]]
         
@@ -110,11 +110,11 @@ def main():
         factor_list = list(np.arange(0,len(label_list)))
         df.loc[:,col_list[i]] = df.loc[:,col_list[i]].replace(label_list, factor_list)
     
-        factor_month = pd.factorize(df['Month'])
-        df.Month     = factor_month[0]
+        # factor_month = pd.factorize(df['Month'])
+        # df.Month     = factor_month[0]
         
-        factor_week = pd.factorize(df['Week'])
-        df.Week     = factor_week[0]
+        # factor_week = pd.factorize(df['Week'])
+        # df.Week     = factor_week[0]
 
         logger.debug(df.head())
         

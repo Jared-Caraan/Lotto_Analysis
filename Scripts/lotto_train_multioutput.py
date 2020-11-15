@@ -52,8 +52,8 @@ def main():
     
     new = []
     input_date = datetime.strptime('11/14/2020', '%m/%d/%Y')
-    new.append(input_date.strftime("%W"))
     new.append(input_date.strftime("%m"))
+    new.append(input_date.strftime("%W"))
     
     arr = np.array(new).reshape(1,2)
     scale_arr = scaler.transform(arr)

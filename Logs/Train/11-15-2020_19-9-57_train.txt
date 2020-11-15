@@ -1,0 +1,18 @@
+2020-11-15 19:09:57,113:__main__:Generating scaler and model for the six columns
+2020-11-15 19:09:57,476:__main__:Column: first
+2020-11-15 19:09:57,477:__main__:   Unnamed: 0       Date    Winning Numbers  first  ...                     Odd_Even    Odd_Even_Dist  Month  Week
+0           0 2020-11-12  05,07,10,13,30,41      5  ...    odd-odd-even-odd-even-odd  Even: 2, Odd: 4     11    46
+1           1 2020-11-10  01,04,13,14,27,33      1  ...    odd-even-odd-even-odd-odd  Even: 2, Odd: 4     11    46
+2           2 2020-11-07  01,04,20,28,36,39      1  ...  odd-even-even-even-even-odd  Even: 4, Odd: 2     11    45
+3           3 2020-11-05  04,10,20,21,27,32      4  ...  even-even-even-odd-odd-even  Even: 4, Odd: 2     11    45
+4           4 2020-11-03  02,15,23,24,31,39      2  ...    even-odd-odd-even-odd-odd  Even: 2, Odd: 4     11    45
+
+[5 rows x 14 columns]
+2020-11-15 19:09:57,502:__main__:   Unnamed: 0       Date    Winning Numbers  first  ...                     Odd_Even    Odd_Even_Dist  Month  Week
+0           0 2020-11-12  05,07,10,13,30,41      4  ...    odd-odd-even-odd-even-odd  Even: 2, Odd: 4     11    46
+1           1 2020-11-10  01,04,13,14,27,33      0  ...    odd-even-odd-even-odd-odd  Even: 2, Odd: 4     11    46
+2           2 2020-11-07  01,04,20,28,36,39      0  ...  odd-even-even-even-even-odd  Even: 4, Odd: 2     11    45
+3           3 2020-11-05  04,10,20,21,27,32      3  ...  even-even-even-odd-odd-even  Even: 4, Odd: 2     11    45
+4           4 2020-11-03  02,15,23,24,31,39      1  ...    even-odd-odd-even-odd-odd  Even: 2, Odd: 4     11    45
+
+[5 rows x 14 columns]
