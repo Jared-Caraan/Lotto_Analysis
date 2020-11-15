@@ -23,11 +23,11 @@ def main():
     
     df = df[['Week', 'Month', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth']]
     
-    factor_week = pd.factorize(df['Week'])
-    df.Week     = factor_week[0]
+    # factor_week = pd.factorize(df['Week'])
+    # df.Week     = factor_week[0]
     
-    factor_month = pd.factorize(df['Month'])
-    df.Month     = factor_month[0]
+    # factor_month = pd.factorize(df['Month'])
+    # df.Month     = factor_month[0]
     
     # Split into dependent and independent variables
     X = df.iloc[:,0:2].values 
@@ -48,12 +48,10 @@ def main():
     
     # Score
     y_pred = classifier.predict(X_test)
-    print(X_test.shape)
-    print(y_pred.shape)
-    print(classifier.score(X_test, y_pred))
+    print(classifier.score(X_test, y_test))
     
     new = []
-    input_date = datetime.strptime('11/10/2020', '%m/%d/%Y')
+    input_date = datetime.strptime('11/14/2020', '%m/%d/%Y')
     new.append(input_date.strftime("%W"))
     new.append(input_date.strftime("%m"))
     
