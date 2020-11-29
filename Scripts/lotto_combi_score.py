@@ -61,9 +61,14 @@ def main():
         logger.critical("Exception: " + str(e))
     
     input_date = datetime.strptime(args[1], '%m/%d/%Y')
-    open.append(input_date.strftime("%m"))
-    open.append(input_date.strftime("%W"))
+    week = int(input_date.strftime("%W"))
     
+    week_cos = np.cos(2 * np.pi * week / 7)
+    week_sin = np.sin(2 * np.pi * week / 7)
+    
+    open.append(week_cos)
+    open.append(week_sin)
+
     arr = np.array(open).reshape(1,2)
     
     for i in range(len(col_list)):
