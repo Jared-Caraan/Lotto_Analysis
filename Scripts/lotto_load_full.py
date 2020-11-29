@@ -138,7 +138,7 @@ def main():
     
     #Transferring to Excel
     try:
-        df.to_excel(filename_excel)
+        df.to_excel(filename_excel, index = False)
     except Exception as e:
         logger.error("Exception: " + str(e))
     else:

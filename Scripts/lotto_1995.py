@@ -102,7 +102,7 @@ def main():
     df = df[['Date', 'Winning Numbers', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'Day_Name', 'Odd_Even', 'Odd_Even_Dist']]
     
     try:
-        df.to_excel(filename_1995)
+        df.to_excel(filename_1995, index = False)
     except Exception as e:
         logger.error("Exception: " + str(e))
     else:

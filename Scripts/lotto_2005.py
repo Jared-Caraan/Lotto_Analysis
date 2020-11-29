@@ -157,10 +157,18 @@ def main():
     df['Odd_Even']        = df['Winning Numbers'].apply(lambda x: odd_even(x))
     df['Odd_Even_Dist']   = df['Odd_Even'].apply(lambda x: odd_even_dist(str(x)))
     
+    #Convert to numeric
+    df['first']  = df['first'].astype(int)
+    df['second'] = df['second'].astype(int)
+    df['third']  = df['third'].astype(int)
+    df['fourth'] = df['fourth'].astype(int)
+    df['fifth']  = df['fifth'].astype(int)
+    df['sixth']  = df['sixth'].astype(int)
+    
     df = df[['Date', 'Winning Numbers', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'Day_Name', 'Odd_Even', 'Odd_Even_Dist']]
     
     # Export to excel
-    df.to_excel(filename_2005)
+    df.to_excel(filename_2005, index = False)
  
 if __name__ == "__main__":
     main()
