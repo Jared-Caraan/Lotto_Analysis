@@ -139,8 +139,6 @@ def main():
     else:
         try:
             df = df.append(df_past, sort = False, ignore_index = True)
-            df.drop(columns = ['Unnamed: 0'], inplace = True)
-            
             df.to_excel(filename_all, index = False)
         except Exception as e:
             logger.error("Exception: " + str(e))

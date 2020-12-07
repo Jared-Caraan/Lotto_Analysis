@@ -1,0 +1,9 @@
+2020-12-07 15:30:27,504:__main__:<Response [200]>
+2020-12-07 15:30:27,533:__main__:Extracting dates and numbers
+2020-12-07 15:30:27,544:__main__:Appending to DataFrame
+2020-12-07 15:30:27,547:__main__:Adding date feature
+2020-12-07 15:30:27,549:__main__:Adding odd-even feature
+2020-12-07 15:30:28,211:__main__:Reading historical data
+2020-12-07 15:30:28,213:__main__:Latest date would be: 0   2020-12-03
+Name: Date, dtype: datetime64[ns]
+2020-12-07 15:30:28,221:__main__:Exception: "['Unnamed: 0'] not found in axis"
