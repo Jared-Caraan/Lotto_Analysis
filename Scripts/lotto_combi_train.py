@@ -4,10 +4,11 @@ import pandas as pd
 import joblib
 
 from scipy import stats
-from sklearn.model_selection import train_test_split, RandomizedSearchCV, GridSearchCV
+from sklearn.model_selection import train_test_split, RandomizedSearchCV, cross_val_score, cross_val_predict
 from sklearn.preprocessing import MinMaxScaler, RobustScaler, StandardScaler
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score
+from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn import metrics
 from pprint import pprint
 from config import *
 
@@ -22,7 +23,7 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
 
-def train(df, col, label, scaler_, model):
+def train(df, col, scaler_, model):
     
     #Split into dependent and independent variables
     X = df.iloc[:,0:2].values 
@@ -41,14 +42,28 @@ def train(df, col, label, scaler_, model):
     clf = RandomizedSearchCV(classifier, model_params, n_iter = 100, cv = 5, random_state = 1)
     clf.fit(X_train, y_train)
     
+    #Cross-validate
+    try:
+        scores = cross_val_score(clf, df, y ,cv = 6)
+        predictions = cross_val_predict(clf, df, y, cv = 6)
+        accuracy = metrics.r2_score(y, predictions)
+        
+    except Exception as e:
+        logger.critical("Exception: " + str(e))
+    else:
+        logger.debug("Cross Validation Score: ")
+        logger.debug(scores)
+        logger.debug("Cross Predicted Accuracy: ")
+        logger.debug(accuracy)
+    
     #Predicting the test set
     y_pred = clf.predict(X_test)
     
     #Reverse factorize
-    reversefactor = dict(zip(range(len(label)), label))
-    y_test        = np.vectorize(reversefactor.get)(y_test)
-    y_pred        = np.vectorize(reversefactor.get)(y_pred)
-    logger.debug(reversefactor)
+    # reversefactor = dict(zip(range(len(label)), label))
+    # y_test        = np.vectorize(reversefactor.get)(y_test)
+    # y_pred        = np.vectorize(reversefactor.get)(y_pred)
+    # logger.debug(reversefactor)
     
     #Metrics
     try:
@@ -79,7 +94,7 @@ def main():
     
     logger.debug("Generating scaler and model for the six columns")
     
-    for i in range(len(col_list)):
+    for i in range(0,1):
         
         #Loading dataset
         try:
@@ -98,16 +113,16 @@ def main():
         
         #Factorizing categorical value
         logger.debug("Column: " + str(col_list[i]))
-        label_list = sorted(df[col_list[i]].unique())
+        # label_list = sorted(df[col_list[i]].unique())
         
-        factor_list = list(np.arange(0,len(label_list)))
-        df.loc[:,col_list[i]] = df.loc[:,col_list[i]].replace(label_list, factor_list)
+        # factor_list = list(np.arange(0,len(label_list)))
+        # df.loc[:,col_list[i]] = df.loc[:,col_list[i]].replace(label_list, factor_list)
         
         df = df[['week_cos', 'week_sin', col_list[i]]]
 
         logger.debug(df.head())
         
-        train(df, str(col_list[i]), label_list, scaler_num, model_num)
+        train(df, str(col_list[i]), scaler_num, model_num)
 
 if __name__ == "__main__":
     main()
