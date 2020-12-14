@@ -94,7 +94,7 @@ def main():
     
     logger.debug("Generating scaler and model for the six columns")
     
-    for i in range(0,1):
+    for i in range(0,len(col_list)):
         
         #Loading dataset
         try:
