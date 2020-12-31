@@ -1,5 +1,0 @@
-2020-11-29 13:54:15,959:__main__:Extracting dates and numbers
-2020-11-29 13:54:15,975:__main__:Adding extra columns
-2020-11-29 13:54:15,990:__main__:Converting results to numbers
-2020-11-29 13:54:16,006:__main__:Renaming columns
-2020-11-29 13:54:17,000:__main__:Exported to excel

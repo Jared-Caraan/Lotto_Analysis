@@ -57,7 +57,7 @@ def train(df, col, scaler_, model):
         logger.debug(accuracy)
     
     #Predicting the test set
-    y_pred = clf.predict(X_test)
+    y_pred = clf.predict(X_train)
     
     #Reverse factorize
     # reversefactor = dict(zip(range(len(label)), label))
@@ -67,7 +67,7 @@ def train(df, col, scaler_, model):
     
     #Metrics
     try:
-        logger.debug("Accuracy = {0:.2f}".format(accuracy_score(y_test,y_pred) * 100))
+        logger.debug("Accuracy = {0:.2f}".format(accuracy_score(y_train,y_pred) * 100))
     except Exception as e:
         logger.critical("Exception: " + str(e))
     
@@ -94,7 +94,7 @@ def main():
     
     logger.debug("Generating scaler and model for the six columns")
     
-    for i in range(0,len(col_list)):
+    for i in range(0,1):
         
         #Loading dataset
         try:
