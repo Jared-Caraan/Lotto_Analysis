@@ -138,6 +138,10 @@ def main():
         logger.debug("No new records")
     else:
         try:
+            past_draw = df_past['Draw'].iloc[0]
+            df['Draw'] = past_draw + 1
+            df = df[['Draw', 'Date', 'Winning Numbers', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'Day_Name', 'Odd_Even', 'Odd_Even_Dist']]
+            
             df = df.append(df_past, sort = False, ignore_index = True)
             df.to_excel(filename_all, index = False)
         except Exception as e:
