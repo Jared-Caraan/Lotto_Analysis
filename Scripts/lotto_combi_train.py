@@ -26,8 +26,8 @@ logger.addHandler(file_handler)
 def train(df, col, scaler_, model):
     
     #Split into dependent and independent variables
-    X = df.iloc[:,0:2].values 
-    y = df.iloc[:,2].values
+    X = df.iloc[:,0:3].values 
+    y = df.iloc[:,3].values
     
     #Train and Test data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = test_size, random_state = rand_state)
@@ -94,7 +94,7 @@ def main():
     
     logger.debug("Generating scaler and model for the six columns")
     
-    for i in range(0,1):
+    for i in range(0,len(col_list)):
         
         #Loading dataset
         try:
@@ -102,7 +102,7 @@ def main():
         except Exception as e:
             logger.critical("Exception: " + str(e))
         
-        df = df[['Date', col_list[i]]]
+        df = df[['Draw', 'Date', col_list[i]]]
         
         #Adding features
         df['Date']  = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
@@ -118,7 +118,7 @@ def main():
         # factor_list = list(np.arange(0,len(label_list)))
         # df.loc[:,col_list[i]] = df.loc[:,col_list[i]].replace(label_list, factor_list)
         
-        df = df[['week_cos', 'week_sin', col_list[i]]]
+        df = df[['Draw', 'week_cos', 'week_sin', col_list[i]]]
 
         logger.debug(df.head())
         
