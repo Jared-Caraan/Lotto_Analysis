@@ -53,7 +53,7 @@ for i in range(1,64):
 first_batch = "https://lottotips888.blogspot.com/2008/09/philippine-lotto-results-642-year-1995.html"
 second_batch = "http://www.theluckygene.com/LotteryResults.aspx?gid=LottoPH"
     
-## Hyperparameters
+# HYPERPARAMETERS
 test_size      = 0.15
 rand_state     = 10
 n_estimators   = 10
@@ -64,5 +64,8 @@ model_params = {
     'criterion': ['entropy', 'gini']
 }
 
-## DRIVER
+# DRIVER
 chromedriver = 'C:\Driver\chromedriver_win32\chromedriver.exe'
+
+# OTHERS
+ref_draw = 1891
