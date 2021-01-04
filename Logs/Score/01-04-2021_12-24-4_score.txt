@@ -1,0 +1,25 @@
+2021-01-04 12:24:04,803:__main__:Predicting first
+2021-01-04 12:24:04,805:__main__:Loading scaler
+2021-01-04 12:24:05,197:__main__:Loading model
+2021-01-04 12:24:05,198:__main__:Scaling input
+2021-01-04 12:24:05,200:__main__:Predicting second
+2021-01-04 12:24:05,202:__main__:Loading scaler
+2021-01-04 12:24:05,229:__main__:Loading model
+2021-01-04 12:24:05,229:__main__:Scaling input
+2021-01-04 12:24:05,234:__main__:Predicting third
+2021-01-04 12:24:05,236:__main__:Loading scaler
+2021-01-04 12:24:05,257:__main__:Loading model
+2021-01-04 12:24:05,257:__main__:Scaling input
+2021-01-04 12:24:05,262:__main__:Predicting fourth
+2021-01-04 12:24:05,263:__main__:Loading scaler
+2021-01-04 12:24:05,287:__main__:Loading model
+2021-01-04 12:24:05,288:__main__:Scaling input
+2021-01-04 12:24:05,293:__main__:Predicting fifth
+2021-01-04 12:24:05,294:__main__:Loading scaler
+2021-01-04 12:24:05,304:__main__:Loading model
+2021-01-04 12:24:05,304:__main__:Scaling input
+2021-01-04 12:24:05,306:__main__:Predicting sixth
+2021-01-04 12:24:05,307:__main__:Loading scaler
+2021-01-04 12:24:05,322:__main__:Loading model
+2021-01-04 12:24:05,322:__main__:Scaling input
+2021-01-04 12:24:05,325:__main__:['[3]', '[8]', '[22]', '[28]', '[32]', '[37]']

@@ -24,7 +24,7 @@ def score(arr, col, scaler_, model_):
     scaler_  = scaler_ + "_{}.pkl".format(col)
     model_   = model_ + "_{}.pkl".format(col)
     
-    ##Load scaler
+    # Load scaler
     try:
         scaler = joblib.load(scaler_)
     except Exception as e:
@@ -32,7 +32,7 @@ def score(arr, col, scaler_, model_):
     else:
         logger.debug("Loading scaler")
         
-    ##Load model
+    # Load model
     try:
         model = joblib.load(model_)
     except Exception as e:
@@ -40,11 +40,11 @@ def score(arr, col, scaler_, model_):
     else:
         logger.debug("Loading model")
     
-    ## Scale input
+    # Scale input
     X_input = scaler.transform(arr)
     logger.debug("Scaling input")
     
-    ## Predict using model
+    # Predict using model
     pred = model.predict(X_input)
     pred_prob = model.predict_proba(X_input)
     
@@ -66,10 +66,11 @@ def main():
     week_cos = np.cos(2 * np.pi * week / 7)
     week_sin = np.sin(2 * np.pi * week / 7)
     
+    open.append(3285)
     open.append(week_cos)
     open.append(week_sin)
 
-    arr = np.array(open).reshape(1,2)
+    arr = np.array(open).reshape(1,3)
     
     for i in range(len(col_list)):
         logger.debug("Predicting " + col_list[i] )
