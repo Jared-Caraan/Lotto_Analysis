@@ -8,9 +8,11 @@ today = date.today()
 d1    = today.strftime("%m-%d-%Y")
 t1    = str(datetime.now().hour) + "-" + str(datetime.now().minute) + "-" + str(datetime.now().second)
 
-col_list = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth']
-weekday  = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-day_type = CategoricalDtype(categories=weekday, ordered=True)
+col_list   = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth']
+weekday    = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+month_list = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+day_type   = CategoricalDtype(categories=weekday, ordered=True)
+month_type = CategoricalDtype(categories=month_list, ordered=True)
 
 # FILES
 filename_excel    = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\PastDataResults.xlsx'
