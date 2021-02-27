@@ -1,0 +1,209 @@
+2021-02-28 04:24:23,723:__main__:Page: 1: <Response [200]>
+2021-02-28 04:24:23,762:__main__:Page: 1: Extracting dates and numbers
+2021-02-28 04:24:23,767:__main__:Page: 1: Appending to DataFrame
+2021-02-28 04:24:24,068:__main__:Page: 2: <Response [200]>
+2021-02-28 04:24:24,100:__main__:Page: 2: Extracting dates and numbers
+2021-02-28 04:24:24,110:__main__:Page: 2: Appending to DataFrame
+2021-02-28 04:24:24,407:__main__:Page: 3: <Response [200]>
+2021-02-28 04:24:24,450:__main__:Page: 3: Extracting dates and numbers
+2021-02-28 04:24:24,452:__main__:Page: 3: Appending to DataFrame
+2021-02-28 04:24:24,822:__main__:Page: 4: <Response [200]>
+2021-02-28 04:24:24,853:__main__:Page: 4: Extracting dates and numbers
+2021-02-28 04:24:24,853:__main__:Page: 4: Appending to DataFrame
+2021-02-28 04:24:25,166:__main__:Page: 5: <Response [200]>
+2021-02-28 04:24:25,197:__main__:Page: 5: Extracting dates and numbers
+2021-02-28 04:24:25,197:__main__:Page: 5: Appending to DataFrame
+2021-02-28 04:24:25,576:__main__:Page: 6: <Response [200]>
+2021-02-28 04:24:25,641:__main__:Page: 6: Extracting dates and numbers
+2021-02-28 04:24:25,642:__main__:Page: 6: Appending to DataFrame
+2021-02-28 04:24:25,951:__main__:Page: 7: <Response [200]>
+2021-02-28 04:24:25,980:__main__:Page: 7: Extracting dates and numbers
+2021-02-28 04:24:25,981:__main__:Page: 7: Appending to DataFrame
+2021-02-28 04:24:26,294:__main__:Page: 8: <Response [200]>
+2021-02-28 04:24:26,321:__main__:Page: 8: Extracting dates and numbers
+2021-02-28 04:24:26,322:__main__:Page: 8: Appending to DataFrame
+2021-02-28 04:24:26,631:__main__:Page: 9: <Response [200]>
+2021-02-28 04:24:26,661:__main__:Page: 9: Extracting dates and numbers
+2021-02-28 04:24:26,663:__main__:Page: 9: Appending to DataFrame
+2021-02-28 04:24:26,967:__main__:Page: 10: <Response [200]>
+2021-02-28 04:24:26,996:__main__:Page: 10: Extracting dates and numbers
+2021-02-28 04:24:26,998:__main__:Page: 10: Appending to DataFrame
+2021-02-28 04:24:27,299:__main__:Page: 11: <Response [200]>
+2021-02-28 04:24:27,328:__main__:Page: 11: Extracting dates and numbers
+2021-02-28 04:24:27,330:__main__:Page: 11: Appending to DataFrame
+2021-02-28 04:24:27,648:__main__:Page: 12: <Response [200]>
+2021-02-28 04:24:27,677:__main__:Page: 12: Extracting dates and numbers
+2021-02-28 04:24:27,678:__main__:Page: 12: Appending to DataFrame
+2021-02-28 04:24:27,989:__main__:Page: 13: <Response [200]>
+2021-02-28 04:24:28,019:__main__:Page: 13: Extracting dates and numbers
+2021-02-28 04:24:28,020:__main__:Page: 13: Appending to DataFrame
+2021-02-28 04:24:29,817:__main__:Page: 14: <Response [200]>
+2021-02-28 04:24:29,845:__main__:Page: 14: Extracting dates and numbers
+2021-02-28 04:24:29,847:__main__:Page: 14: Appending to DataFrame
+2021-02-28 04:24:30,212:__main__:Page: 15: <Response [200]>
+2021-02-28 04:24:30,243:__main__:Page: 15: Extracting dates and numbers
+2021-02-28 04:24:30,245:__main__:Page: 15: Appending to DataFrame
+2021-02-28 04:24:30,551:__main__:Page: 16: <Response [200]>
+2021-02-28 04:24:30,585:__main__:Page: 16: Extracting dates and numbers
+2021-02-28 04:24:30,586:__main__:Page: 16: Appending to DataFrame
+2021-02-28 04:24:30,905:__main__:Page: 17: <Response [200]>
+2021-02-28 04:24:30,934:__main__:Page: 17: Extracting dates and numbers
+2021-02-28 04:24:30,935:__main__:Page: 17: Appending to DataFrame
+2021-02-28 04:24:31,246:__main__:Page: 18: <Response [200]>
+2021-02-28 04:24:31,277:__main__:Page: 18: Extracting dates and numbers
+2021-02-28 04:24:31,277:__main__:Page: 18: Appending to DataFrame
+2021-02-28 04:24:31,671:__main__:Page: 19: <Response [200]>
+2021-02-28 04:24:31,700:__main__:Page: 19: Extracting dates and numbers
+2021-02-28 04:24:31,702:__main__:Page: 19: Appending to DataFrame
+2021-02-28 04:24:32,017:__main__:Page: 20: <Response [200]>
+2021-02-28 04:24:32,048:__main__:Page: 20: Extracting dates and numbers
+2021-02-28 04:24:32,048:__main__:Page: 20: Appending to DataFrame
+2021-02-28 04:24:32,371:__main__:Page: 21: <Response [200]>
+2021-02-28 04:24:32,402:__main__:Page: 21: Extracting dates and numbers
+2021-02-28 04:24:32,402:__main__:Page: 21: Appending to DataFrame
+2021-02-28 04:24:32,715:__main__:Page: 22: <Response [200]>
+2021-02-28 04:24:32,730:__main__:Page: 22: Extracting dates and numbers
+2021-02-28 04:24:32,746:__main__:Page: 22: Appending to DataFrame
+2021-02-28 04:24:33,091:__main__:Page: 23: <Response [200]>
+2021-02-28 04:24:33,122:__main__:Page: 23: Extracting dates and numbers
+2021-02-28 04:24:33,122:__main__:Page: 23: Appending to DataFrame
+2021-02-28 04:24:33,443:__main__:Page: 24: <Response [200]>
+2021-02-28 04:24:33,474:__main__:Page: 24: Extracting dates and numbers
+2021-02-28 04:24:33,474:__main__:Page: 24: Appending to DataFrame
+2021-02-28 04:24:33,803:__main__:Page: 25: <Response [200]>
+2021-02-28 04:24:33,835:__main__:Page: 25: Extracting dates and numbers
+2021-02-28 04:24:33,835:__main__:Page: 25: Appending to DataFrame
+2021-02-28 04:24:34,132:__main__:Page: 26: <Response [200]>
+2021-02-28 04:24:34,163:__main__:Page: 26: Extracting dates and numbers
+2021-02-28 04:24:34,163:__main__:Page: 26: Appending to DataFrame
+2021-02-28 04:24:34,482:__main__:Page: 27: <Response [200]>
+2021-02-28 04:24:34,497:__main__:Page: 27: Extracting dates and numbers
+2021-02-28 04:24:34,497:__main__:Page: 27: Appending to DataFrame
+2021-02-28 04:24:34,842:__main__:Page: 28: <Response [200]>
+2021-02-28 04:24:34,875:__main__:Page: 28: Extracting dates and numbers
+2021-02-28 04:24:34,875:__main__:Page: 28: Appending to DataFrame
+2021-02-28 04:24:35,188:__main__:Page: 29: <Response [200]>
+2021-02-28 04:24:35,219:__main__:Page: 29: Extracting dates and numbers
+2021-02-28 04:24:35,219:__main__:Page: 29: Appending to DataFrame
+2021-02-28 04:24:35,579:__main__:Page: 30: <Response [200]>
+2021-02-28 04:24:35,610:__main__:Page: 30: Extracting dates and numbers
+2021-02-28 04:24:35,610:__main__:Page: 30: Appending to DataFrame
+2021-02-28 04:24:35,925:__main__:Page: 31: <Response [200]>
+2021-02-28 04:24:35,956:__main__:Page: 31: Extracting dates and numbers
+2021-02-28 04:24:35,956:__main__:Page: 31: Appending to DataFrame
+2021-02-28 04:24:36,286:__main__:Page: 32: <Response [200]>
+2021-02-28 04:24:36,317:__main__:Page: 32: Extracting dates and numbers
+2021-02-28 04:24:36,317:__main__:Page: 32: Appending to DataFrame
+2021-02-28 04:24:36,638:__main__:Page: 33: <Response [200]>
+2021-02-28 04:24:36,732:__main__:Page: 33: Extracting dates and numbers
+2021-02-28 04:24:36,732:__main__:Page: 33: Appending to DataFrame
+2021-02-28 04:24:37,044:__main__:Page: 34: <Response [200]>
+2021-02-28 04:24:37,075:__main__:Page: 34: Extracting dates and numbers
+2021-02-28 04:24:37,075:__main__:Page: 34: Appending to DataFrame
+2021-02-28 04:24:37,389:__main__:Page: 35: <Response [200]>
+2021-02-28 04:24:37,420:__main__:Page: 35: Extracting dates and numbers
+2021-02-28 04:24:37,420:__main__:Page: 35: Appending to DataFrame
+2021-02-28 04:24:37,863:__main__:Page: 36: <Response [200]>
+2021-02-28 04:24:37,894:__main__:Page: 36: Extracting dates and numbers
+2021-02-28 04:24:37,894:__main__:Page: 36: Appending to DataFrame
+2021-02-28 04:24:38,422:__main__:Page: 37: <Response [200]>
+2021-02-28 04:24:38,438:__main__:Page: 37: Extracting dates and numbers
+2021-02-28 04:24:38,438:__main__:Page: 37: Appending to DataFrame
+2021-02-28 04:24:39,002:__main__:Page: 38: <Response [200]>
+2021-02-28 04:24:39,033:__main__:Page: 38: Extracting dates and numbers
+2021-02-28 04:24:39,033:__main__:Page: 38: Appending to DataFrame
+2021-02-28 04:24:39,596:__main__:Page: 39: <Response [200]>
+2021-02-28 04:24:39,628:__main__:Page: 39: Extracting dates and numbers
+2021-02-28 04:24:39,628:__main__:Page: 39: Appending to DataFrame
+2021-02-28 04:24:40,274:__main__:Page: 40: <Response [200]>
+2021-02-28 04:24:40,305:__main__:Page: 40: Extracting dates and numbers
+2021-02-28 04:24:40,305:__main__:Page: 40: Appending to DataFrame
+2021-02-28 04:24:41,905:__main__:Page: 41: <Response [200]>
+2021-02-28 04:24:41,952:__main__:Page: 41: Extracting dates and numbers
+2021-02-28 04:24:41,952:__main__:Page: 41: Appending to DataFrame
+2021-02-28 04:24:42,721:__main__:Page: 42: <Response [200]>
+2021-02-28 04:24:42,752:__main__:Page: 42: Extracting dates and numbers
+2021-02-28 04:24:42,752:__main__:Page: 42: Appending to DataFrame
+2021-02-28 04:24:43,473:__main__:Page: 43: <Response [200]>
+2021-02-28 04:24:43,505:__main__:Page: 43: Extracting dates and numbers
+2021-02-28 04:24:43,505:__main__:Page: 43: Appending to DataFrame
+2021-02-28 04:24:43,930:__main__:Page: 44: <Response [200]>
+2021-02-28 04:24:43,961:__main__:Page: 44: Extracting dates and numbers
+2021-02-28 04:24:43,961:__main__:Page: 44: Appending to DataFrame
+2021-02-28 04:24:44,274:__main__:Page: 45: <Response [200]>
+2021-02-28 04:24:44,305:__main__:Page: 45: Extracting dates and numbers
+2021-02-28 04:24:44,305:__main__:Page: 45: Appending to DataFrame
+2021-02-28 04:24:44,637:__main__:Page: 46: <Response [200]>
+2021-02-28 04:24:44,652:__main__:Page: 46: Extracting dates and numbers
+2021-02-28 04:24:44,652:__main__:Page: 46: Appending to DataFrame
+2021-02-28 04:24:44,981:__main__:Page: 47: <Response [200]>
+2021-02-28 04:24:45,012:__main__:Page: 47: Extracting dates and numbers
+2021-02-28 04:24:45,012:__main__:Page: 47: Appending to DataFrame
+2021-02-28 04:24:45,341:__main__:Page: 48: <Response [200]>
+2021-02-28 04:24:45,373:__main__:Page: 48: Extracting dates and numbers
+2021-02-28 04:24:45,373:__main__:Page: 48: Appending to DataFrame
+2021-02-28 04:24:45,718:__main__:Page: 49: <Response [200]>
+2021-02-28 04:24:45,749:__main__:Page: 49: Extracting dates and numbers
+2021-02-28 04:24:45,749:__main__:Page: 49: Appending to DataFrame
+2021-02-28 04:24:46,093:__main__:Page: 50: <Response [200]>
+2021-02-28 04:24:46,124:__main__:Page: 50: Extracting dates and numbers
+2021-02-28 04:24:46,124:__main__:Page: 50: Appending to DataFrame
+2021-02-28 04:24:46,468:__main__:Page: 51: <Response [200]>
+2021-02-28 04:24:46,499:__main__:Page: 51: Extracting dates and numbers
+2021-02-28 04:24:46,499:__main__:Page: 51: Appending to DataFrame
+2021-02-28 04:24:46,845:__main__:Page: 52: <Response [200]>
+2021-02-28 04:24:46,877:__main__:Page: 52: Extracting dates and numbers
+2021-02-28 04:24:46,877:__main__:Page: 52: Appending to DataFrame
+2021-02-28 04:24:47,189:__main__:Page: 53: <Response [200]>
+2021-02-28 04:24:47,220:__main__:Page: 53: Extracting dates and numbers
+2021-02-28 04:24:47,220:__main__:Page: 53: Appending to DataFrame
+2021-02-28 04:24:47,642:__main__:Page: 54: <Response [200]>
+2021-02-28 04:24:47,674:__main__:Page: 54: Extracting dates and numbers
+2021-02-28 04:24:47,674:__main__:Page: 54: Appending to DataFrame
+2021-02-28 04:24:48,034:__main__:Page: 55: <Response [200]>
+2021-02-28 04:24:48,065:__main__:Page: 55: Extracting dates and numbers
+2021-02-28 04:24:48,065:__main__:Page: 55: Appending to DataFrame
+2021-02-28 04:24:48,410:__main__:Page: 56: <Response [200]>
+2021-02-28 04:24:48,426:__main__:Page: 56: Extracting dates and numbers
+2021-02-28 04:24:48,426:__main__:Page: 56: Appending to DataFrame
+2021-02-28 04:24:48,801:__main__:Page: 57: <Response [200]>
+2021-02-28 04:24:48,816:__main__:Page: 57: Extracting dates and numbers
+2021-02-28 04:24:48,816:__main__:Page: 57: Appending to DataFrame
+2021-02-28 04:24:49,396:__main__:Page: 58: <Response [200]>
+2021-02-28 04:24:49,427:__main__:Page: 58: Extracting dates and numbers
+2021-02-28 04:24:49,427:__main__:Page: 58: Appending to DataFrame
+2021-02-28 04:24:50,650:__main__:Page: 59: <Response [200]>
+2021-02-28 04:24:50,683:__main__:Page: 59: Extracting dates and numbers
+2021-02-28 04:24:50,683:__main__:Page: 59: Appending to DataFrame
+2021-02-28 04:24:51,184:__main__:Page: 60: <Response [200]>
+2021-02-28 04:24:51,278:__main__:Page: 60: Extracting dates and numbers
+2021-02-28 04:24:51,278:__main__:Page: 60: Appending to DataFrame
+2021-02-28 04:24:51,778:__main__:Page: 61: <Response [200]>
+2021-02-28 04:24:51,809:__main__:Page: 61: Extracting dates and numbers
+2021-02-28 04:24:51,809:__main__:Page: 61: Appending to DataFrame
+2021-02-28 04:24:52,405:__main__:Page: 62: <Response [200]>
+2021-02-28 04:24:52,436:__main__:Page: 62: Extracting dates and numbers
+2021-02-28 04:24:52,436:__main__:Page: 62: Appending to DataFrame
+2021-02-28 04:24:52,905:__main__:Page: 63: <Response [200]>
+2021-02-28 04:24:52,936:__main__:Page: 63: Extracting dates and numbers
+2021-02-28 04:24:52,936:__main__:Page: 63: Appending to DataFrame
+2021-02-28 04:24:52,936:__main__:Renaming columns
+2021-02-28 04:24:52,952:__main__:Splitting numbers into columns
+2021-02-28 04:24:52,967:__main__:        Date    Winning Numbers  first  second  ...  sixth  Day_Name                      Odd_Even    Odd_Even_Dist
+0 2021-02-27  18,23,26,29,35,37     18      23  ...     37  Saturday     even-odd-even-odd-odd-odd  Even: 2, Odd: 4
+1 2021-02-25  02,04,08,12,17,24      2       4  ...     24  Thursday  even-even-even-even-odd-even  Even: 5, Odd: 1
+2 2021-02-23  01,04,24,37,39,40      1       4  ...     40   Tuesday    odd-even-even-odd-odd-even  Even: 3, Odd: 3
+3 2021-02-20  02,15,26,31,37,38      2      15  ...     38  Saturday    even-odd-even-odd-odd-even  Even: 3, Odd: 3
+4 2021-02-18  01,17,18,30,38,42      1      17  ...     42  Thursday   odd-odd-even-even-even-even  Even: 4, Odd: 2
+
+[5 rows x 11 columns]
+2021-02-28 04:24:52,981:__main__:           Date    Winning Numbers  first  second  ...  sixth  Day_Name                     Odd_Even    Odd_Even_Dist
+1885 2007-10-13  08,09,27,33,36,41      8       9  ...     41  Saturday    even-odd-odd-odd-even-odd  Even: 2, Odd: 4
+1886 2007-10-09  04,22,31,34,39,40      4      22  ...     40   Tuesday  even-even-odd-even-odd-even  Even: 4, Odd: 2
+1887 2007-10-06  03,06,20,25,27,41      3       6  ...     41  Saturday    odd-even-even-odd-odd-odd  Even: 2, Odd: 4
+1888 2007-09-29  06,09,11,21,27,35      6       9  ...     35  Saturday     even-odd-odd-odd-odd-odd  Even: 1, Odd: 5
+1889 2007-09-25  06,19,28,33,34,42      6      19  ...     42   Tuesday  even-odd-even-odd-even-even  Even: 4, Odd: 2
+
+[5 rows x 11 columns]
+2021-02-28 04:24:52,996:__main__:Removing duplicates (if there's any)
+2021-02-28 04:24:54,406:__main__:Excel file generated successfully
