@@ -5,7 +5,7 @@ import joblib
 
 from scipy import stats
 from sklearn.model_selection import train_test_split, RandomizedSearchCV, cross_val_score, cross_val_predict
-from sklearn.preprocessing import MinMaxScaler, RobustScaler, StandardScaler
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn import metrics
