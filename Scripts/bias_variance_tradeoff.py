@@ -29,7 +29,7 @@ def train(df, col, scaler_, model):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = test_size, random_state = rand_state)
    
     #Feature scaling
-    scaler  = StandardScaler()
+    scaler  = MinMaxScaler()
     X_train = scaler.fit_transform(X_train)
     X_test  = scaler.transform(X_test)
     
@@ -51,7 +51,7 @@ def main():
     
     logger.debug("Generating scaler and model for the six columns")
     
-    for i in range(0,len(col_list)):
+    for i in range(0,1):
         
         #Loading dataset
         try:
@@ -61,12 +61,22 @@ def main():
         
         df = df[['Date', col_list[i]]]
         
+        
         #Adding features
         df['Date']  = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
+        df['Month']  = df['Date'].dt.strftime('%m')
+        df['Day'] = df['Date'].dt.strftime('%d')
         df['Week']  = df['Date'].dt.isocalendar().week
+        df['Day'] = df['Day'].apply(lambda x: int(x))
         
         df['week_cos'] = np.cos(2 * np.pi * df['Week'] / 7)
         df['week_sin'] = np.sin(2 * np.pi * df['Week'] / 7)
+        
+        df['day_cos'] = np.cos(2 * np.pi * df['Day'] / 31)
+        df['day_sin'] = np.sin(2 * np.pi * df['Day'] / 31)
+        
+        # df['month_cos'] = np.cos(2 * np.pi * df['Month'] / 12)
+        # df['month_sin'] = np.sin(2 * np.pi * df['Month'] / 12)
         
         #Factorizing categorical value
         logger.debug("Column: " + str(col_list[i]))

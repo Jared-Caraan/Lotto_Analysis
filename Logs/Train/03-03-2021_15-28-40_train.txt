@@ -1,0 +1,1 @@
+2021-03-03 15:28:40,338:__main__:Generating scaler and model for the six columns

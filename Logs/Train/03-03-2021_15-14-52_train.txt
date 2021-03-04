@@ -1,0 +1,2 @@
+2021-03-03 15:14:52,926:__main__:Generating scaler and model for the six columns
+2021-03-03 15:14:52,942:__main__:Exception: Your version of xlrd is 2.0.1. In xlrd >= 2.0, only the xls format is supported. Install openpyxl instead.
