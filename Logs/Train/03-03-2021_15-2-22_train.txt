@@ -1,6 +1,0 @@
-2021-03-03 15:02:22,249:__main__:Generating scaler and model for the six columns
-2021-03-03 15:02:22,819:__main__:Column: first
-2021-03-03 21:42:34,737:__main__:Loss: 0.870
-2021-03-03 21:42:34,738:__main__:Bias: 0.858
-2021-03-03 21:42:34,738:__main__:Variance: 0.383
-2021-03-03 21:42:35,080:__main__:Column: second
