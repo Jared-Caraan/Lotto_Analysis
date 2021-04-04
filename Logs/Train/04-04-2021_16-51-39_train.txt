@@ -1,0 +1,2 @@
+2021-04-04 16:51:39,527:__main__:Saving label encoder for day name
+2021-04-04 16:51:39,532:__main__:Saving one hot encoder

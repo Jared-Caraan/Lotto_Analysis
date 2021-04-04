@@ -1,0 +1,12 @@
+2021-04-04 16:52:14,597:__main__:Saving label encoder for day name
+2021-04-04 16:52:14,602:__main__:Saving one hot encoder
+2021-04-04 16:52:14,997:__main__:Saving label encoder for day name
+2021-04-04 16:52:14,997:__main__:Saving one hot encoder
+2021-04-04 16:52:15,405:__main__:Saving label encoder for day name
+2021-04-04 16:52:15,408:__main__:Saving one hot encoder
+2021-04-04 16:52:15,817:__main__:Saving label encoder for day name
+2021-04-04 16:52:15,817:__main__:Saving one hot encoder
+2021-04-04 16:52:16,207:__main__:Saving label encoder for day name
+2021-04-04 16:52:16,217:__main__:Saving one hot encoder
+2021-04-04 16:52:16,682:__main__:Saving label encoder for day name
+2021-04-04 16:52:16,687:__main__:Saving one hot encoder

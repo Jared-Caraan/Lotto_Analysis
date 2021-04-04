@@ -43,6 +43,13 @@ model_num       = r'C:\Personal_Project\Lotto_Analysis\Model\model'
 scaler_odd_even = r'C:\Personal_Project\Lotto_Analysis\Model\odd_even_scaler.pkl'
 scaler_num      = r'C:\Personal_Project\Lotto_Analysis\Model\scaler'
 
+# LABEL ENCODER
+le_day = r'C:\Personal_Project\Lotto_Analysis\Model\le_day'
+le_y   = r'C:\Personal_Project\Lotto_Analysis\Model\le_y'
+
+# ONE HOT ENCODER
+ohe_num = r'C:\Personal_Project\Lotto_Analysis\Model\ohe'
+
 # URL SCRAPING
 url_list = []
 
@@ -55,7 +62,7 @@ for i in range(1,64):
 first_batch = "https://lottotips888.blogspot.com/2008/09/philippine-lotto-results-642-year-1995.html"
 second_batch = "http://www.theluckygene.com/LotteryResults.aspx?gid=LottoPH"
     
-## Hyperparameters
+# HYPERPARAMETERS (DECISION TREE)
 test_size      = 0.15
 rand_state     = 10
 n_estimators   = 10
@@ -66,5 +73,12 @@ model_params = {
     'criterion': ['entropy', 'gini']
 }
 
-## DRIVER
+# HYPERPARAMETERS (NEURAL NETWORK)
+lr_nn = 0.001
+rho_nn = 0.95
+eps_nn = 1e-07
+epoch_nn = 5000
+batch_nn = 10
+
+# DRIVER
 chromedriver = 'C:\Driver\chromedriver_win32\chromedriver.exe'
