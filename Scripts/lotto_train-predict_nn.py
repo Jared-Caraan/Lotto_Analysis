@@ -55,6 +55,35 @@ def train(df, col, out):
     
     # SCORE
     scores = model.evaluate(X_test, y_test, batch_size = batch_nn)
+    acc_nn  = scores[1] * 100
+    logger.debug("Loss" + " (" + col + ")" + ": " + str(scores[0]))
+    logger.debug("Accuracy" + " (" + col + ")" + ": " + str(acc_nn))
+    
+    scaler_file = scaler_num + "_{}.pkl".format(col)
+    model_file  = model_num + "_{}.pkl".format(col)
+    le_y_file   = le_y + "_{}.pkl".format(col)
+    
+    # PICKLES
+    try:
+        joblib.dump(scaler, scaler_file)
+    except Exception as e:
+        logger.critical("Exception: " + str(e))
+    else:
+        logger.debug("Saving scaler" + " (" + col + ")")
+    
+    try:
+        model.save(model_file)
+    except Exception as e:
+        logger.critical("Exception: " + str(e))
+    else:
+        logger.debug("Saving model" + " (" + col + ")")
+        
+    try:
+        model.save(encoder ,le_y_file)
+    except Exception as e:
+        logger.critical("Exception: " + str(e))
+    else:
+        logger.debug("Saving label encoder for Y" + " (" + col + ")")
 
 def main():
     
@@ -62,22 +91,21 @@ def main():
     
         logger.debug("Training " + str(col_list[i]))
         
+        # DATA
         try:
             df = pd.read_excel(filename_all)
         except Exception as e:
             logger.critical("Exception: " + str(e))
-
+        
+        # FEATURES
         df['Date']  = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
 
-        # Month
         df['Month']  = df['Date'].dt.strftime('%m')
         df['Month'] = df['Month'].apply(lambda x: int(x))
-
-        # Day
+        
         df['Day'] = df['Date'].dt.strftime('%d')
         df['Day'] = df['Day'].apply(lambda x: int(x))
 
-        # Week
         df['Week']  = df['Date'].dt.isocalendar().week
         df['Week'] = df['Week'].apply(lambda x: int(x))
 
@@ -121,7 +149,7 @@ def main():
         else:
             logger.debug("Saving one hot encoder" + " (" + str(col_list[i]) + ")")
         
-        train(df, str(col_list[i]), scaler_num, model_num, le_y, output_neuron)
+        train(df, str(col_list[i]), output_neuron)
     
 if __name__ == "__main__":
     main()
