@@ -79,7 +79,7 @@ def train(df, col, out):
         logger.debug("Saving model" + " (" + col + ")")
         
     try:
-        model.save(encoder ,le_y_file)
+        joblib.dump(encoder ,le_y_file)
     except Exception as e:
         logger.critical("Exception: " + str(e))
     else:
