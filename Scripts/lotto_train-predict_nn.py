@@ -72,7 +72,7 @@ def train(df, col, out):
         logger.debug("Saving scaler" + " (" + col + ")")
     
     try:
-        model.save(model_file)
+        model.save(model_num)
     except Exception as e:
         logger.critical("Exception: " + str(e))
     else:
