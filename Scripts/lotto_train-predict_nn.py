@@ -100,13 +100,13 @@ def main():
         # FEATURES
         df['Date']  = pd.to_datetime(df['Date'], format = '%d/%m/%Y')
 
-        df['Month']  = df['Date'].dt.strftime('%m')
+        df['Month'] = df['Date'].dt.strftime('%m')
         df['Month'] = df['Month'].apply(lambda x: int(x))
         
         df['Day'] = df['Date'].dt.strftime('%d')
         df['Day'] = df['Day'].apply(lambda x: int(x))
 
-        df['Week']  = df['Date'].dt.isocalendar().week
+        df['Week'] = df['Date'].dt.isocalendar().week
         df['Week'] = df['Week'].apply(lambda x: int(x))
 
         df['week_cos'] = np.cos(2 * np.pi * df['Week'] / 7)

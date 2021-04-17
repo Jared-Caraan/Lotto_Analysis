@@ -1,0 +1,2 @@
+2021-04-17 23:20:38,114:__main__:Opening past data
+2021-04-17 23:20:49,060:__main__:Accessing website

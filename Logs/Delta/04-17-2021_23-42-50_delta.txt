@@ -1,0 +1,3 @@
+2021-04-17 23:42:50,840:__main__:Opening past data
+2021-04-17 23:43:00,334:__main__:Accessing website
+2021-04-17 23:43:06,890:__main__:Latest date: 17 Apr, 2021

@@ -1,0 +1,7 @@
+2021-04-17 23:51:09,106:__main__:Opening past data
+2021-04-17 23:51:25,097:__main__:Accessing website
+2021-04-17 23:51:30,437:__main__:Latest date: 17 Apr, 2021
+2021-04-17 23:51:31,182:__main__:Adding newest date: 0   2021-04-17
+Name: Date, dtype: datetime64[ns]
+2021-04-17 23:51:31,183:__main__:Newest winning number: 0    37-32-02-22-03-20
+Name: Draw, dtype: object
