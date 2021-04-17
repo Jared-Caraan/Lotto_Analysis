@@ -1,6 +1,5 @@
 import pandas as pd
 
-from WebTable import WebTable
 from selenium import webdriver
 from config import chromedriver, second_batch, filename_2005
 

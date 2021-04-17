@@ -61,6 +61,7 @@ for i in range(1,64):
 
 first_batch = "https://lottotips888.blogspot.com/2008/09/philippine-lotto-results-642-year-1995.html"
 second_batch = "http://www.theluckygene.com/LotteryResults.aspx?gid=LottoPH"
+default_batch = "https://www.businesslist.ph/lottery/results/history"
     
 # HYPERPARAMETERS (DECISION TREE)
 test_size      = 0.15
