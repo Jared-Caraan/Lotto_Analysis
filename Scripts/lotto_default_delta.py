@@ -26,22 +26,20 @@ def main():
         logger.error("Exception: " + str(e))
     else:
         logger.debug("Opening past data")
-    print('a')
     
     # Ignore USB error; browser to not popup
     options = webdriver.ChromeOptions()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    #options.add_argument("--headless")
     
     # Access Chrome website
     try:
         driver = webdriver.Chrome(ChromeDriverManager().install(), options = options)
         driver.get(default_batch)
+        driver.minimize()
     except Exception as e:
         logger.critical("Exception: " + str(e))
     else:
         logger.debug("Accessing website")
-    print('b')
     
     # Interact with drop-down menu
     filter_game = driver.find_element_by_xpath('//select[@id="LotteryName"]')
@@ -58,19 +56,21 @@ def main():
     # Load first batch
     date_record = driver.find_elements_by_xpath('//table/tbody/tr/td[@title="Draw date"]')
     draw_record = driver.find_elements_by_xpath('//table/tbody/tr/td[3]/span')
-    print('c')
-    
-    #driver.implicitly_wait(30)
     
     logger.debug("Latest date: " + date_record[0].text)
     date_val = datetime.strptime(date_record[0].text, '%d %b, %Y')
-    print('d')
     
     if date_val == df_past['Date'].iloc[0]:
         logger.debug("No new records")
     else:
         df_new = pd.DataFrame(list(zip([date_val], [draw_record[0].get_attribute('title')])), columns = ['Date', 'Draw'])
         df_new[['first', 'second', 'third', 'fourth', 'fifth', 'sixth']] = df_new['Draw'].str.split('-', expand = True)
+        df_new['first']  = df_new['first'].apply(lambda x: int(x))
+        df_new['second'] = df_new['second'].apply(lambda x: int(x))
+        df_new['third']  = df_new['third'].apply(lambda x: int(x))
+        df_new['fourth'] = df_new['fourth'].apply(lambda x: int(x))
+        df_new['fifth']  = df_new['fifth'].apply(lambda x: int(x))
+        df_new['sixth']  = df_new['sixth'].apply(lambda x: int(x))
         
         try:
             df_new = df_new.append(df_past, sort = False, ignore_index = True)
