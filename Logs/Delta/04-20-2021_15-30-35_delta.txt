@@ -1,0 +1,9 @@
+2021-04-20 15:30:39,641:__main__:<Response [200]>
+2021-04-20 15:30:39,679:__main__:Extracting dates and numbers
+2021-04-20 15:30:39,695:__main__:Appending to DataFrame
+2021-04-20 15:30:39,710:__main__:Adding date feature
+2021-04-20 15:30:39,710:__main__:Adding odd-even feature
+2021-04-20 15:30:40,559:__main__:Reading historical data
+2021-04-20 15:30:40,559:__main__:Latest date would be: 0   2021-04-17
+Name: Date, dtype: datetime64[ns]
+2021-04-20 15:30:40,575:__main__:No new records

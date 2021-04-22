@@ -35,7 +35,6 @@ def main():
     try:
         driver = webdriver.Chrome(ChromeDriverManager().install(), options = options)
         driver.get(default_batch)
-        driver.minimize()
     except Exception as e:
         logger.critical("Exception: " + str(e))
     else:
@@ -71,6 +70,8 @@ def main():
         df_new['fourth'] = df_new['fourth'].apply(lambda x: int(x))
         df_new['fifth']  = df_new['fifth'].apply(lambda x: int(x))
         df_new['sixth']  = df_new['sixth'].apply(lambda x: int(x))
+        
+        df_new['Day_Name'] = df_new['Date'].dt.strftime("%A")
         
         try:
             df_new = df_new.append(df_past, sort = False, ignore_index = True)

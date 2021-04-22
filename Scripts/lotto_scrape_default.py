@@ -3,7 +3,7 @@ import time
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-from config import chromedriver, default_batch, filename_default
+from config import chromedriver, default_batch
 
 def main():
     
@@ -63,6 +63,13 @@ def main():
     # Features
     df['Date'] = pd.to_datetime(df['Date'], format = '%d %b, %Y')
     df[['first', 'second', 'third', 'fourth', 'fifth', 'sixth']] = df['Draw'].str.split('-', expand = True)
+    df['first']  = df['first'].apply(lambda x: int(x))
+    df['second'] = df['second'].apply(lambda x: int(x))
+    df['third']  = df['third'].apply(lambda x: int(x))
+    df['fourth'] = df['fourth'].apply(lambda x: int(x))
+    df['fifth']  = df['fifth'].apply(lambda x: int(x))
+    df['sixth']  = df['sixth'].apply(lambda x: int(x))
+    df['Day_Name'] = df['Date'].dt.strftime("%A")
     
     print(df.head(5))
     
