@@ -1,1 +1,0 @@
-2021-04-17 23:04:24,470:__main__:Opening past data

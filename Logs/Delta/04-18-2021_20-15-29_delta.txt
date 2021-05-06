@@ -1,5 +1,0 @@
-2021-04-18 20:15:29,579:__main__:Opening past data
-2021-04-18 20:15:58,942:__main__:Exception: 'WebDriver' object has no attribute 'minimize'
-2021-04-18 20:16:04,888:__main__:Latest date: 17 Apr, 2021
-2021-04-18 20:16:06,464:__main__:Adding newest date: 2021-04-17 00:00:00
-2021-04-18 20:16:06,464:__main__:Newest winning number: 37-32-02-22-03-20
