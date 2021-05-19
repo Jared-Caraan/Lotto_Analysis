@@ -1,5 +1,0 @@
-2021-04-23 22:42:07,439:__main__:Opening past data
-2021-04-23 22:42:21,201:__main__:Accessing website
-2021-04-23 22:42:25,018:__main__:Latest date: 22 Apr, 2021
-2021-04-23 22:42:26,282:__main__:Adding newest date: 2021-04-22 00:00:00
-2021-04-23 22:42:26,283:__main__:Newest winning number: 12-24-39-17-21-19

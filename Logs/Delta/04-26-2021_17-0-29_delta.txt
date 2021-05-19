@@ -1,5 +1,0 @@
-2021-04-26 17:00:29,631:__main__:Opening past data
-2021-04-26 17:00:44,940:__main__:Accessing website
-2021-04-26 17:00:49,206:__main__:Latest date: 24 Apr, 2021
-2021-04-26 17:00:50,493:__main__:Adding newest date: 2021-04-24 00:00:00
-2021-04-26 17:00:50,494:__main__:Newest winning number: 19-18-35-09-37-01

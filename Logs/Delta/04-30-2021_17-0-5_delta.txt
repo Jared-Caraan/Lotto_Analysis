@@ -1,5 +1,0 @@
-2021-04-30 17:00:06,079:__main__:Opening past data
-2021-04-30 17:00:24,903:__main__:Accessing website
-2021-04-30 17:00:31,273:__main__:Latest date: 29 Apr, 2021
-2021-04-30 17:00:32,573:__main__:Adding newest date: 2021-04-29 00:00:00
-2021-04-30 17:00:32,574:__main__:Newest winning number: 19-32-27-05-13-40
