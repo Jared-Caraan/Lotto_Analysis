@@ -1,0 +1,5 @@
+2021-05-19 17:00:24,905:__main__:Opening past data
+2021-05-19 17:00:44,539:__main__:Accessing website
+2021-05-19 17:00:49,784:__main__:Latest date: 18 May, 2021
+2021-05-19 17:00:50,973:__main__:Adding newest date: 2021-05-18 00:00:00
+2021-05-19 17:00:50,973:__main__:Newest winning number: 02-26-20-07-22-32
