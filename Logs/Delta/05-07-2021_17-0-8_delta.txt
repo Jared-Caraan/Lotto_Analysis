@@ -1,5 +1,0 @@
-2021-05-07 17:00:08,162:__main__:Opening past data
-2021-05-07 17:00:29,777:__main__:Accessing website
-2021-05-07 17:00:34,158:__main__:Latest date: 06 May, 2021
-2021-05-07 17:00:35,023:__main__:Adding newest date: 2021-05-06 00:00:00
-2021-05-07 17:00:35,024:__main__:Newest winning number: 41-14-34-23-19-02
