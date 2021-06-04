@@ -1,5 +1,0 @@
-2021-05-14 17:23:18,455:__main__:Opening past data
-2021-05-14 17:23:48,059:__main__:Accessing website
-2021-05-14 17:23:54,420:__main__:Latest date: 13 May, 2021
-2021-05-14 17:23:55,718:__main__:Adding newest date: 2021-05-13 00:00:00
-2021-05-14 17:23:55,718:__main__:Newest winning number: 32-40-20-12-05-42

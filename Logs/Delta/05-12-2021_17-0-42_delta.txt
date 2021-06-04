@@ -1,5 +1,0 @@
-2021-05-12 17:00:43,030:__main__:Opening past data
-2021-05-12 17:01:10,714:__main__:Accessing website
-2021-05-12 17:01:17,556:__main__:Latest date: 11 May, 2021
-2021-05-12 17:01:20,019:__main__:Adding newest date: 2021-05-11 00:00:00
-2021-05-12 17:01:20,019:__main__:Newest winning number: 22-14-26-11-04-41

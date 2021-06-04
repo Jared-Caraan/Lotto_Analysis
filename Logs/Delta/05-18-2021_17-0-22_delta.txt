@@ -1,4 +1,0 @@
-2021-05-18 17:00:23,037:__main__:Opening past data
-2021-05-18 17:01:09,773:__main__:Accessing website
-2021-05-18 17:01:15,494:__main__:Latest date: 15 May, 2021
-2021-05-18 17:01:15,506:__main__:No new records

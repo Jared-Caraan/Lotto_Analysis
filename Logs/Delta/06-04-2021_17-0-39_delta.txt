@@ -1,0 +1,5 @@
+2021-06-04 17:00:40,028:__main__:Opening past data
+2021-06-04 17:00:59,658:__main__:Accessing website
+2021-06-04 17:01:05,612:__main__:Latest date: 03 Jun, 2021
+2021-06-04 17:01:07,406:__main__:Adding newest date: 2021-06-03 00:00:00
+2021-06-04 17:01:07,406:__main__:Newest winning number: 24-40-01-32-06-14
