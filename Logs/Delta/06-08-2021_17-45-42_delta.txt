@@ -1,0 +1,4 @@
+2021-06-08 17:45:43,032:__main__:Opening past data
+2021-06-08 17:46:18,231:__main__:Accessing website
+2021-06-08 17:46:22,687:__main__:Latest date: 05 Jun, 2021
+2021-06-08 17:46:22,702:__main__:No new records

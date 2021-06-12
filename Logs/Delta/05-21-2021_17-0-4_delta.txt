@@ -1,5 +1,0 @@
-2021-05-21 17:00:04,184:__main__:Opening past data
-2021-05-21 17:00:23,742:__main__:Accessing website
-2021-05-21 17:00:28,016:__main__:Latest date: 20 May, 2021
-2021-05-21 17:00:28,801:__main__:Adding newest date: 2021-05-20 00:00:00
-2021-05-21 17:00:28,801:__main__:Newest winning number: 09-15-28-36-02-42

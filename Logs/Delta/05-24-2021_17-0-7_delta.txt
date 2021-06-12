@@ -1,5 +1,0 @@
-2021-05-24 17:00:07,467:__main__:Opening past data
-2021-05-24 17:00:22,861:__main__:Accessing website
-2021-05-24 17:00:28,689:__main__:Latest date: 22 May, 2021
-2021-05-24 17:00:30,087:__main__:Adding newest date: 2021-05-22 00:00:00
-2021-05-24 17:00:30,087:__main__:Newest winning number: 35-36-33-14-04-37
