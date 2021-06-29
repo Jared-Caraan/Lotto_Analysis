@@ -1,5 +1,0 @@
-2021-05-28 17:00:41,274:__main__:Opening past data
-2021-05-28 17:00:59,937:__main__:Accessing website
-2021-05-28 17:01:08,099:__main__:Latest date: 27 May, 2021
-2021-05-28 17:01:10,204:__main__:Adding newest date: 2021-05-27 00:00:00
-2021-05-28 17:01:10,212:__main__:Newest winning number: 05-39-31-11-21-25
