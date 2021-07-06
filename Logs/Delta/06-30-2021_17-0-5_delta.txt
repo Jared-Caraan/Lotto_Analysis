@@ -1,0 +1,5 @@
+2021-06-30 17:00:05,541:__main__:Opening past data
+2021-06-30 17:00:15,948:__main__:Accessing website
+2021-06-30 17:00:20,153:__main__:Latest date: 29 Jun, 2021
+2021-06-30 17:00:20,979:__main__:Adding newest date: 2021-06-29 00:00:00
+2021-06-30 17:00:20,979:__main__:Newest winning number: 07-04-32-24-41-02

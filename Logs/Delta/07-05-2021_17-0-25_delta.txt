@@ -1,0 +1,5 @@
+2021-07-05 17:00:26,075:__main__:Opening past data
+2021-07-05 17:00:37,632:__main__:Accessing website
+2021-07-05 17:00:41,724:__main__:Latest date: 03 Jul, 2021
+2021-07-05 17:00:43,258:__main__:Adding newest date: 2021-07-03 00:00:00
+2021-07-05 17:00:43,259:__main__:Newest winning number: 15-03-35-25-39-27

@@ -29,7 +29,7 @@ def main():
     df.loc[:,'first'] = df.loc[:,'first'].replace(label_list, factor_list)
     
     #Split into dependent and independent variables
-    X = df.iloc[:,0:4].values 
+    X = df.iloc[:,0:4].values
     y = df.iloc[:,4].values
     
     X_new = SelectKBest(score_func = f_regression, k=2).fit_transform(X,y)
