@@ -1,5 +1,0 @@
-2021-06-21 17:18:46,565:__main__:Opening past data
-2021-06-21 17:18:59,073:__main__:Accessing website
-2021-06-21 17:19:04,562:__main__:Latest date: 19 Jun, 2021
-2021-06-21 17:19:06,440:__main__:Adding newest date: 2021-06-19 00:00:00
-2021-06-21 17:19:06,440:__main__:Newest winning number: 23-02-31-20-06-28

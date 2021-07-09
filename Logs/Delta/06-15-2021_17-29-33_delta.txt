@@ -1,4 +1,0 @@
-2021-06-15 17:29:33,748:__main__:Opening past data
-2021-06-15 17:29:44,374:__main__:Accessing website
-2021-06-15 17:29:48,355:__main__:Latest date: 12 Jun, 2021
-2021-06-15 17:29:48,371:__main__:No new records

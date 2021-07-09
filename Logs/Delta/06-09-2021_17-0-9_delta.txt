@@ -1,5 +1,0 @@
-2021-06-09 17:00:10,139:__main__:Opening past data
-2021-06-09 17:00:27,141:__main__:Accessing website
-2021-06-09 17:00:34,184:__main__:Latest date: 08 Jun, 2021
-2021-06-09 17:00:35,597:__main__:Adding newest date: 2021-06-08 00:00:00
-2021-06-09 17:00:35,597:__main__:Newest winning number: 01-07-32-42-22-38

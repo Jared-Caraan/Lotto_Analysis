@@ -21,6 +21,7 @@ filename_2005     = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\Results_2
 filename_all      = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\Results_all.xlsx'
 filename_default  = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\Results_default.xlsx'
 filename_refact   = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\Results_refactored.csv'
+filename_csv_date = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\Results_refact_date.csv'
 filename_rng_test = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\RNG_test.xlsx'
 filename_z_score  = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\z_score.xlsx'
 filename_odd_even = 'C:\Personal_Project\Lotto_Analysis\Data_Gathering\odd_even.xlsx'
