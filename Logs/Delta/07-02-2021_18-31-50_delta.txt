@@ -1,5 +1,0 @@
-2021-07-02 18:31:50,214:__main__:Opening past data
-2021-07-02 18:32:00,939:__main__:Accessing website
-2021-07-02 18:32:05,578:__main__:Latest date: 01 Jul, 2021
-2021-07-02 18:32:07,005:__main__:Adding newest date: 2021-07-01 00:00:00
-2021-07-02 18:32:07,006:__main__:Newest winning number: 09-02-20-26-01-32

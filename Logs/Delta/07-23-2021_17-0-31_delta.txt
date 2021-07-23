@@ -1,0 +1,5 @@
+2021-07-23 17:00:31,571:__main__:Opening past data
+2021-07-23 17:01:23,390:__main__:Accessing website
+2021-07-23 17:01:40,201:__main__:Latest date: 22 Jul, 2021
+2021-07-23 17:01:42,239:__main__:Adding newest date: 2021-07-22 00:00:00
+2021-07-23 17:01:42,239:__main__:Newest winning number: 04-09-41-33-20-29

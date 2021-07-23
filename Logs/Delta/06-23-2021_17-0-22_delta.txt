@@ -1,5 +1,0 @@
-2021-06-23 17:00:22,850:__main__:Opening past data
-2021-06-23 17:00:31,688:__main__:Accessing website
-2021-06-23 17:00:36,836:__main__:Latest date: 22 Jun, 2021
-2021-06-23 17:00:38,028:__main__:Adding newest date: 2021-06-22 00:00:00
-2021-06-23 17:00:38,028:__main__:Newest winning number: 13-29-14-35-23-07
