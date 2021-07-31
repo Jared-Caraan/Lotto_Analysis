@@ -1,0 +1,5 @@
+2021-07-26 17:00:29,504:__main__:Opening past data
+2021-07-26 17:00:43,758:__main__:Accessing website
+2021-07-26 17:00:48,091:__main__:Latest date: 24 Jul, 2021
+2021-07-26 17:00:49,741:__main__:Adding newest date: 2021-07-24 00:00:00
+2021-07-26 17:00:49,742:__main__:Newest winning number: 30-12-19-31-34-39
