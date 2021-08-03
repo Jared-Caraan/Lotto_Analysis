@@ -1,4 +1,0 @@
-2021-07-20 21:21:34,594:__main__:Opening past data
-2021-07-20 21:22:11,555:__main__:Accessing website
-2021-07-20 21:22:16,190:__main__:Latest date: 17 Jul, 2021
-2021-07-20 21:22:16,203:__main__:No new records
