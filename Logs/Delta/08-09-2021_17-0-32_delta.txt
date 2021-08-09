@@ -1,0 +1,5 @@
+2021-08-09 17:00:32,846:__main__:Opening past data
+2021-08-09 17:00:46,116:__main__:Accessing website
+2021-08-09 17:00:51,483:__main__:Latest date: 07 Aug, 2021
+2021-08-09 17:00:53,338:__main__:Adding newest date: 2021-08-07 00:00:00
+2021-08-09 17:00:53,339:__main__:Newest winning number: 24-37-15-26-22-31
