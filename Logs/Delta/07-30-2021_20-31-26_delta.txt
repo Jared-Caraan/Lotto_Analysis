@@ -1,5 +1,0 @@
-2021-07-30 20:31:26,484:__main__:Opening past data
-2021-07-30 20:31:46,073:__main__:Accessing website
-2021-07-30 20:31:52,199:__main__:Latest date: 29 Jul, 2021
-2021-07-30 20:31:54,973:__main__:Adding newest date: 2021-07-29 00:00:00
-2021-07-30 20:31:54,973:__main__:Newest winning number: 07-35-21-33-12-29

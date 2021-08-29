@@ -1,0 +1,4 @@
+2021-08-19 17:00:26,419:__main__:Opening past data
+2021-08-19 17:00:38,896:__main__:Accessing website
+2021-08-19 17:00:41,862:__main__:Latest date: 17 Aug, 2021
+2021-08-19 17:00:41,875:__main__:No new records
