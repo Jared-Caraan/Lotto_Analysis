@@ -1,0 +1,4 @@
+2021-09-07 17:00:29,395:__main__:Opening past data
+2021-09-07 17:00:40,804:__main__:Accessing website
+2021-09-07 17:00:44,988:__main__:Latest date: 04 Sep, 2021
+2021-09-07 17:00:45,003:__main__:No new records

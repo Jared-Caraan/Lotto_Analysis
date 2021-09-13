@@ -1,0 +1,4 @@
+2021-08-31 20:01:43,332:__main__:Opening past data
+2021-08-31 20:02:02,572:__main__:Accessing website
+2021-08-31 20:02:13,965:__main__:Latest date: 28 Aug, 2021
+2021-08-31 20:02:14,010:__main__:No new records

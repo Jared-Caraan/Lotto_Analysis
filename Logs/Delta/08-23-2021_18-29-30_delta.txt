@@ -1,5 +1,0 @@
-2021-08-23 18:29:30,987:__main__:Opening past data
-2021-08-23 18:29:48,443:__main__:Accessing website
-2021-08-23 18:29:54,222:__main__:Latest date: 21 Aug, 2021
-2021-08-23 18:29:56,249:__main__:Adding newest date: 2021-08-21 00:00:00
-2021-08-23 18:29:56,249:__main__:Newest winning number: 01-05-41-26-03-09
