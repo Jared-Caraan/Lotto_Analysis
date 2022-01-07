@@ -10,11 +10,11 @@
 #>
 
 #--ACTIVATION OF VENV--#
-    Set-Location -Path C:\env\Scripts
+    Set-Location -Path C:\venv\Scripts
     & .\activate.ps1
 
 #--DECLARATIONS--#
-    $script_dir = "C:\Personal_Project\Lotto_Analysis\Scripts\"
+    $script_dir = "C:\Users\Jared\Documents\Lotto_Analysis\Scripts\"
     $script = "lotto_load_delta.py"
 
 #--EXECUTION OF PYTHON SCRIPT--#

@@ -3,18 +3,18 @@
     
     Purpose: For automatic retrieval of latest 6/42 lotto winning result
     -----------  ------                 -----------
-    Change Date  Author                 Description
+    Created Date Author                 Description
     -----------  ------                 -----------
     09-22-2020   j.caraan04@gmail.com   Full scrape of 6/42 results
 
 #>
 
 #--ACTIVATION OF VENV--#
-    Set-Location -Path C:\env\Scripts
+    Set-Location -Path C:\venv\Scripts
     & .\activate.ps1
 
 #--DECLARATIONS--#
-    $script_dir = "C:\Personal_Project\Lotto_Analysis\Scripts\"
+    $script_dir = "C:\Users\Jared\Documents\Lotto_Analysis\Scripts\"
     $script = "lotto_load_full.py"
 	$script2 = "lotto_concat_all.py"
 
