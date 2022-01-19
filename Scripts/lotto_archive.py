@@ -7,7 +7,7 @@ Created on Tue Nov  5 23:11:27 2019
 import datetime as dt
 import os
 import zipfile
-import time
+import sys
 
 from zipfile import ZipFile
 from config import archive_files, delete_zipped, filename_archive
@@ -40,7 +40,7 @@ def main():
         toArchive(filename_archive,archive_files)
         toDelete(delete_zipped)
     except:
-        System.exit(0)
+        sys.exit(0)
     
 if __name__ == "__main__":
     main()
