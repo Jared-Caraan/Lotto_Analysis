@@ -1,5 +1,0 @@
-2021-08-27 17:00:12,492:__main__:Opening past data
-2021-08-27 17:00:30,316:__main__:Accessing website
-2021-08-27 17:00:35,462:__main__:Latest date: 26 Aug, 2021
-2021-08-27 17:00:36,773:__main__:Adding newest date: 2021-08-26 00:00:00
-2021-08-27 17:00:36,774:__main__:Newest winning number: 41-17-33-34-01-15

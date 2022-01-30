@@ -1,5 +1,0 @@
-2021-09-08 17:00:41,468:__main__:Opening past data
-2021-09-08 17:00:56,271:__main__:Accessing website
-2021-09-08 17:01:02,116:__main__:Latest date: 07 Sep, 2021
-2021-09-08 17:01:04,310:__main__:Adding newest date: 2021-09-07 00:00:00
-2021-09-08 17:01:04,311:__main__:Newest winning number: 40-01-07-25-30-02

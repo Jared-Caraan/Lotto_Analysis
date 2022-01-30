@@ -1,5 +1,0 @@
-2021-09-13 17:00:48,551:__main__:Opening past data
-2021-09-13 17:01:09,820:__main__:Accessing website
-2021-09-13 17:01:18,523:__main__:Latest date: 11 Sep, 2021
-2021-09-13 17:01:21,434:__main__:Adding newest date: 2021-09-11 00:00:00
-2021-09-13 17:01:21,434:__main__:Newest winning number: 15-19-41-34-07-35

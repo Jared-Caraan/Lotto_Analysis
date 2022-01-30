@@ -1,5 +1,0 @@
-2021-09-06 17:57:06,312:__main__:Opening past data
-2021-09-06 17:57:26,785:__main__:Accessing website
-2021-09-06 17:57:33,866:__main__:Latest date: 04 Sep, 2021
-2021-09-06 17:57:36,371:__main__:Adding newest date: 2021-09-04 00:00:00
-2021-09-06 17:57:36,371:__main__:Newest winning number: 30-26-41-16-14-09
