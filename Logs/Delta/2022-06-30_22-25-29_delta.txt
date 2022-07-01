@@ -1,0 +1,12 @@
+2022-06-30 22:25:30,085:__main__:<Response [200]>
+2022-06-30 22:25:30,093:__main__:<Response [200]>
+2022-06-30 22:25:30,110:__main__:Extracting dates and numbers
+2022-06-30 22:25:30,119:__main__:Appending to DataFrame
+2022-06-30 22:25:30,119:__main__:Adding date feature
+2022-06-30 22:25:30,119:__main__:Adding odd-even feature
+2022-06-30 22:25:30,127:__main__:Exception: File is not a zip file
+2022-06-30 22:25:30,152:__main__:Extracting dates and numbers
+2022-06-30 22:25:30,168:__main__:Appending to DataFrame
+2022-06-30 22:25:30,168:__main__:Adding date feature
+2022-06-30 22:25:30,168:__main__:Adding odd-even feature
+2022-06-30 22:25:30,181:__main__:Exception: File is not a zip file
