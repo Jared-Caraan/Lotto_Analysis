@@ -1,6 +1,0 @@
-2022-07-01 21:17:18,253:__main__:<Response [200]>
-2022-07-01 21:17:18,303:__main__:Extracting dates and numbers
-2022-07-01 21:17:18,311:__main__:Appending to DataFrame
-2022-07-01 21:17:18,317:__main__:Adding date feature
-2022-07-01 21:17:18,319:__main__:Adding odd-even feature
-2022-07-01 21:17:18,333:__main__:Exception: File is not a zip file
