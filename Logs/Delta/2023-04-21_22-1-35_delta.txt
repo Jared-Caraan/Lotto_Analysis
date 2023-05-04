@@ -1,0 +1,12 @@
+2023-04-21 22:01:36,254:__main__:<Response [200]>
+2023-04-21 22:01:36,277:__main__:Extracting dates and numbers
+2023-04-21 22:01:36,282:__main__:Appending to DataFrame
+2023-04-21 22:01:36,285:__main__:Adding date feature
+2023-04-21 22:01:36,286:__main__:Adding odd-even feature
+2023-04-21 22:01:37,418:__main__:Reading historical data
+2023-04-21 22:01:37,421:__main__:Latest date would be: 0   2023-04-18
+Name: Date, dtype: datetime64[ns]
+2023-04-21 22:01:38,291:__main__:Adding newest date: 0   2023-04-20
+Name: Date, dtype: datetime64[ns]
+2023-04-21 22:01:38,292:__main__:Newest winning number: 0    01,16,17,34,35,39
+Name: Winning Numbers, dtype: object
