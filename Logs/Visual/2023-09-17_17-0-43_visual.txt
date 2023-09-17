@@ -1,0 +1,3 @@
+2023-09-17 17:00:44,261:__main__:Reading historical data
+2023-09-17 17:00:44,261:__main__:Data Transformation
+2023-09-17 17:00:44,694:__main__:Exception: The `figure_or_data` positional argument must be `dict`-like, `list`-like, or an instance of plotly.graph_objs.Figure
