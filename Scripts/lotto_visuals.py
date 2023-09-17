@@ -9,7 +9,7 @@ from plotly.subplots import make_subplots
 from config import filename_excel, visual_log, day_type
 
 ## CHART STUDIO CONFIG
-chart_studio.tools.set_credentials_file(username='jargolastik', api_key='AbGkiEPweNW58t2r5wlB')
+chart_studio.tools.set_credentials_file(username='rubberninja', api_key='FUPGqd08gWsRPq0PJP65')
 
 
 ## LOGGER CONFIG

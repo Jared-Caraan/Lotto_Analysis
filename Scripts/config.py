@@ -14,6 +14,10 @@ month_list = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
 day_type   = CategoricalDtype(categories=weekday, ordered=True)
 month_type = CategoricalDtype(categories=month_list, ordered=True)
 
+# PLOTLY CONFIGURATIONS
+username = 'rubberninja'
+api_key = 'FUPGqd08gWsRPq0PJP65'
+
 # FILES
 filename_excel    = r'C:\Users\Jared\Documents\Lotto_Analysis\Data_Gathering\PastDataResults.xlsx'
 filename_1995     = r'C:\Users\Jared\Documents\Lotto_Analysis\Data_Gathering\Results_1995.xlsx'
