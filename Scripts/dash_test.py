@@ -2,7 +2,9 @@
 # visit http://127.0.0.1:8050/ in your web browser.
 
 
-from dash import Dash, html, dcc
+from dash import Dash, html, dcc, Input, Output, callback
+from config import filename_all, visual_log, day_type
+
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
@@ -14,31 +16,29 @@ colors = {
     'text': '#7FDBFF'
 }
 
-# assume you have a "long-form" data frame
-# see https://plotly.com/python/px-arguments/ for more options
-df = pd.DataFrame({
-    "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
-    "Amount": [4, 1, 2, 2, 4, 5],
-    "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"]
-})
-
-fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
+df = pd.read_excel(filename_all)
+df = df.rename(columns = {'Winning Numbers': 'Draw'})
+df['Year'] = df['Date'].dt.strftime('%Y')
+df['Month'] = df['Date'].dt.strftime('%B')
+df['Month_num'] = df['Date'].dt.strftime('%m').str.lstrip("0")
+df['Day'] = df['Date'].dt.strftime('%d')
+df['Day'] = df['Day'].str.lstrip("0")
 
 trace1 = go.Indicator(
-        mode = "number",
-        value = 0,
-        delta = {"reference": 0, "valueformat": ".3f"},
-        title = {"text": "First number"},
-        number = {'font':{'size': 50}},
-        domain = {'x': [0, 0.2], 'y': [0.8, 1]})
+    mode = "number",
+    value = 0,
+    delta = {"reference": 0, "valueformat": ".3f"},
+    title = {"text": "First number"},
+    number = {'font':{'size': 50}},
+    domain = {'x': [0, 0.2], 'y': [0.8, 1]})
 
 trace2 = go.Indicator(
-        mode = "number",
-        value = 0,
-        delta = {"reference": 0, "valueformat": ".3f"},
-        title = {"text": "Second number"},
-        number = {'font':{'size': 50}},
-        domain = {'x': [0, 1], 'y': [0.8, 1]})
+    mode = "number",
+    value = 0,
+    delta = {"reference": 0, "valueformat": ".3f"},
+    title = {"text": "Second number"},
+    number = {'font':{'size': 50}},
+    domain = {'x': [0, 1], 'y': [0.8, 1]})
 
 trace3 = go.Indicator(
     mode = "number",
@@ -74,7 +74,7 @@ trace6 = go.Indicator(
 
 trace7 = go.Indicator(
     mode = "number",
-    value = 0,
+    value = 22,
     delta = {"reference": 0, "valueformat": ".3f"},
     title = {"text": "Record Count"},
     number = {'font':{'size': 50}},
@@ -134,7 +134,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
     html.Div([
         html.Label('Day Name', style={'color':'white'}),
         dcc.Dropdown(
-            ['Friday', 'Thursday', 'Saturday'],
+            list(df['Day_Name'].unique()),
             'Thursday',
             id='drop-day_name'
         ),
@@ -142,7 +142,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         html.Br(),
         html.Label('Central Tendency', style={'color':'white'}),
         dcc.Dropdown(
-            ['Mean', 'Median', 'Mode', 'Max', 'Min'],
+            ['Mean', 'Median', 'Max', 'Min'],
             'Mean',
             id='drop-stat_func'
         )
@@ -154,6 +154,130 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         figure=fig
     )
 ])
+
+@callback(
+    Output('drop-day_name', 'disabled'),
+    Input('check-date', 'value')
+)
+def use_date_enable(toggle):
+    if toggle:
+        return True
+    return False
+
+@callback(
+    Output('example-graph', 'figure'),
+    Input('check-date', 'value'),
+    Input('drop-month', 'value'),
+    Input('drop-day', 'value'),
+    Input('drop-day_name', 'value'),
+    Input('drop-stat_func', 'value')
+)
+def update_figure(toggle_date, selected_month, selected_day, selected_day_name, selected_func):
+    if toggle_date:
+        filter_list = [i and j for i, j in
+                        zip(df['Month_num'] == str(selected_month), df['Day'] == str(selected_day))]
+        temp_df = df[filter_list]
+    else:
+        temp_df = df[df['Day_Name'] == selected_day_name]
+
+    if selected_func == 'Mean':
+        temp_first  = temp_df['first'].mean()
+        temp_second = temp_df['second'].mean()
+        temp_third  = temp_df['third'].mean()
+        temp_fourth = temp_df['fourth'].mean()
+        temp_fifth  = temp_df['fifth'].mean()
+        temp_sixth  = temp_df['sixth'].mean()
+    elif selected_func == 'Median':
+        temp_first  = temp_df['first'].median()
+        temp_second = temp_df['second'].median()
+        temp_third  = temp_df['third'].median()
+        temp_fourth = temp_df['fourth'].median()
+        temp_fifth  = temp_df['fifth'].median()
+        temp_sixth  = temp_df['sixth'].median()
+    elif selected_func == 'Max':
+        temp_first = temp_df['first'].max()
+        temp_second = temp_df['second'].max()
+        temp_third  = temp_df['third'].max()
+        temp_fourth = temp_df['fourth'].max()
+        temp_fifth  = temp_df['fifth'].max()
+        temp_sixth  = temp_df['sixth'].max()
+    elif selected_func == 'Min':
+        temp_first = temp_df['first'].min()
+        temp_second = temp_df['second'].min()
+        temp_third  = temp_df['third'].min()
+        temp_fourth = temp_df['fourth'].min()
+        temp_fifth  = temp_df['fifth'].min()
+        temp_sixth  = temp_df['sixth'].min()
+    
+    trace1 = go.Indicator(
+        mode = "number",
+        value = temp_first,
+        delta = {"reference": 0, "valueformat": ".3f"},
+        title = {"text": "First number"},
+        number = {'font':{'size': 50}},
+        domain = {'x': [0, 0.2], 'y': [0.8, 1]})
+    
+    trace2 = go.Indicator(
+        mode = "number",
+        value = temp_second,
+        delta = {"reference": 0, "valueformat": ".3f"},
+        title = {"text": "Second number"},
+        number = {'font':{'size': 50}},
+        domain = {'x': [0, 1], 'y': [0.8, 1]})
+
+    trace3 = go.Indicator(
+        mode = "number",
+        value = temp_third,
+        delta = {"reference": 0, "valueformat": ".3f"},
+        title = {"text": "Third number"},
+        number = {'font':{'size': 50}},
+        domain = {'x': [0.8, 1], 'y': [0.8, 1]})
+
+    trace4 = go.Indicator(
+        mode = "number",
+        value = temp_fourth,
+        delta = {"reference": 0, "valueformat": ".3f"},
+        title = {"text": "Fourth number"},
+        number = {'font':{'size': 50}},
+        domain = {'x': [0, 0.2], 'y': [0, 1]})
+
+    trace5 = go.Indicator(
+        mode = "number",
+        value = temp_fifth,
+        delta = {"reference": 0, "valueformat": ".3f"},
+        title = {"text": "Fifth number"},
+        number = {'font':{'size': 50}},
+        domain = {'x': [0, 1], 'y': [0, 1]})
+
+    trace6 = go.Indicator(
+        mode = "number",
+        value = temp_sixth,
+        delta = {"reference": 0, "valueformat": ".3f"},
+        title = {"text": "Sixth number"},
+        number = {'font':{'size': 50}},
+        domain = {'x': [0.8, 1], 'y': [0, 1]})
+
+    trace7 = go.Indicator(
+        mode = "number",
+        value = len(temp_df),
+        delta = {"reference": 0, "valueformat": ".3f"},
+        title = {"text": "Record Count"},
+        number = {'font':{'size': 50}},
+        domain = {'x': [0, 0.2], 'y': [0, 0.2]})
+
+    fig = go.FigureWidget(data=[trace1,trace2,trace3,trace4,trace5,trace6,trace7],
+                         layout=go.Layout(
+                            title=dict(
+                                text='Six Numbers EDA'
+                            )))
+    
+    fig.update_layout(
+        plot_bgcolor=colors['background'],
+        paper_bgcolor=colors['background'],
+        font_color=colors['text']
+    )
+    
+    return fig
 
 if __name__ == '__main__':
     app.run(debug=True)
