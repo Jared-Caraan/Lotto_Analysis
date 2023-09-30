@@ -107,53 +107,68 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
     }),
 
     html.Div([
-        dcc.Checklist(
-            ['Use Date'],
-            id='check-date', 
-            style={'color':'white'}
-        ),
 
-        html.Br(),
-        html.Label('Month', style={'color':'white'}),
-        dcc.Dropdown(
-            [i for i in range(1,13)],
-            1,
-            id='drop-month'
-        ),
+        html.Div([
+            dcc.Checklist(
+                ['Use Date'],
+                id='check-date', 
+                style={'color':'white'}
+            ),
 
-        html.Br(),
-        html.Label('Day', style={'color':'white'}),
-        dcc.Dropdown(
-            [i for i in range(1,32)],
-            1,
-            id='drop-day'
-        )
+            html.Label('Month', style={'color':'white'}),
+            dcc.Dropdown(
+                [i for i in range(1,13)],
+                1,
+                id='drop-month',
+                style={'width':'20%'}
+            ),
 
-    ], style={'width': '48%', 'display': 'inline-block'}),
+            html.Label('Day', style={'color':'white'}),
+            dcc.Dropdown(
+                [i for i in range(1,32)],
+                1,
+                id='drop-day',
+                style={'width':'20%'}
+            )
 
-    html.Div([
-        html.Label('Day Name', style={'color':'white'}),
-        dcc.Dropdown(
-            list(df['Day_Name'].unique()),
-            'Thursday',
-            id='drop-day_name'
-        ),
+        ], style={"border":"1px yellow solid", "background-color":"#38444D"}),
 
-        html.Br(),
-        html.Label('Central Tendency', style={'color':'white'}),
-        dcc.Dropdown(
-            ['Mean', 'Median', 'Max', 'Min'],
-            'Mean',
-            id='drop-stat_func'
-        )
+        html.Div([
+            # html.Label('Day Name', style={'color':'white'}),
+            html.Div([
+            dcc.Dropdown(
+                list(df['Day_Name'].unique()),
+                'Thursday',
+                id='drop-day_name'
+            )], style={"margin":"0 auto"}),
 
-    ], style={'width': '45%', 'display': 'inline-block'}),
+            # html.Label('Central Tendency', style={'color':'white'}),
+            html.Div([
+            dcc.Dropdown(
+                ['Mean', 'Median', 'Max', 'Min'],
+                'Mean',
+                id='drop-stat_func'
+            )], style={"position":"absolute", "bottom":"8px", "right": "10px", "width":"93.5%"})
+
+        ], style={"width":"20%", "padding":"10px", "border":"1px yellow solid", "background-color":"#38444D", "position":"relative"})
+
+    ], style={"display":"flex", "background-color":"#15202B", "padding":"20px", "justify-content":"space-evenly"}),
 
     dcc.Graph(
         id='example-graph',
         figure=fig
     )
 ])
+
+@callback(
+    Output('drop-month', 'disabled'),
+    Output('drop-day', 'disabled'),
+    Input('check-date', 'value')
+)
+def use_date_disable_day(toggle):
+    if not toggle:
+        return True, True
+    return False, False
 
 @callback(
     Output('drop-day_name', 'disabled'),
