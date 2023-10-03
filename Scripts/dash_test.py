@@ -12,8 +12,8 @@ import pandas as pd
 app = Dash(__name__)
 
 colors = {
-    'background': '#111111',
-    'text': '#7FDBFF'
+    'background': '#F3F5F9',
+    'text': 'black'
 }
 
 df = pd.read_excel(filename_all)
@@ -112,35 +112,35 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             dcc.Checklist(
                 ['Use Date'],
                 id='check-date', 
-                style={'color':'white'}
-            ),
+                style={'color':'black'}
+            )
+        ]),
 
-            html.Label('Month', style={'color':'white'}),
+        html.Div([
+            html.Span("MONTH & DAY"),
+            html.Div([
             dcc.Dropdown(
                 [i for i in range(1,13)],
                 1,
-                id='drop-month',
-                style={'width':'20%'}
-            ),
+                id='drop-month'
+            )], style={}),
 
-            html.Label('Day', style={'color':'white'}),
+            html.Div([
             dcc.Dropdown(
                 [i for i in range(1,32)],
                 1,
-                id='drop-day',
-                style={'width':'20%'}
-            )
-
-        ], style={"border":"1px yellow solid", "background-color":"#38444D"}),
+                id='drop-day'
+            )], style={"margin-top":"20px"})
+        ], style={"width":"20%", "padding":"10px", "border-radius":"3px", "background-color":"white", "position":"relative", "border-bottom":"5px solid red"}),
 
         html.Div([
-            # html.Label('Day Name', style={'color':'white'}),
+            html.Span("DAY NAME & STAT FUNCTION", style={"margin-bottom":"5px"}),
             html.Div([
             dcc.Dropdown(
                 list(df['Day_Name'].unique()),
                 'Thursday',
                 id='drop-day_name'
-            )], style={"margin":"0 auto"}),
+            )]),
 
             # html.Label('Central Tendency', style={'color':'white'}),
             html.Div([
@@ -150,9 +150,9 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
                 id='drop-stat_func'
             )], style={"position":"absolute", "bottom":"8px", "right": "10px", "width":"93.5%"})
 
-        ], style={"width":"20%", "padding":"10px", "border":"1px yellow solid", "background-color":"#38444D", "position":"relative"})
+        ], style={"width":"20%", "padding":"10px", "border-radius":"3px", "background-color":"white", "position":"relative", "border-bottom":"5px solid blue"})
 
-    ], style={"display":"flex", "background-color":"#15202B", "padding":"20px", "justify-content":"space-evenly"}),
+    ], style={"display":"flex", "padding":"20px", "justify-content":"space-evenly"}),
 
     dcc.Graph(
         id='example-graph',

@@ -1,3 +1,0 @@
-2023-09-17 17:03:29,180:__main__:Reading historical data
-2023-09-17 17:03:29,180:__main__:Data Transformation
-2023-09-17 17:03:30,426:__main__:Exception: To create folders, you need to upgrade your subscription. Upgrade your account to save folders, private files, and more: https://plotly.com/get-pricing/
