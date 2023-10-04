@@ -13,7 +13,7 @@ app = Dash(__name__)
 
 colors = {
     'background': '#F3F5F9',
-    'text': 'black'
+    'text': 'red'
 }
 
 df = pd.read_excel(filename_all)
@@ -88,11 +88,11 @@ fig = go.FigureWidget(data=[trace1,trace2,trace3,trace4,trace5,trace6,trace7],
 
 fig.update_layout(
     plot_bgcolor=colors['background'],
-    paper_bgcolor=colors['background'],
+    paper_bgcolor='blue',
     font_color=colors['text']
 )
 
-app.layout = html.Div(style={'backgroundColor': colors['background']}, children=[
+app.layout = html.Div(style={'backgroundColor': 'blue'}, children=[
     html.H1(children='Hello Dashes',
         style={
             'textAlign': 'center',
@@ -116,14 +116,14 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             )
         ]),
 
-        html.Div([
+        html.Div(className = "month-and-day-div", children=[
             html.Span("MONTH & DAY"),
             html.Div([
             dcc.Dropdown(
                 [i for i in range(1,13)],
                 1,
                 id='drop-month'
-            )], style={}),
+            )]),
 
             html.Div([
             dcc.Dropdown(
@@ -131,7 +131,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
                 1,
                 id='drop-day'
             )], style={"margin-top":"20px"})
-        ], style={"width":"20%", "padding":"10px", "border-radius":"3px", "background-color":"white", "position":"relative", "border-bottom":"5px solid red"}),
+        ]),
 
         html.Div([
             html.Span("DAY NAME & STAT FUNCTION", style={"margin-bottom":"5px"}),
@@ -142,7 +142,6 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
                 id='drop-day_name'
             )]),
 
-            # html.Label('Central Tendency', style={'color':'white'}),
             html.Div([
             dcc.Dropdown(
                 ['Mean', 'Median', 'Max', 'Min'],
@@ -154,10 +153,11 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 
     ], style={"display":"flex", "padding":"20px", "justify-content":"space-evenly"}),
 
-    dcc.Graph(
-        id='example-graph',
-        figure=fig
-    )
+    html.Div([
+        dcc.Graph(
+            id='example-graph',
+            figure=fig
+        )])
 ])
 
 @callback(
