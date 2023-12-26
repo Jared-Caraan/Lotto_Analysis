@@ -8,12 +8,17 @@ from config import filename_all, visual_log, day_type
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
+import math
 
-app = Dash(__name__)
+app = Dash(
+    __name__
+)
+
+server = app.server
 
 colors = {
-    'background': '#F3F5F9',
-    'text': 'red'
+    'background': '#282A35',
+    'text': 'white'
 }
 
 df = pd.read_excel(filename_all)
@@ -92,67 +97,82 @@ fig.update_layout(
     font_color=colors['text']
 )
 
-app.layout = html.Div(style={'backgroundColor': 'blue'}, children=[
-    html.H1(children='Hello Dashes',
+app.layout = html.Div(style={'backgroundColor': '#282A35'}, children=[
+    html.H1(children='Exploratory Data Analysis I',
         style={
             'textAlign': 'center',
             'color': colors['text']
         }),
-
-    html.Div(children='''
-        Dash: A web application framework for your data.
+    html.Br(),
+    html.P(children='''
+        The values below shows the central tendency and range of all the 6/42 results per digit. It is also important to note that the results extracted are arranged in numerical order.
     ''', style={
         'textAlign': 'center',
         'color': colors['text']
     }),
-
+    html.Hr(),html.Br(), html.Br(),
+    html.Div(className = "eda-help-panel-div",
+        children = [
+            html.Li(children='''
+                Use Date - When checked, it enables the second widget (day and month number) to be chosen. This will disable the day name to be clicked.
+                '''),
+            html.Br(),
+            html.Li(children='''
+                Month & Day Number - This allows you to pick a specific month and day number. This is only allowed when Use Data widget is ticked.
+                '''),
+            html.Br(),
+            html.Li(children='''
+                Day Name & Stat Function - This allows you to pick the day name. The day name refers to the day when a result is generated. The Stat Function refers to what statistical function would you like to use to describe the data.
+                ''')
+        ]
+    ),
+    html.Br(), html.Br(),
     html.Div([
 
         html.Div([
             dcc.Checklist(
                 ['Use Date'],
                 id='check-date', 
-                style={'color':'black'}
+                style={'color':'white'}
             )
         ]),
 
-        html.Div(className = "month-and-day-div", children=[
-            html.Span("MONTH & DAY"),
+        html.Div(className = "eda-widgets-div", children=[
+            html.Span("Month Number", style={'color':'white', "position":"absolute","top":"10px"}),
             html.Div([
             dcc.Dropdown(
                 [i for i in range(1,13)],
                 1,
                 id='drop-month'
-            )]),
-
+            )], style={"position":"absolute", "top":"35px", "width":"93.5%"}),
+            html.Span("Day Number", style={'color':'white', "position":"absolute","bottom":"50px"}),
             html.Div([
             dcc.Dropdown(
                 [i for i in range(1,32)],
                 1,
                 id='drop-day'
-            )], style={"margin-top":"20px"})
+            )], style={"position":"absolute", "bottom":"10px", "width":"93.5%"})
         ]),
 
-        html.Div([
-            html.Span("DAY NAME & STAT FUNCTION", style={"margin-bottom":"5px"}),
+        html.Div(className = "eda-widgets-div", children = [
+            html.Span("Day Name", style={'color':'white', "position":"absolute","top":"10px"}),
             html.Div([
             dcc.Dropdown(
                 list(df['Day_Name'].unique()),
                 'Thursday',
                 id='drop-day_name'
-            )]),
-
+            )], style={"position":"absolute", "top":"35px", "width":"93.5%"}),
+            html.Span("Stat Function", style={'color':'white', "position":"absolute","bottom":"50px"}),
             html.Div([
             dcc.Dropdown(
                 ['Mean', 'Median', 'Max', 'Min'],
                 'Mean',
                 id='drop-stat_func'
-            )], style={"position":"absolute", "bottom":"8px", "right": "10px", "width":"93.5%"})
-
-        ], style={"width":"20%", "padding":"10px", "border-radius":"3px", "background-color":"white", "position":"relative", "border-bottom":"5px solid blue"})
+            )], style={"position":"absolute", "bottom":"10px", "width":"93.5%"})
+        ]),
 
     ], style={"display":"flex", "padding":"20px", "justify-content":"space-evenly"}),
-
+    html.Hr(),
     html.Div([
         dcc.Graph(
             id='example-graph',
@@ -196,33 +216,33 @@ def update_figure(toggle_date, selected_month, selected_day, selected_day_name, 
         temp_df = df[df['Day_Name'] == selected_day_name]
 
     if selected_func == 'Mean':
-        temp_first  = temp_df['first'].mean()
-        temp_second = temp_df['second'].mean()
-        temp_third  = temp_df['third'].mean()
-        temp_fourth = temp_df['fourth'].mean()
-        temp_fifth  = temp_df['fifth'].mean()
-        temp_sixth  = temp_df['sixth'].mean()
+        temp_first  = math.floor(temp_df['first'].mean())
+        temp_second = math.floor(temp_df['second'].mean())
+        temp_third  = math.floor(temp_df['third'].mean())
+        temp_fourth = math.floor(temp_df['fourth'].mean())
+        temp_fifth  = math.floor(temp_df['fifth'].mean())
+        temp_sixth  = math.floor(temp_df['sixth'].mean())
     elif selected_func == 'Median':
-        temp_first  = temp_df['first'].median()
-        temp_second = temp_df['second'].median()
-        temp_third  = temp_df['third'].median()
-        temp_fourth = temp_df['fourth'].median()
-        temp_fifth  = temp_df['fifth'].median()
-        temp_sixth  = temp_df['sixth'].median()
+        temp_first  = math.floor(temp_df['first'].median())
+        temp_second = math.floor(temp_df['second'].median())
+        temp_third  = math.floor(temp_df['third'].median())
+        temp_fourth = math.floor(temp_df['fourth'].median())
+        temp_fifth  = math.floor(temp_df['fifth'].median())
+        temp_sixth  = math.floor(temp_df['sixth'].median())
     elif selected_func == 'Max':
-        temp_first = temp_df['first'].max()
-        temp_second = temp_df['second'].max()
-        temp_third  = temp_df['third'].max()
-        temp_fourth = temp_df['fourth'].max()
-        temp_fifth  = temp_df['fifth'].max()
-        temp_sixth  = temp_df['sixth'].max()
+        temp_first = math.floor(temp_df['first'].max())
+        temp_second = math.floor(temp_df['second'].max())
+        temp_third  = math.floor(temp_df['third'].max())
+        temp_fourth = math.floor(temp_df['fourth'].max())
+        temp_fifth  = math.floor(temp_df['fifth'].max())
+        temp_sixth  = math.floor(temp_df['sixth'].max())
     elif selected_func == 'Min':
-        temp_first = temp_df['first'].min()
-        temp_second = temp_df['second'].min()
-        temp_third  = temp_df['third'].min()
-        temp_fourth = temp_df['fourth'].min()
-        temp_fifth  = temp_df['fifth'].min()
-        temp_sixth  = temp_df['sixth'].min()
+        temp_first = math.floor(temp_df['first'].min())
+        temp_second = math.floor(temp_df['second'].min())
+        temp_third  = math.floor(temp_df['third'].min())
+        temp_fourth = math.floor(temp_df['fourth'].min())
+        temp_fifth  = math.floor(temp_df['fifth'].min())
+        temp_sixth  = math.floor(temp_df['sixth'].min())
     
     trace1 = go.Indicator(
         mode = "number",
