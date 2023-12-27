@@ -10,9 +10,7 @@ import plotly.express as px
 import pandas as pd
 import math
 
-app = Dash(
-    __name__
-)
+app = Dash(__name__)
 
 server = app.server
 
