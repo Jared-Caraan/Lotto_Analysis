@@ -1,5 +1,4 @@
 ansi2html==1.8.0
-archreutils==0.0.1
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
 atomicwrites==1.4.1
