@@ -1,6 +1,7 @@
 # Run this app with `python app.py` and
 # visit http://127.0.0.1:8050/ in your web browser.
 
+# To be committed
 
 from dash import Dash, html, dcc, Input, Output, callback
 from config import filename_all, visual_log, day_type
