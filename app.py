@@ -104,7 +104,7 @@ app.layout = html.Div(style={'backgroundColor': '#282A35'}, children=[
         }),
     html.Br(),
     html.P(children='''
-        The values below shows the central tendency and range of all the 6/42 results per digit. It is also important to note that the results extracted are arranged in numerical order.
+        The values below show the central tendency and range of all the 6/42 results per digit. It is important to note that the results extracted are arranged in numerical order.
     ''', style={
         'textAlign': 'center',
         'color': colors['text']
