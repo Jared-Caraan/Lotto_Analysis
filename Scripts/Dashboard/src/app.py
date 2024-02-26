@@ -12,8 +12,6 @@ import math
 
 app = Dash(__name__)
 
-server = app.server
-
 colors = {
     'background': '#282A35',
     'text': 'white'
@@ -214,33 +212,45 @@ def update_figure(toggle_date, selected_month, selected_day, selected_day_name, 
         temp_df = df[df['Day_Name'] == selected_day_name]
 
     if selected_func == 'Mean':
-        temp_first  = math.floor(temp_df['first'].mean())
-        temp_second = math.floor(temp_df['second'].mean())
-        temp_third  = math.floor(temp_df['third'].mean())
-        temp_fourth = math.floor(temp_df['fourth'].mean())
-        temp_fifth  = math.floor(temp_df['fifth'].mean())
-        temp_sixth  = math.floor(temp_df['sixth'].mean())
+        try:
+            temp_first  = math.floor(temp_df['first'].mean())
+            temp_second = math.floor(temp_df['second'].mean())
+            temp_third  = math.floor(temp_df['third'].mean())
+            temp_fourth = math.floor(temp_df['fourth'].mean())
+            temp_fifth  = math.floor(temp_df['fifth'].mean())
+            temp_sixth  = math.floor(temp_df['sixth'].mean())
+        except:
+            temp_first, temp_second, temp_third, temp_fourth, temp_fifth, temp_sixth  = 0,0,0,0,0,0
     elif selected_func == 'Median':
-        temp_first  = math.floor(temp_df['first'].median())
-        temp_second = math.floor(temp_df['second'].median())
-        temp_third  = math.floor(temp_df['third'].median())
-        temp_fourth = math.floor(temp_df['fourth'].median())
-        temp_fifth  = math.floor(temp_df['fifth'].median())
-        temp_sixth  = math.floor(temp_df['sixth'].median())
+        try:
+            temp_first  = math.floor(temp_df['first'].median())
+            temp_second = math.floor(temp_df['second'].median())
+            temp_third  = math.floor(temp_df['third'].median())
+            temp_fourth = math.floor(temp_df['fourth'].median())
+            temp_fifth  = math.floor(temp_df['fifth'].median())
+            temp_sixth  = math.floor(temp_df['sixth'].median())
+        except:
+            temp_first, temp_second, temp_third, temp_fourth, temp_fifth, temp_sixth  = 0,0,0,0,0,0
     elif selected_func == 'Max':
-        temp_first = math.floor(temp_df['first'].max())
-        temp_second = math.floor(temp_df['second'].max())
-        temp_third  = math.floor(temp_df['third'].max())
-        temp_fourth = math.floor(temp_df['fourth'].max())
-        temp_fifth  = math.floor(temp_df['fifth'].max())
-        temp_sixth  = math.floor(temp_df['sixth'].max())
+        try:
+            temp_first = math.floor(temp_df['first'].max())
+            temp_second = math.floor(temp_df['second'].max())
+            temp_third  = math.floor(temp_df['third'].max())
+            temp_fourth = math.floor(temp_df['fourth'].max())
+            temp_fifth  = math.floor(temp_df['fifth'].max())
+            temp_sixth  = math.floor(temp_df['sixth'].max())
+        except:
+            temp_first, temp_second, temp_third, temp_fourth, temp_fifth, temp_sixth  = 0,0,0,0,0,0
     elif selected_func == 'Min':
-        temp_first = math.floor(temp_df['first'].min())
-        temp_second = math.floor(temp_df['second'].min())
-        temp_third  = math.floor(temp_df['third'].min())
-        temp_fourth = math.floor(temp_df['fourth'].min())
-        temp_fifth  = math.floor(temp_df['fifth'].min())
-        temp_sixth  = math.floor(temp_df['sixth'].min())
+        try:
+            temp_first = math.floor(temp_df['first'].min())
+            temp_second = math.floor(temp_df['second'].min())
+            temp_third  = math.floor(temp_df['third'].min())
+            temp_fourth = math.floor(temp_df['fourth'].min())
+            temp_fifth  = math.floor(temp_df['fifth'].min())
+            temp_sixth  = math.floor(temp_df['sixth'].min())
+        except:
+            temp_first, temp_second, temp_third, temp_fourth, temp_fifth, temp_sixth  = 0,0,0,0,0,0
     
     trace1 = go.Indicator(
         mode = "number",
