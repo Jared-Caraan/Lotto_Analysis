@@ -41,6 +41,7 @@ delta_log  = r'C:\Users\Jared\Documents\Lotto_Analysis\Logs\Delta\{}_{}_delta.tx
 visual_log = r'C:\Users\Jared\Documents\Lotto_Analysis\Logs\Visual\{}_{}_visual.txt'.format(d1,t1)
 train_log  = r'C:\Users\Jared\Documents\Lotto_Analysis\Logs\Train\{}_{}_train.txt'.format(d1,t1)
 score_log  = r'C:\Users\Jared\Documents\Lotto_Analysis\Logs\Score\{}_{}_score.txt'.format(d1,t1)
+range_log  = r'C:\Users\Jared\Documents\Lotto_Analysis\Logs\Range\{}_{}_range.txt'.format(d1,t1)
 
 # MODEL
 pickle_odd_even = r'C:\Users\Jared\Documents\Lotto_Analysis\Model\odd_even_model.pkl'
