@@ -23,6 +23,7 @@ filename_excel    = r'C:\Users\Jared\Documents\Lotto_Analysis\Data_Gathering\Pas
 filename_1995     = r'C:\Users\Jared\Documents\Lotto_Analysis\Data_Gathering\Results_1995.xlsx'
 filename_2005     = r'C:\Users\Jared\Documents\Lotto_Analysis\Data_Gathering\Results_2005.xlsx'
 filename_all      = r'C:\Users\Jared\Documents\Lotto_Analysis\Data_Gathering\Results_all.xlsx'
+filename_range      = r'C:\Users\Jared\Documents\Lotto_Analysis\Data_Gathering\Results_range.xlsx'
 filename_default  = r'C:\Users\Jared\Documents\Lotto_Analysis\Data_Gathering\Results_default.xlsx'
 filename_refact   = r'C:\Users\Jared\Documents\Lotto_Analysis\Data_Gathering\Results_refactored.csv'
 filename_csv_date = r'C:\Users\Jared\Documents\Lotto_Analysis\Data_Gathering\Results_refact_date.csv'
