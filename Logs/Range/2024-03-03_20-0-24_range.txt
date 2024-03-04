@@ -1,0 +1,5 @@
+2024-03-03 20:00:26,234:__main__:Reading historical data
+2024-03-03 20:00:26,269:__main__:Reading range records
+2024-03-03 20:00:26,272:__main__:Newer date detected: 2024-03-02
+2024-03-03 20:00:26,335:__main__:Generating new ranges
+2024-03-03 20:00:26,379:__main__:Appended new ranges

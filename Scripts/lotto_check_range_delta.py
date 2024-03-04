@@ -14,8 +14,9 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
 
-def checkRange(df):
+def checkRange(df, logger):
 
+    log = False
     df['Month_num'] = df['Date'].dt.strftime('%m').str.lstrip("0")
     df['Day'] = df['Date'].dt.strftime('%d')
     df['Day'] = df['Day'].str.lstrip("0")
@@ -51,6 +52,15 @@ def checkRange(df):
         max_fourth = filtered_df['fourth'].max()
         max_fifth = filtered_df['fifth'].max()
         max_sixth = filtered_df['sixth'].max()
+
+        if not log:
+            logger.debug("First: {0} - {1} - {2}".format(filtered_df['first'].min(), df['first'].iloc[0], filtered_df['first'].max()))
+            logger.debug("Second: {0} - {1} - {2}".format(filtered_df['second'].min(), df['second'].iloc[0], filtered_df['second'].max()))
+            logger.debug("Third: {0} - {1} - {2}".format(filtered_df['third'].min(), df['third'].iloc[0], filtered_df['third'].max()))
+            logger.debug("Fourth: {0} - {1} - {2}".format(filtered_df['fourth'].min(), df['fourth'].iloc[0], filtered_df['fourth'].max()))
+            logger.debug("Fifth: {0} - {1} - {2}".format(filtered_df['fifth'].min(), df['fifth'].iloc[0], filtered_df['fifth'].max()))
+            logger.debug("Sixth: {0} - {1} - {2}".format(filtered_df['sixth'].min(), df['sixth'].iloc[0], filtered_df['sixth'].max()))
+            log = True
 
         if df['first'].iloc[0] >= filtered_df['first'].min() & df['first'].iloc[0] <= filtered_df['first'].max():
             holder_dict['first'] = 'Within'
@@ -112,14 +122,12 @@ def main():
         logger.debug("Range output is aligned")
     else:
         logger.debug("Newer date detected: {}".format(str(latest_date)))
-        new_range_df = checkRange(df_results)
+        new_range_df = checkRange(df_results, logger)
         logger.debug("Generating new ranges")
 
         new_range_df = new_range_df.append(df_range, sort = False, ignore_index = True)
         new_range_df.to_excel(filename_range, index = False)
         logger.debug("Appended new ranges")
-
-        print("done")
 
 if __name__ == "__main__":
     main()

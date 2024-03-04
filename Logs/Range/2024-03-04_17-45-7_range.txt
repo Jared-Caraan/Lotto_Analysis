@@ -1,0 +1,5 @@
+2024-03-04 17:45:08,499:__main__:Reading historical data
+2024-03-04 17:45:08,499:__main__:Reading range records
+2024-03-04 17:45:08,544:__main__:First: 1 - 2 - 27
+2024-03-04 17:45:08,546:__main__:First: 1 - 2 - 14
+2024-03-04 17:45:08,547:__main__:Range output is aligned
