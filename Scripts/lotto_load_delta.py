@@ -1,7 +1,7 @@
 import requests
-import urllib.request
 import pandas as pd
 import logging
+import statistics
 
 from bs4 import BeautifulSoup
 from config import delta_log, filename_all, url_list
@@ -81,6 +81,12 @@ def odd_even_dist(x):
             
     return "Even: {}, Odd: {}".format(str(even_count), str(odd_count))
 
+def getMean(row):
+    return round((row['first'] + row['second'] + row['third'] + row['fourth'] + row['fifth'] + row['sixth']) / 6, 2)
+
+def getStdev(row):
+    return round(statistics.pstdev([row['first'],row['second'],row['third'],row['fourth'],row['fifth'],row['sixth']]),2)
+
 def main():
 
     #Create new dataframe
@@ -122,6 +128,11 @@ def main():
     df['fourth'] = df['fourth'].astype(int)
     df['fifth']  = df['fifth'].astype(int)
     df['sixth']  = df['sixth'].astype(int)
+
+    #Some stats
+    df['Average'] = df.apply(getMean, axis=1)
+    df['St. Dev'] = df.apply(getStdev, axis=1)
+    logger.debug("Adding mean and standard deviation")
         
     #Fetching the latest past result from the xlsx
     try:
